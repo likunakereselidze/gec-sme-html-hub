@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Request — sme.gecbusiness.com/participants</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f5f7fa;color:#1a1a2e;line-height:1.6}
+
+.header{background:#15374a;color:#fff;padding:40px 0;border-bottom:4px solid #f05324}
+.header-inner{max-width:860px;margin:0 auto;padding:0 32px}
+.header-tag{display:inline-block;background:#f05324;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:3px;margin-bottom:16px}
+.header h1{font-size:28px;font-weight:800;line-height:1.2;margin-bottom:8px}
+.header p{color:rgba(255,255,255,.6);font-size:15px}
+.header-meta{display:flex;gap:24px;margin-top:20px;flex-wrap:wrap}
+.header-meta span{font-size:13px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px}
+.header-meta strong{color:#fff}
+
+.body{max-width:860px;margin:0 auto;padding:40px 32px}
+
+/* SECTION */
+.section{background:#fff;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:24px;overflow:hidden}
+.section-head{padding:18px 24px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:12px}
+.section-num{width:28px;height:28px;background:#15374a;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.section-head h2{font-size:16px;font-weight:700;color:#15374a}
+.section-body{padding:20px 24px}
+
+/* SUMMARY ROW */
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.summary-item{background:#f8fafc;border-radius:7px;padding:14px 16px;border-left:3px solid #f05324}
+.summary-item.teal{border-left-color:#049978}
+.summary-item.gold{border-left-color:#f0b91c}
+.summary-item .label{font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.summary-item .value{font-size:14px;font-weight:600;color:#15374a}
+
+/* FEATURES */
+.feature-list{display:flex;flex-direction:column;gap:10px}
+.feature{display:flex;gap:12px;padding:12px 16px;border-radius:7px;background:#f8fafc}
+.feature-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feature-icon.orange{background:#fff3ee}
+.feature-icon.teal{background:#e8f5f0}
+.feature-icon.navy{background:#e8eef2}
+.feature-icon.gold{background:#fdf8e8}
+.feature-text h4{font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:2px}
+.feature-text p{font-size:12px;color:#666}
+
+/* WIREFRAME */
+.wireframe{background:#f0f4f8;border-radius:8px;padding:16px;border:1px dashed #c8d5e0}
+.wf-bar{background:#15374a;border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.wf-bar span{color:rgba(255,255,255,.7);font-size:11px}
+.wf-bar strong{color:#fff;font-size:12px}
+.wf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
+.wf-stat{background:#fff;border-radius:5px;padding:8px 10px;border-left:3px solid #f05324}
+.wf-stat .n{font-size:18px;font-weight:800;color:#15374a}
+.wf-stat .l{font-size:9px;color:#999;text-transform:uppercase}
+.wf-table{background:#fff;border-radius:5px;overflow:hidden}
+.wf-thead{background:#15374a;display:grid;grid-template-columns:30px 1.5fr 1.2fr 1fr 0.8fr 80px;gap:0}
+.wf-thead span{color:rgba(255,255,255,.6);font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px}
+.wf-row{display:grid;grid-template-columns:30px 1.5fr 1.2fr 1fr 0.8fr 80px;border-bottom:1px solid #f5f5f5}
+.wf-row span{font-size:10px;padding:7px 8px;color:#333}
+.wf-row span:first-child{color:#ccc}
+.wf-badge{display:inline-block;background:#e8f5f0;color:#049978;font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px}
+.wf-btn{display:inline-block;border:1px solid #e0e0e0;border-radius:3px;font-size:9px;padding:2px 6px;color:#15374a;font-weight:600}
+
+/* TECH SPECS */
+.spec-table{width:100%;border-collapse:collapse;font-size:13px}
+.spec-table tr{border-bottom:1px solid #f0f0f0}
+.spec-table tr:last-child{border-bottom:none}
+.spec-table td{padding:10px 12px;vertical-align:top}
+.spec-table td:first-child{font-weight:600;color:#15374a;width:200px;white-space:nowrap}
+.spec-table td:last-child{color:#444}
+code{background:#f0f4f8;padding:2px 7px;border-radius:4px;font-family:monospace;font-size:12px;color:#c7254e}
+
+/* FIELDS */
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.field-chip{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 12px;font-size:12px}
+.field-chip .fname{font-weight:600;color:#15374a;margin-bottom:1px}
+.field-chip .ftype{font-size:11px;color:#999}
+
+/* CTA */
+.cta{background:#15374a;border-radius:10px;padding:28px 32px;color:#fff;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.cta h3{font-size:17px;font-weight:700;margin-bottom:4px}
+.cta p{color:rgba(255,255,255,.6);font-size:13px}
+.cta-contact{text-align:right}
+.cta-contact a{color:#f0b91c;text-decoration:none;font-weight:600;font-size:14px}
+.cta-contact p{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
+
+@media(max-width:600px){
+  .summary-grid{grid-template-columns:1fr}
+  .fields-grid{grid-template-columns:1fr}
+  .wf-thead,.wf-row{grid-template-columns:30px 1fr 1fr 60px}
+  .wf-thead span:nth-child(4),.wf-thead span:nth-child(5),
+  .wf-row span:nth-child(4),.wf-row span:nth-child(5){display:none}
+  .cta{flex-direction:column}
+  .cta-contact{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-tag">IT Request</div>
+    <h1>Participants Dashboard<br>sme.gecbusiness.com/participants</h1>
+    <p>Password-protected CRM page to view and manage SME program applications</p>
+    <div class="header-meta">
+      <span>📅 <strong>Requested: May 2026</strong></span>
+      <span>👤 <strong>Requested by: Lika Kereselidze</strong></span>
+      <span>📧 <strong>lkereselidze@gecbusiness.com</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="body">
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">1</div>
+      <h2>Summary</h2>
+    </div>
+    <div class="section-body">
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="label">Page URL</div>
+          <div class="value">sme.gecbusiness.com/participants</div>
+        </div>
+        <div class="summary-item teal">
+          <div class="label">Access</div>
+          <div class="value">Password-protected (admin only)</div>
+        </div>
+        <div class="summary-item gold">
+          <div class="label">Purpose</div>
+          <div class="value">View all applications submitted via the SME program form</div>
+        </div>
+        <div class="summary-item">
+          <div class="label">Data source</div>
+          <div class="value">Form at sme.gecbusiness.com/GEC_Application_Form.html</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">2</div>
+      <h2>Required Features</h2>
+    </div>
+    <div class="section-body">
+      <div class="feature-list">
+        <div class="feature">
+          <div class="feature-icon orange">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f05324" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Password login screen</h4>
+            <p>Before seeing any data, the user must enter a password. Session stays active until the browser is closed.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon teal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#049978" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Participants table</h4>
+            <p>Full list of all submitted applications with columns: #, name, company, sector, employees, phone, email, info source, date.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon navy">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15374a" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Search and filter</h4>
+            <p>Search by name, company or email. Filter by business sector and number of employees.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon orange">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f05324" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Detail view per applicant</h4>
+            <p>Click any row to open a panel showing all fields including the full motivation/growth potential text.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f0b91c" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>CSV export</h4>
+            <p>One-click button to download all submissions as a CSV file, compatible with Excel and Google Sheets.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon teal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#049978" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Stats summary bar</h4>
+            <p>Shows total applications, submissions today, and most common sector at the top of the page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WIREFRAME -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">3</div>
+      <h2>Visual Reference (Wireframe)</h2>
+    </div>
+    <div class="section-body">
+      <div class="wireframe">
+        <div class="wf-bar">
+          <strong>მონაწილეები</strong>
+          <div style="display:flex;gap:8px">
+            <span style="background:rgba(255,255,255,.15);padding:3px 10px;border-radius:4px;font-size:10px">CSV ექსპორტი</span>
+            <span style="font-size:10px">გასვლა</span>
+          </div>
+        </div>
+        <div class="wf-stats">
+          <div class="wf-stat"><div class="n">12</div><div class="l">სულ განაცხადი</div></div>
+          <div class="wf-stat" style="border-left-color:#049978"><div class="n">3</div><div class="l">დღეს</div></div>
+          <div class="wf-stat" style="border-left-color:#f0b91c"><div class="n">IT</div><div class="l">გავრც. სექტორი</div></div>
+        </div>
+        <div style="display:flex;gap:6px;margin-bottom:8px">
+          <div style="flex:1;background:#fff;border:1px solid #ddd;border-radius:4px;padding:5px 10px;font-size:10px;color:#aaa">🔍  ძებნა...</div>
+          <div style="background:#fff;border:1px solid #ddd;border-radius:4px;padding:5px 10px;font-size:10px;color:#666">სექტორი ▾</div>
+          <div style="background:#fff;border:1px solid #ddd;border-radius:4px;padding:5px 10px;font-size:10px;color:#666">ზომა ▾</div>
+        </div>
+        <div class="wf-table">
+          <div class="wf-thead">
+            <span>#</span><span>სახელი · კომპანია</span><span>სექტორი</span><span>ტელ. / ელ-ფოსტა</span><span>თარიღი</span><span></span>
+          </div>
+          <div class="wf-row">
+            <span>1</span>
+            <span><b style="font-size:10px;color:#15374a">გიორგი მამულაშვილი</b><br><span style="color:#999;font-size:9px">შპს ტექ სოლუშენი</span></span>
+            <span><span class="wf-badge">IT</span></span>
+            <span><span style="font-size:9px">+995 599 123 456<br>g.m@tech.ge</span></span>
+            <span style="font-size:9px;color:#aaa">2026-06-01</span>
+            <span><span class="wf-btn">დეტალი</span></span>
+          </div>
+          <div class="wf-row">
+            <span>2</span>
+            <span><b style="font-size:10px;color:#15374a">ნინო ბერიძე</b><br><span style="color:#999;font-size:9px">შპს ბერი ტრეიდი</span></span>
+            <span><span class="wf-badge">ვაჭრობა</span></span>
+            <span><span style="font-size:9px">+995 577 654 321<br>n.b@trade.ge</span></span>
+            <span style="font-size:9px;color:#aaa">2026-06-02</span>
+            <span><span class="wf-btn">დეტალი</span></span>
+          </div>
+          <div class="wf-row" style="opacity:.4">
+            <span>3</span>
+            <span><b style="font-size:10px;color:#15374a">დავით კაპანაძე</b><br><span style="color:#999;font-size:9px">შპს კაპი ფუდი</span></span>
+            <span><span class="wf-badge">კვება</span></span>
+            <span><span style="font-size:9px">+995 555 000 111</span></span>
+            <span style="font-size:9px;color:#aaa">2026-06-03</span>
+            <span><span class="wf-btn">დეტალი</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM FIELDS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">4</div>
+      <h2>Data Fields Collected by the Form</h2>
+    </div>
+    <div class="section-body">
+      <p style="font-size:13px;color:#666;margin-bottom:14px">All fields below are submitted by the applicant via <code>sme.gecbusiness.com/GEC_Application_Form.html</code> and must be stored and displayed in the dashboard.</p>
+      <div class="fields-grid">
+        <div class="field-chip"><div class="fname">სახელი და გვარი</div><div class="ftype">Text — required</div></div>
+        <div class="field-chip"><div class="fname">ტელეფონი</div><div class="ftype">Phone — required</div></div>
+        <div class="field-chip"><div class="fname">ელ-ფოსტა</div><div class="ftype">Email — required</div></div>
+        <div class="field-chip"><div class="fname">კომპანიის სახელი</div><div class="ftype">Text — required</div></div>
+        <div class="field-chip"><div class="fname">სექტორი</div><div class="ftype">Dropdown — required</div></div>
+        <div class="field-chip"><div class="fname">თანამშრომლები</div><div class="ftype">Dropdown — required</div></div>
+        <div class="field-chip"><div class="fname">ზრდის პოტენციალი</div><div class="ftype">Textarea — required</div></div>
+        <div class="field-chip"><div class="fname">საინფორმაციო წყარო</div><div class="ftype">Dropdown — required</div></div>
+        <div class="field-chip"><div class="fname">თანხმობა</div><div class="ftype">Checkbox — required</div></div>
+        <div class="field-chip" style="border-left:2px solid #f0b91c"><div class="fname">_submitted</div><div class="ftype">Auto — submission timestamp</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH SPECS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">5</div>
+      <h2>Technical Specifications</h2>
+    </div>
+    <div class="section-body">
+      <table class="spec-table">
+        <tr><td>Form POST endpoint</td><td><code>POST /api/apply</code> — saves submission to server storage</td></tr>
+        <tr><td>Dashboard URL</td><td><code>sme.gecbusiness.com/participants</code></td></tr>
+        <tr><td>Data API</td><td><code>GET /api/submissions?password=XXX</code> — returns JSON array of all submissions</td></tr>
+        <tr><td>Authentication</td><td>Password sent as query parameter; server returns 401 if wrong</td></tr>
+        <tr><td>Storage</td><td>JSON file on server OR database — IT team's choice</td></tr>
+        <tr><td>Access control</td><td>Single shared password (can be upgraded to user accounts later)</td></tr>
+        <tr><td>Export format</td><td>CSV with UTF-8 BOM (for Georgian characters in Excel)</td></tr>
+        <tr><td>Language</td><td>Georgian (ka) — all UI labels in Georgian</td></tr>
+        <tr><td>Mobile</td><td>Responsive — must work on phone and desktop</td></tr>
+        <tr><td>Existing server</td><td>Server at <code>167.86.79.194</code>, nginx, Python API on port 8901</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <h3>Ready to proceed?</h3>
+      <p>Questions or clarifications — contact Lika directly.</p>
+    </div>
+    <div class="cta-contact">
+      <a href="mailto:lkereselidze@gecbusiness.com">lkereselidze@gecbusiness.com</a>
+      <p>GEC Business Assistant</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -211,7 +211,6 @@ const DEMO_DATA = [
 function doLogin() {
   const pw = document.getElementById('pw-input').value;
 
-  // Offline/demo mode — works without server
   if (pw === 'GECsme2026') {
     allData = DEMO_DATA;
     document.getElementById('login-screen').style.display = 'none';
@@ -221,6 +220,7 @@ function doLogin() {
     renderTable();
     return;
   }
+
 
   fetch(API + '?password=' + encodeURIComponent(pw))
     .then(r => { if (!r.ok) throw new Error(); return r.json(); })
