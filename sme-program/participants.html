@@ -221,7 +221,6 @@ function doLogin() {
     return;
   }
 
-
   fetch(API + '?password=' + encodeURIComponent(pw))
     .then(r => { if (!r.ok) throw new Error(); return r.json(); })
     .then(data => {
