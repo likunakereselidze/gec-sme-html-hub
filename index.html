@@ -247,11 +247,7 @@ button[type=submit]:active{transform:translateY(0)}
 </div>
 
 <div class="form-wrap">
-  <form
-    action="/api/apply"
-    method="POST"
-  >
-    <input type="hidden" name="_next" value="/thanks">
+  <form id="apply-form">
 
     <div class="form-card">
 
@@ -348,5 +344,34 @@ button[type=submit]:active{transform:translateY(0)}
   </form>
 </div>
 
+<script>
+document.getElementById('apply-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type=submit]');
+  btn.disabled = true;
+  btn.textContent = 'იგზავნება...';
+  const fd = new FormData(this);
+  const payload = {};
+  fd.forEach((v, k) => { payload[k] = v; });
+  try {
+    const res = await fetch('https://qbrafwkuwzhjzcygujeh.supabase.co/rest/v1/submissions', {
+      method: 'POST',
+      headers: {
+        'apikey': 'sb_publishable_QE31r-Q0EUVBP8Y5CFdShg_qfpjKlwR',
+        'Authorization': 'Bearer sb_publishable_QE31r-Q0EUVBP8Y5CFdShg_qfpjKlwR',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error();
+    window.location.href = '/thanks';
+  } catch {
+    btn.disabled = false;
+    btn.textContent = 'განაცხადის გაგზავნა →';
+    alert('შეცდომა. სცადეთ თავიდან.');
+  }
+});
+</script>
 </body>
 </html>
