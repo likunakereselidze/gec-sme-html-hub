@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEC SME Growth Program — All Materials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'FiraGO';
+    src: url('/fonts/FiraGO-Regular.ttf') format('truetype');
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #F8F9FA;
+    font-family: 'Inter', 'FiraGO', 'Segoe UI', sans-serif;
+    color: #153749;
+    min-height: 100vh;
+  }
+  .header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-bottom: 1px solid #E5E8EB;
+  }
+  .header .badge {
+    display: inline-block;
+    background: #F05324;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .header h1 {
+    font-size: 38px;
+    color: #153749;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .header p {
+    font-size: 15px;
+    color: #6B7280;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 50px auto 40px;
+    padding: 0 20px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    text-decoration: none;
+    color: #153749;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #E5E8EB;
+    border-left: 4px solid;
+    box-shadow: 0 2px 8px rgba(21,55,73,0.04);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(21,55,73,0.12);
+  }
+  .card.sme { border-left-color: #F05324; }
+  .card.bank { border-left-color: #049978; }
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #153749;
+  }
+  .card .audience {
+    font-size: 12px;
+    color: #F05324;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .card.bank .audience { color: #049978; }
+  .card .meta {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+  .card .lang {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-top: 14px;
+    font-weight: 600;
+    color: white;
+  }
+  .card .lang.en { background: #F05324; }
+  .card .lang.ge { background: #049978; }
+  .social {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .section-title {
+    font-size: 13px;
+    color: #F05324;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .social-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    text-decoration: none;
+    color: #153749;
+    border: 1px solid #E5E8EB;
+    border-left: 4px solid #F0B91C;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21,55,73,0.04);
+  }
+  .social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(21,55,73,0.1);
+  }
+  .social-card h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #153749;
+  }
+  .social-card p {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+  .social-card .lang {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+  }
+  .social-card .lang.en { background: #F05324; }
+  .social-card .lang.ge { background: #049978; }
+
+  .dashboard-cta {
+    text-align: center;
+    margin: 50px auto 80px;
+  }
+  .dashboard-btn {
+    display: inline-block;
+    background: #153749;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 2px solid #153749;
+  }
+  .dashboard-btn:hover {
+    background: #F05324;
+    border-color: #F05324;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(240,83,36,0.3);
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">GEC Business Assistant</div>
+  <h1>SME Business Growth Program</h1>
+  <p>Sales Presentations &amp; Campaign Materials</p>
+</div>
+
+<div style="text-align:center;padding:40px 20px 0;">
+  <div class="section-title">Presentations</div>
+</div>
+
+<div class="grid">
+  <a href="GEC_SME_Growth_Program_SMEs_ENG.html" class="card sme">
+    <div class="audience">SME Owners</div>
+    <h2>SME Presentation</h2>
+    <div class="meta">8 slides — Problem → Scope → Mentors → Outcomes → CTA</div>
+    <span class="lang en">English</span>
+  </a>
+  <a href="GEC_SME_Growth_Program_SMEs_GEO.html" class="card sme">
+    <div class="audience">SME მფლობელები</div>
+    <h2>SME პრეზენტაცია</h2>
+    <div class="meta">8 სლაიდი — გამოწვევა → მასშტაბი → მენტორები → შედეგი</div>
+    <span class="lang ge">ქართული</span>
+  </a>
+  <a href="GEC_SME_Growth_Program_Banks_ENG.html" class="card bank">
+    <div class="audience">Banks · Strategic Partners</div>
+    <h2>Bank Presentation</h2>
+    <div class="meta">8 slides — Partnership angle → Value → Scope → Outcomes</div>
+    <span class="lang en">English</span>
+  </a>
+  <a href="GEC_SME_Growth_Program_Banks_GEO.html" class="card bank">
+    <div class="audience">ბანკები · სტრატეგიული პარტნიორები</div>
+    <h2>ბანკის პრეზენტაცია</h2>
+    <div class="meta">8 სლაიდი — პარტნიორობა → ღირებულება → მასშტაბი</div>
+    <span class="lang ge">ქართული</span>
+  </a>
+</div>
+
+<div class="social">
+  <div class="section-title">Social Media Campaign</div>
+  <div class="social-grid">
+    <a href="Social_Media_Campaign_ENG.html" class="social-card">
+      <h3>Campaign Copy &amp; Visuals</h3>
+      <p>12 posts with mockups + LinkedIn DM template — 4-week rollout</p>
+      <span class="lang en">English</span>
+    </a>
+    <a href="Social_Media_Campaign_GEO.html" class="social-card">
+      <h3>კამპანიის ტექსტი და ვიზუალი</h3>
+      <p>12 პოსტი მოკაპებით + LinkedIn DM შაბლონი — 4-კვირიანი გეგმა</p>
+      <span class="lang ge">ქართული</span>
+    </a>
+  </div>
+</div>
+
+<div class="dashboard-cta" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+  <a href="GEC_Application_Form.html" class="dashboard-btn" style="background:#F05324;border-color:#F05324;">Apply to the Program →</a>
+  <a href="comments-dashboard.html" class="dashboard-btn">View All Team Comments →</a>
+</div>
+
+
+<!-- COMMENT SYSTEM -->
+<style>
+  .comment-section {
+    max-width: 960px; margin: 20px auto; padding: 0 20px;
+  }
+  .comment-box {
+    background: #1e1e30; border: 1px solid #2a2a3e; border-radius: 12px;
+    padding: 20px; margin: 8px 0;
+  }
+  .comment-box h4 {
+    color: #EE5525; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 12px;
+  }
+  .comment-box .comment-form {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .comment-box input[type="text"] {
+    background: #12121f; border: 1px solid #333; border-radius: 6px;
+    padding: 10px 14px; color: #fff; font-size: 14px; width: 160px;
+    font-family: inherit;
+  }
+  .comment-box textarea {
+    background: #12121f; border: 1px solid #333; border-radius: 6px;
+    padding: 10px 14px; color: #fff; font-size: 14px; flex: 1; min-width: 300px;
+    min-height: 40px; max-height: 120px; resize: vertical; font-family: inherit;
+  }
+  .comment-box input:focus, .comment-box textarea:focus {
+    outline: none; border-color: #009778;
+  }
+  .comment-box button {
+    background: #009778; color: #fff; border: none; border-radius: 6px;
+    padding: 10px 20px; font-size: 13px; font-weight: 600; cursor: pointer;
+    letter-spacing: 1px; text-transform: uppercase; font-family: inherit;
+  }
+  .comment-box button:hover { background: #00b890; }
+  .comment-list { margin-top: 12px; }
+  .comment-item {
+    background: #12121f; border-radius: 8px; padding: 12px 16px; margin: 6px 0;
+    border-left: 3px solid #009778;
+  }
+  .comment-item .meta {
+    font-size: 11px; color: #666; margin-bottom: 4px;
+  }
+  .comment-item .meta .name { color: #009778; font-weight: 600; }
+  .comment-item .text { font-size: 14px; color: #ccc; line-height: 1.5; }
+
+  /* Floating comment toggle */
+  .comment-toggle {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    background: #EE5525; color: #fff; border: none; border-radius: 50%;
+    width: 56px; height: 56px; font-size: 24px; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(238,85,37,0.4); display: flex;
+    align-items: center; justify-content: center;
+  }
+  .comment-toggle:hover { background: #ff6633; transform: scale(1.05); }
+  .comment-toggle .badge {
+    position: absolute; top: -4px; right: -4px; background: #009778;
+    color: #fff; font-size: 11px; font-weight: 700; border-radius: 10px;
+    padding: 2px 7px; min-width: 18px; text-align: center;
+  }
+
+  .comments-panel {
+    position: fixed; bottom: 90px; right: 20px; z-index: 999;
+    width: 420px; max-height: 70vh; overflow-y: auto;
+    background: #1a1a2e; border: 1px solid #2a2a3e; border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5); padding: 24px;
+    display: none;
+  }
+  .comments-panel.open { display: block; }
+  .comments-panel h3 {
+    color: #fff; font-size: 18px; margin-bottom: 4px;
+  }
+  .comments-panel .subtitle {
+    color: #666; font-size: 12px; margin-bottom: 16px;
+  }
+  .comments-panel .section-label {
+    color: #EE5525; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 16px; margin-bottom: 6px;
+    padding-top: 12px; border-top: 1px solid #2a2a3e;
+  }
+  .comments-panel .section-label:first-of-type { border-top: none; padding-top: 0; }
+</style>
+
+<button class="comment-toggle" onclick="toggleComments()" title="Comments">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="badge" id="commentCount" style="display:none;">0</span>
+</button>
+
+<div class="comments-panel" id="commentsPanel">
+  <h3>Team Comments</h3>
+  <p class="subtitle">Leave feedback on any section</p>
+
+  <div style="margin:16px 0;">
+    <input type="text" id="commenterName" placeholder="Your name"
+           style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;width:100%;margin-bottom:8px;font-family:inherit;"
+           oninput="localStorage.setItem('gec_reviewer_name', this.value)">
+    <div style="display:flex;gap:8px;">
+      <select id="commentSection"
+              style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;flex:1;font-family:inherit;">
+        <option value="general">General</option>
+      </select>
+    </div>
+    <textarea id="commentText" placeholder="Your comment..."
+              style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;width:100%;min-height:60px;margin-top:8px;resize:vertical;font-family:inherit;"></textarea>
+    <button onclick="postComment()"
+            style="background:#009778;color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-top:8px;width:100%;text-transform:uppercase;letter-spacing:1px;font-family:inherit;">
+      Submit Comment
+    </button>
+  </div>
+
+  <div id="commentsList"></div>
+</div>
+
+<script>
+const API = '/api/comments';
+const PAGE = location.pathname.split('/').pop() || 'index.html';
+
+// Restore saved name
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('gec_reviewer_name');
+  if (saved) document.getElementById('commenterName').value = saved;
+  detectSections();
+  loadComments();
+});
+
+function detectSections() {
+  const sel = document.getElementById('commentSection');
+  // Find slide labels, post titles, week labels
+  const markers = document.querySelectorAll('.week-label, .copy-section h3, [class*="slide"]');
+  const seen = new Set(['general']);
+
+  // For presentation pages, detect by slide numbers
+  const slideLabels = document.querySelectorAll('div[style*="position:relative"]');
+  let slideNum = 0;
+  slideLabels.forEach(el => {
+    const txt = el.textContent.trim();
+    if (txt.startsWith('Slide')) {
+      slideNum++;
+      const label = 'Slide ' + slideNum;
+      if (!seen.has(label)) {
+        seen.add(label);
+        const opt = document.createElement('option');
+        opt.value = label;
+        opt.textContent = label;
+        sel.appendChild(opt);
+      }
+    }
+  });
+
+  // For campaign pages, detect post titles
+  document.querySelectorAll('.copy-section h3').forEach(el => {
+    const label = el.textContent.trim();
+    if (label && !seen.has(label)) {
+      seen.add(label);
+      const opt = document.createElement('option');
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    }
+  });
+
+  // For index page
+  if (seen.size <= 1) {
+    ['Presentations', 'Social Media Campaign', 'Overall'].forEach(label => {
+      const opt = document.createElement('option');
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+  }
+}
+
+async function loadComments() {
+  try {
+    const res = await fetch(API + '?page=' + encodeURIComponent(PAGE));
+    const comments = await res.json();
+    renderComments(comments);
+  } catch(e) {
+    console.log('Could not load comments', e);
+  }
+}
+
+function renderComments(comments) {
+  const list = document.getElementById('commentsList');
+  const badge = document.getElementById('commentCount');
+
+  if (comments.length > 0) {
+    badge.style.display = 'block';
+    badge.textContent = comments.length;
+  } else {
+    badge.style.display = 'none';
+  }
+
+  // Group by section
+  const groups = {};
+  comments.forEach(c => {
+    const s = c.section || 'general';
+    if (!groups[s]) groups[s] = [];
+    groups[s].push(c);
+  });
+
+  let html = '';
+  for (const [section, items] of Object.entries(groups)) {
+    html += '<div class="section-label">' + section + '</div>';
+    items.forEach(c => {
+      html += '<div class="comment-item">'
+        + '<div class="meta"><span class="name">' + escHtml(c.name) + '</span> &middot; ' + escHtml(c.time) + '</div>'
+        + '<div class="text">' + escHtml(c.text) + '</div>'
+        + '</div>';
+    });
+  }
+
+  list.innerHTML = html || '<p style="color:#555;font-size:13px;text-align:center;padding:20px;">No comments yet. Be the first!</p>';
+}
+
+async function postComment() {
+  const name = document.getElementById('commenterName').value.trim() || 'Anonymous';
+  const section = document.getElementById('commentSection').value;
+  const text = document.getElementById('commentText').value.trim();
+
+  if (!text) return;
+
+  try {
+    await fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ page: PAGE, section, name, text })
+    });
+    document.getElementById('commentText').value = '';
+    loadComments();
+  } catch(e) {
+    alert('Could not save comment. Please try again.');
+  }
+}
+
+function toggleComments() {
+  document.getElementById('commentsPanel').classList.toggle('open');
+}
+
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+</script>
+
+</body>
+</html>

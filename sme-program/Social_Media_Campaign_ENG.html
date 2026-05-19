@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEC SME Growth Program — Social Media Campaign (English)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f1a; font-family: 'Inter', sans-serif; color: #fff; padding: 40px 20px; }
+
+  .campaign-header { text-align: center; margin-bottom: 60px; }
+  .campaign-header h1 { font-size: 32px; color: #EE5525; margin-bottom: 8px; }
+  .campaign-header p { color: #888; font-size: 14px; }
+
+  .week-label {
+    text-align: center; margin: 60px 0 30px; padding: 12px 24px;
+    background: linear-gradient(90deg, transparent, #1a1a2e, transparent);
+    font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #009778;
+  }
+
+  .post-row {
+    display: flex; gap: 30px; max-width: 1200px; margin: 40px auto;
+    align-items: flex-start; flex-wrap: wrap; justify-content: center;
+  }
+
+  /* The visual mockup */
+  .visual {
+    width: 480px; min-height: 480px; border-radius: 16px; overflow: hidden;
+    position: relative; display: flex; flex-direction: column; justify-content: center;
+    padding: 48px; box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+  .visual.dark { background: #1A1A2E; }
+  .visual.white { background: #FFFFFF; color: #1A1A2E; }
+  .visual.teal { background: #009778; }
+  .visual.orange { background: #EE5525; }
+  .visual.split { background: linear-gradient(90deg, #2a2a3e 50%, #ffffff 50%); }
+  .visual.light-teal { background: #E0F5F0; color: #1A1A2E; }
+
+  .visual .accent-line {
+    position: absolute; bottom: 60px; left: 48px;
+    width: 80px; height: 4px; background: #EE5525; border-radius: 2px;
+  }
+  .visual .accent-line.teal { background: #009778; }
+
+  .visual .logo {
+    position: absolute; bottom: 20px; right: 24px;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; opacity: 0.6;
+  }
+  .visual .logo.white { color: #fff; }
+  .visual .logo.dark { color: #1A1A2E; }
+
+  .visual h2 {
+    font-size: 32px; font-weight: 900; line-height: 1.2; margin-bottom: 16px;
+  }
+  .visual h2.orange { color: #EE5525; }
+  .visual h2.teal { color: #009778; }
+  .visual h2.white { color: #fff; }
+
+  .visual .subtitle {
+    font-size: 16px; line-height: 1.6; opacity: 0.8;
+  }
+  .visual .subtitle.white { color: rgba(255,255,255,0.75); }
+  .visual .subtitle.dark { color: #555; }
+
+  .visual .tag {
+    display: inline-block; margin-top: 20px; padding: 6px 14px;
+    border-radius: 20px; font-size: 11px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .visual .tag.orange { background: #EE5525; color: #fff; }
+  .visual .tag.teal { background: #009778; color: #fff; }
+
+  /* Carousel mockup */
+  .carousel {
+    width: 480px; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+  .carousel-slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .carousel-slides::-webkit-scrollbar { height: 4px; }
+  .carousel-slides::-webkit-scrollbar-thumb { background: #EE5525; border-radius: 2px; }
+  .carousel-slide {
+    min-width: 480px; min-height: 480px; scroll-snap-align: start;
+    display: flex; flex-direction: column; justify-content: center; padding: 48px;
+    position: relative;
+  }
+  .carousel-dots {
+    display: flex; justify-content: center; gap: 6px; padding: 12px;
+    background: #1a1a2e;
+  }
+  .carousel-dots span {
+    width: 8px; height: 8px; border-radius: 50%; background: #333;
+  }
+  .carousel-dots span.active { background: #EE5525; }
+
+  /* Stats boxes */
+  .stats-row { display: flex; gap: 16px; margin-top: 24px; }
+  .stat-box {
+    flex: 1; background: rgba(255,255,255,0.08); border-radius: 12px;
+    padding: 20px; text-align: center;
+  }
+  .stat-box .num { font-size: 42px; font-weight: 900; color: #EE5525; }
+  .stat-box .desc { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+  /* Check items */
+  .check-item {
+    display: flex; align-items: flex-start; gap: 10px; margin: 8px 0;
+    font-size: 14px; line-height: 1.5;
+  }
+  .check-item .icon { color: #009778; font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+  /* Steps */
+  .step {
+    display: flex; align-items: center; gap: 16px; margin: 14px 0;
+  }
+  .step-num {
+    width: 36px; height: 36px; border-radius: 50%; background: #EE5525;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px; flex-shrink: 0;
+  }
+  .step-text h4 { font-size: 16px; font-weight: 700; }
+  .step-text p { font-size: 13px; opacity: 0.6; }
+
+  /* Split card */
+  .split-inner { display: flex; height: 100%; }
+  .split-left, .split-right {
+    flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px;
+  }
+  .split-left { color: #666; }
+  .split-right { color: #1A1A2E; }
+
+  /* Comparison */
+  .vs-panel { display: flex; min-height: 480px; }
+  .vs-left {
+    flex: 1; background: #2a2a3e; display: flex; flex-direction: column;
+    justify-content: center; padding: 36px; color: #666;
+  }
+  .vs-right {
+    flex: 1; background: #009778; display: flex; flex-direction: column;
+    justify-content: center; padding: 36px; color: #fff;
+  }
+  .vs-divider {
+    width: 4px; background: #EE5525;
+  }
+
+  /* Quote card */
+  .quote-marks { font-size: 64px; color: #EE5525; line-height: 0.5; margin-bottom: 16px; }
+  .quote-text { font-size: 18px; line-height: 1.6; font-style: italic; }
+  .quote-author { margin-top: 20px; font-size: 14px; color: #009778; font-weight: 700; font-style: normal; }
+
+  /* Copy section */
+  .copy-section {
+    width: 400px; background: #1a1a2e; border-radius: 16px; padding: 30px;
+    border: 1px solid #2a2a3e;
+  }
+  .copy-section h3 {
+    font-size: 14px; color: #EE5525; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 6px;
+  }
+  .copy-section .platform {
+    font-size: 11px; color: #009778; margin-bottom: 16px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .copy-section .copy-text {
+    font-size: 14px; color: #ccc; line-height: 1.7;
+    white-space: pre-wrap;
+  }
+  .copy-section .hashtags {
+    margin-top: 16px; font-size: 12px; color: #009778;
+  }
+
+  /* CTA button mockup */
+  .cta-btn {
+    display: inline-block; margin-top: 24px; padding: 12px 32px;
+    background: #009778; color: #fff; border-radius: 8px;
+    font-weight: 700; font-size: 14px; letter-spacing: 1px;
+  }
+  .cta-btn.orange { background: #EE5525; }
+
+  .scroll-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="campaign-header">
+  <h1>Social Media Campaign — English</h1>
+  <p>GEC SME Business Growth Program | Victor Antonio Methodology | 12 Posts + LinkedIn DM</p>
+</div>
+
+<!-- WEEK 1 -->
+<div class="week-label">Week 1 — Pain &amp; Awareness</div>
+
+<!-- Post 1: The Firefighter -->
+<div class="post-row">
+  <div class="visual dark">
+    <h2 class="white" style="font-size:28px;">You didn't start a business to become a full-time firefighter.</h2>
+    <p class="subtitle white" style="margin-top:20px;">Your business grew.<br>Your systems didn't.</p>
+    <div class="accent-line"></div>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 1 — The Firefighter</h3>
+    <div class="platform">LinkedIn · Facebook · Instagram</div>
+    <div class="copy-text">You didn't start a business to become a full-time firefighter.
+
+But here you are — solving every crisis, approving every decision, answering every call.
+
+Your business grew. Your systems didn't.
+
+Sound familiar? You're not alone. And there's a way out.
+
+Follow us this week — we're going to show you what it looks like.</div>
+    <div class="hashtags">#SMEGrowth #BusinessOwner #GEC</div>
+  </div>
+</div>
+
+<!-- Post 2: The Lonely CEO -->
+<div class="post-row">
+  <div class="carousel">
+    <div class="carousel-slides">
+      <div class="carousel-slide" style="background:#fff;">
+        <div class="quote-marks">"</div>
+        <h2 style="color:#1A1A2E;font-size:26px;">Your employees can't tell you the truth.</h2>
+      </div>
+      <div class="carousel-slide" style="background:#fff;">
+        <div class="quote-marks">"</div>
+        <h2 style="color:#1A1A2E;font-size:26px;">Your family doesn't understand the pressure.</h2>
+      </div>
+      <div class="carousel-slide" style="background:#009778;">
+        <h2 class="white" style="font-size:24px;">What if you had a room full of people who get it?</h2>
+        <p class="subtitle white" style="margin-top:16px;">15-20 CEOs. 13 mentors.<br>That's not networking. That's a lifeline.</p>
+        <div class="logo white">GEC</div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="active"></span><span></span><span></span>
+    </div>
+    <p class="scroll-hint">← scroll to see all slides →</p>
+  </div>
+  <div class="copy-section">
+    <h3>Post 2 — The Lonely CEO</h3>
+    <div class="platform">LinkedIn · Facebook — Carousel</div>
+    <div class="copy-text">The hardest part of running a business isn't the competition. It's having nobody to talk to.
+
+Your employees can't tell you the truth.
+Your family doesn't understand the pressure.
+Your accountant only sees the numbers, not the vision.
+
+What if you had a room full of people who get it? 15-20 CEOs facing the same battles. 13 mentors who've been there.
+
+That's not networking. That's a lifeline.</div>
+    <div class="hashtags">#Entrepreneurship #Leadership #GECBusiness</div>
+  </div>
+</div>
+
+<!-- Post 3: Growth Paradox -->
+<div class="post-row">
+  <div class="visual dark" style="text-align:center;">
+    <p style="font-size:14px;color:#888;text-transform:uppercase;letter-spacing:3px;margin-bottom:24px;">The Growth Paradox</p>
+    <p style="font-size:20px;margin:10px 0;"><span style="color:#EE5525;">More customers</span> <span style="color:#555;">=</span> <span style="color:#fff;">more chaos</span></p>
+    <p style="font-size:20px;margin:10px 0;"><span style="color:#EE5525;">More revenue</span> <span style="color:#555;">=</span> <span style="color:#fff;">more stress</span></p>
+    <p style="font-size:20px;margin:10px 0;"><span style="color:#EE5525;">More employees</span> <span style="color:#555;">=</span> <span style="color:#fff;">more problems</span></p>
+    <div style="width:60px;height:3px;background:#EE5525;margin:24px auto;"></div>
+    <p style="font-size:22px;color:#009778;font-weight:700;">Growing WITHOUT breaking is.</p>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 3 — Growth Paradox</h3>
+    <div class="platform">Instagram · LinkedIn — Reel or Static</div>
+    <div class="copy-text">The growth paradox:
+
+More customers = more chaos
+More revenue = more stress
+More employees = more problems
+
+Growing isn't the hard part.
+Growing WITHOUT breaking is.</div>
+    <div class="hashtags">#BusinessGrowth #SME #ScaleUp</div>
+  </div>
+</div>
+
+<!-- WEEK 2 -->
+<div class="week-label">Week 2 — Solution &amp; Differentiation</div>
+
+<!-- Post 4: Response Block Carousel -->
+<div class="post-row">
+  <div class="carousel">
+    <div class="carousel-slides">
+      <div class="carousel-slide" style="background:#1A1A2E;">
+        <h2 style="color:#EE5525;font-size:28px;">"I've done trainings before. They don't work."</h2>
+        <p class="subtitle white" style="margin-top:16px;">We hear this all the time.<br>And honestly? You're probably right.</p>
+      </div>
+      <div class="carousel-slide" style="background:#fff;">
+        <div class="check-item"><span class="icon">✔</span><span style="color:#1A1A2E;font-size:18px;font-weight:600;">You don't sit and listen.<br>You work ON your business.</span></div>
+      </div>
+      <div class="carousel-slide" style="background:#fff;">
+        <div class="check-item"><span class="icon">✔</span><span style="color:#1A1A2E;font-size:18px;font-weight:600;">13 mentors who built real companies.<br>Not professors.</span></div>
+      </div>
+      <div class="carousel-slide" style="background:#fff;">
+        <div class="check-item"><span class="icon">✔</span><span style="color:#1A1A2E;font-size:18px;font-weight:600;">Every module = a deliverable<br>you implement THAT WEEK.</span></div>
+      </div>
+      <div class="carousel-slide" style="background:#009778;">
+        <h2 class="white" style="font-size:24px;">You leave with a Growth Plan.<br>Not a certificate.</h2>
+        <p class="subtitle white" style="margin-top:16px;">67% of graduates increased revenue within 6 months.</p>
+        <div class="cta-btn orange" style="margin-top:24px;">APPLY NOW</div>
+        <div class="logo white">GEC</div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="active"></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="scroll-hint">← scroll to see all 5 slides →</p>
+  </div>
+  <div class="copy-section">
+    <h3>Post 4 — "Trainings Don't Work"</h3>
+    <div class="platform">LinkedIn · Facebook — Carousel (5 slides)</div>
+    <div class="copy-text">"I've done trainings before. They don't work."
+
+We hear this all the time. And honestly? You're probably right. Most trainings give you theory and leave you to figure out the rest.
+
+Here's why this is different:
+✔ You work ON your business every session
+✔ 13 mentors who built real companies
+✔ Every module = implement THAT WEEK
+✔ You leave with a Growth Plan, not a certificate
+
+Based on Goldman Sachs 10KSB model.
+67% increased revenue within 6 months.</div>
+    <div class="hashtags">#SMEGrowth #BusinessTransformation #GEC</div>
+  </div>
+</div>
+
+<!-- Post 5: Cost of NOT doing it -->
+<div class="post-row">
+  <div class="visual" style="background:linear-gradient(90deg, #1A1A2E 50%, #fff 50%);padding:0;">
+    <div style="display:flex;height:480px;">
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px;">
+        <p style="font-size:16px;color:#666;text-decoration:line-through;">Can I afford this?</p>
+      </div>
+      <div style="width:4px;background:#EE5525;"></div>
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px;">
+        <p style="font-size:22px;color:#EE5525;font-weight:900;">Can I afford NOT to?</p>
+        <p style="font-size:13px;color:#888;margin-top:16px;line-height:1.7;">One bad hire = 3-6 months salary<br>One wrong market move = one year<br>One missed opportunity = everything</p>
+        <div style="margin-top:24px;padding:8px 16px;background:#009778;color:#fff;border-radius:6px;display:inline-block;font-size:12px;font-weight:700;">19 WEEKS. 9 MODULES.</div>
+      </div>
+    </div>
+    <div class="logo dark" style="right:24px;">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 5 — Cost of NOT Doing It</h3>
+    <div class="platform">LinkedIn · Facebook · Instagram</div>
+    <div class="copy-text">The program costs less than one bad hire.
+
+One wrong market move costs you a year.
+One bad hire costs 3-6 months of salary.
+One missed opportunity costs... everything.
+
+The question isn't "Can I afford this?"
+The question is "Can I afford NOT to?"
+
+GEC SME Business Growth Program.
+19 weeks. 9 modules. One transformed business.</div>
+    <div class="hashtags">#ROI #BusinessInvestment #GEC</div>
+  </div>
+</div>
+
+<!-- Post 6: Mentor Spotlight -->
+<div class="post-row">
+  <div class="visual light-teal" style="text-align:left;">
+    <div class="quote-marks">"</div>
+    <p class="quote-text" style="color:#1A1A2E;">There is no unsellable product. There are only barriers, fears, and wrong communication — which can always be overcome with the right approach.</p>
+    <p class="quote-author">— Keti Khuntsaria</p>
+    <p style="font-size:12px;color:#555;margin-top:4px;">Sales & Negotiation Mentor</p>
+    <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:#009778;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;">KK</div>
+      <span style="font-size:12px;color:#009778;font-weight:600;">GEC SME Growth Program</span>
+    </div>
+    <div class="logo dark">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 6 — Mentor Spotlight</h3>
+    <div class="platform">Instagram · LinkedIn — Quote Card</div>
+    <div class="copy-text">"There is no unsellable product. There are only barriers, fears, and wrong communication — which can always be overcome with the right approach."
+
+— Keti Khuntsaria, Sales & Negotiation Mentor
+GEC SME Business Growth Program
+
+13 mentors. Real experience. Real results.</div>
+    <div class="hashtags">#Mentorship #SalesExcellence #GEC</div>
+  </div>
+</div>
+
+<!-- WEEK 3 -->
+<div class="week-label">Week 3 — Proof &amp; Urgency</div>
+
+<!-- Post 7: Goldman Sachs Stats -->
+<div class="post-row">
+  <div class="visual dark" style="text-align:center;">
+    <p style="font-size:12px;color:#888;text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;">Based on Goldman Sachs 10KSB</p>
+    <p style="font-size:16px;color:#fff;margin-bottom:24px;">This isn't theory. These are real numbers.</p>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="num">67%</div>
+        <div class="desc">increased revenue<br>within 6 months</div>
+      </div>
+      <div class="stat-box">
+        <div class="num" style="color:#009778;">47%</div>
+        <div class="desc">created new jobs<br>within 6 months</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">60%</div>
+        <div class="desc">do business with<br>each other</div>
+      </div>
+    </div>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 7 — Goldman Sachs Numbers</h3>
+    <div class="platform">LinkedIn · Facebook — Infographic</div>
+    <div class="copy-text">This isn't theory. These are real numbers.
+
+The Goldman Sachs 10,000 Small Businesses model:
+
+📊 67% increased revenue within 6 months
+📊 47% created new jobs within 6 months
+📊 60% of graduates do business with each other
+
+We've adapted this proven framework for the Georgian market. Same methodology. Local mentors. Local context.</div>
+    <div class="hashtags">#ProvenResults #SMEAccelerator #GEC</div>
+  </div>
+</div>
+
+<!-- Post 8: Here's What You Need to Do -->
+<div class="post-row">
+  <div class="visual dark">
+    <h2 class="white" style="font-size:26px;margin-bottom:32px;">Here's what you need to do.</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><h4>Apply</h4><p>Fill out the application at gecbusiness.com</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><h4>Get Selected</h4><p>We review your business and schedule an interview</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><h4>Transform</h4><p>Join the next cohort and build your growth machine</p></div>
+    </div>
+    <div class="cta-btn" style="margin-top:28px;">APPLY NOW →</div>
+    <p style="font-size:12px;color:#555;margin-top:16px;">15-20 spots per cohort. Selection is rigorous.</p>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 8 — "Here's What You Need to Do"</h3>
+    <div class="platform">LinkedIn · Facebook · Instagram</div>
+    <div class="copy-text">Here's what you need to do.
+
+1️⃣ Apply — Fill out the application at gecbusiness.com
+2️⃣ Get Selected — We review your business and schedule an interview
+3️⃣ Transform — Join the next cohort and build your growth machine
+
+15-20 spots per cohort. Selection is rigorous.
+
+Don't wait for the "right time."
+The right time was 6 months ago.</div>
+    <div class="hashtags">#ApplyNow #BusinessGrowth #GEC</div>
+  </div>
+</div>
+
+<!-- Post 9: EBRD Trust -->
+<div class="post-row">
+  <div class="visual white">
+    <div style="background:#009778;color:#fff;display:inline-block;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:20px;">EBRD ASB ACCREDITED PARTNER</div>
+    <h2 style="color:#1A1A2E;font-size:22px;">When we say we can help your business grow, it's not just talk.</h2>
+    <p style="color:#1A1A2E;font-size:16px;font-weight:700;margin-top:8px;">It's verified.</p>
+    <div style="margin-top:24px;">
+      <div class="check-item"><span class="icon">✅</span><span style="color:#1A1A2E;">International quality standards</span></div>
+      <div class="check-item"><span class="icon">✅</span><span style="color:#1A1A2E;">Proven methodology</span></div>
+      <div class="check-item"><span class="icon">✅</span><span style="color:#1A1A2E;">Trusted by world's leading development institutions</span></div>
+    </div>
+    <div class="logo dark">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 9 — EBRD Trust Badge</h3>
+    <div class="platform">LinkedIn — Announcement</div>
+    <div class="copy-text">GEC is an accredited partner of the European Bank for Reconstruction and Development's Advice for Small Business program.
+
+What that means for you:
+✅ International quality standards
+✅ Proven methodology
+✅ Trusted by the world's leading development institutions
+
+When we say we can help your business grow, it's not just talk. It's verified.</div>
+    <div class="hashtags">#EBRD #QualityAssurance #TrustedPartner #GEC</div>
+  </div>
+</div>
+
+<!-- WEEK 4 -->
+<div class="week-label">Week 4 — Close &amp; FOMO</div>
+
+<!-- Post 10: Limited Spots -->
+<div class="post-row">
+  <div class="visual orange" style="text-align:center;">
+    <h2 class="white" style="font-size:40px;">15-20 SPOTS.<br>ONE COHORT.</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:15px;margin-top:20px;line-height:1.7;">This isn't a webinar with 500 people.<br>This is a curated group of business owners,<br>selected through a 3-step process,<br>working shoulder to shoulder for 19 weeks.</p>
+    <div class="cta-btn" style="background:#fff;color:#EE5525;margin-top:28px;">APPLY BEFORE IT'S TOO LATE</div>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 10 — Limited Spots</h3>
+    <div class="platform">All Channels — Urgency</div>
+    <div class="copy-text">15-20 spots. One cohort.
+
+This isn't a webinar with 500 people.
+This is a curated group of business owners, selected through a 3-step process, working shoulder to shoulder for 19 weeks.
+
+With 13 mentors. 1-on-1 guidance.
+And a growth plan you can take to a bank.
+
+If you're serious about scaling your business, apply now.</div>
+    <div class="hashtags">#LastChance #LimitedSpots #GEC</div>
+  </div>
+</div>
+
+<!-- Post 11: The Decision -->
+<div class="post-row">
+  <div class="carousel" style="border-radius:16px;overflow:hidden;">
+    <div class="vs-panel">
+      <div class="vs-left">
+        <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;color:#555;">6 months from now</p>
+        <p style="font-size:20px;line-height:1.6;">Still firefighting.<br>Still guessing.<br>Still alone.</p>
+      </div>
+      <div class="vs-divider"></div>
+      <div class="vs-right">
+        <p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;opacity:0.8;">6 months from now</p>
+        <p style="font-size:20px;line-height:1.6;font-weight:700;">Systems running.<br>Team empowered.<br>Growth on track.</p>
+      </div>
+    </div>
+    <div style="background:#1A1A2E;padding:16px;text-align:center;">
+      <p style="font-size:16px;"><span style="color:#888;">The difference?</span> <span style="color:#EE5525;font-weight:700;">19 weeks.</span></p>
+    </div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 11 — The Decision</h3>
+    <div class="platform">LinkedIn · Instagram — Split Panel</div>
+    <div class="copy-text">6 months from now, you'll be in one of two places:
+
+LEFT: Still firefighting. Still guessing. Still alone.
+RIGHT: Systems running. Team empowered. Growth on track.
+
+Same business. Same market. Different decisions.
+
+The difference? 19 weeks.</div>
+    <div class="hashtags">#BusinessDecision #GrowthMindset #GEC</div>
+  </div>
+</div>
+
+<!-- Post 12: We Believe -->
+<div class="post-row">
+  <div class="visual teal" style="text-align:center;">
+    <h2 class="white" style="font-size:24px;line-height:1.5;">We believe Georgian businesses<br>don't need more advice.</h2>
+    <p style="color:rgba(255,255,255,0.9);font-size:20px;margin-top:16px;font-weight:700;">They need a system.<br>A network. A plan.</p>
+    <div style="width:60px;height:3px;background:#fff;margin:24px auto;opacity:0.5;"></div>
+    <p style="color:rgba(255,255,255,0.7);font-size:14px;">That's what we built.</p>
+    <p style="color:#fff;font-size:16px;font-weight:700;margin-top:20px;">GEC SME Business Growth Program</p>
+    <div class="cta-btn orange" style="margin-top:20px;">gecbusiness.com</div>
+    <div class="logo white">GEC</div>
+  </div>
+  <div class="copy-section">
+    <h3>Post 12 — We Believe</h3>
+    <div class="platform">All Channels — Brand Statement</div>
+    <div class="copy-text">We believe Georgian businesses don't need more advice.
+They need a system. A network. A plan.
+
+That's what we built.
+
+GEC SME Business Growth Program.
+Applications open now.
+
+gecbusiness.com</div>
+    <div class="hashtags">#GEC #YourBusinessAssistant #Georgia</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- COMMENT SYSTEM -->
+<style>
+  .comment-section {
+    max-width: 960px; margin: 20px auto; padding: 0 20px;
+  }
+  .comment-box {
+    background: #1e1e30; border: 1px solid #2a2a3e; border-radius: 12px;
+    padding: 20px; margin: 8px 0;
+  }
+  .comment-box h4 {
+    color: #EE5525; font-size: 13px; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 12px;
+  }
+  .comment-box .comment-form {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .comment-box input[type="text"] {
+    background: #12121f; border: 1px solid #333; border-radius: 6px;
+    padding: 10px 14px; color: #fff; font-size: 14px; width: 160px;
+    font-family: inherit;
+  }
+  .comment-box textarea {
+    background: #12121f; border: 1px solid #333; border-radius: 6px;
+    padding: 10px 14px; color: #fff; font-size: 14px; flex: 1; min-width: 300px;
+    min-height: 40px; max-height: 120px; resize: vertical; font-family: inherit;
+  }
+  .comment-box input:focus, .comment-box textarea:focus {
+    outline: none; border-color: #009778;
+  }
+  .comment-box button {
+    background: #009778; color: #fff; border: none; border-radius: 6px;
+    padding: 10px 20px; font-size: 13px; font-weight: 600; cursor: pointer;
+    letter-spacing: 1px; text-transform: uppercase; font-family: inherit;
+  }
+  .comment-box button:hover { background: #00b890; }
+  .comment-list { margin-top: 12px; }
+  .comment-item {
+    background: #12121f; border-radius: 8px; padding: 12px 16px; margin: 6px 0;
+    border-left: 3px solid #009778;
+  }
+  .comment-item .meta {
+    font-size: 11px; color: #666; margin-bottom: 4px;
+  }
+  .comment-item .meta .name { color: #009778; font-weight: 600; }
+  .comment-item .text { font-size: 14px; color: #ccc; line-height: 1.5; }
+
+  /* Floating comment toggle */
+  .comment-toggle {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    background: #EE5525; color: #fff; border: none; border-radius: 50%;
+    width: 56px; height: 56px; font-size: 24px; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(238,85,37,0.4); display: flex;
+    align-items: center; justify-content: center;
+  }
+  .comment-toggle:hover { background: #ff6633; transform: scale(1.05); }
+  .comment-toggle .badge {
+    position: absolute; top: -4px; right: -4px; background: #009778;
+    color: #fff; font-size: 11px; font-weight: 700; border-radius: 10px;
+    padding: 2px 7px; min-width: 18px; text-align: center;
+  }
+
+  .comments-panel {
+    position: fixed; bottom: 90px; right: 20px; z-index: 999;
+    width: 420px; max-height: 70vh; overflow-y: auto;
+    background: #1a1a2e; border: 1px solid #2a2a3e; border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5); padding: 24px;
+    display: none;
+  }
+  .comments-panel.open { display: block; }
+  .comments-panel h3 {
+    color: #fff; font-size: 18px; margin-bottom: 4px;
+  }
+  .comments-panel .subtitle {
+    color: #666; font-size: 12px; margin-bottom: 16px;
+  }
+  .comments-panel .section-label {
+    color: #EE5525; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 16px; margin-bottom: 6px;
+    padding-top: 12px; border-top: 1px solid #2a2a3e;
+  }
+  .comments-panel .section-label:first-of-type { border-top: none; padding-top: 0; }
+</style>
+
+<button class="comment-toggle" onclick="toggleComments()" title="Comments">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="badge" id="commentCount" style="display:none;">0</span>
+</button>
+
+<div class="comments-panel" id="commentsPanel">
+  <h3>Team Comments</h3>
+  <p class="subtitle">Leave feedback on any section</p>
+
+  <div style="margin:16px 0;">
+    <input type="text" id="commenterName" placeholder="Your name"
+           style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;width:100%;margin-bottom:8px;font-family:inherit;"
+           oninput="localStorage.setItem('gec_reviewer_name', this.value)">
+    <div style="display:flex;gap:8px;">
+      <select id="commentSection"
+              style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;flex:1;font-family:inherit;">
+        <option value="general">General</option>
+      </select>
+    </div>
+    <textarea id="commentText" placeholder="Your comment..."
+              style="background:#12121f;border:1px solid #333;border-radius:6px;padding:8px 12px;color:#fff;font-size:13px;width:100%;min-height:60px;margin-top:8px;resize:vertical;font-family:inherit;"></textarea>
+    <button onclick="postComment()"
+            style="background:#009778;color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-top:8px;width:100%;text-transform:uppercase;letter-spacing:1px;font-family:inherit;">
+      Submit Comment
+    </button>
+  </div>
+
+  <div id="commentsList"></div>
+</div>
+
+<script>
+const API = '/api/comments';
+const PAGE = location.pathname.split('/').pop() || 'index.html';
+
+// Restore saved name
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('gec_reviewer_name');
+  if (saved) document.getElementById('commenterName').value = saved;
+  detectSections();
+  loadComments();
+});
+
+function detectSections() {
+  const sel = document.getElementById('commentSection');
+  // Find slide labels, post titles, week labels
+  const markers = document.querySelectorAll('.week-label, .copy-section h3, [class*="slide"]');
+  const seen = new Set(['general']);
+
+  // For presentation pages, detect by slide numbers
+  const slideLabels = document.querySelectorAll('div[style*="position:relative"]');
+  let slideNum = 0;
+  slideLabels.forEach(el => {
+    const txt = el.textContent.trim();
+    if (txt.startsWith('Slide')) {
+      slideNum++;
+      const label = 'Slide ' + slideNum;
+      if (!seen.has(label)) {
+        seen.add(label);
+        const opt = document.createElement('option');
+        opt.value = label;
+        opt.textContent = label;
+        sel.appendChild(opt);
+      }
+    }
+  });
+
+  // For campaign pages, detect post titles
+  document.querySelectorAll('.copy-section h3').forEach(el => {
+    const label = el.textContent.trim();
+    if (label && !seen.has(label)) {
+      seen.add(label);
+      const opt = document.createElement('option');
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    }
+  });
+
+  // For index page
+  if (seen.size <= 1) {
+    ['Presentations', 'Social Media Campaign', 'Overall'].forEach(label => {
+      const opt = document.createElement('option');
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+  }
+}
+
+async function loadComments() {
+  try {
+    const res = await fetch(API + '?page=' + encodeURIComponent(PAGE));
+    const comments = await res.json();
+    renderComments(comments);
+  } catch(e) {
+    console.log('Could not load comments', e);
+  }
+}
+
+function renderComments(comments) {
+  const list = document.getElementById('commentsList');
+  const badge = document.getElementById('commentCount');
+
+  if (comments.length > 0) {
+    badge.style.display = 'block';
+    badge.textContent = comments.length;
+  } else {
+    badge.style.display = 'none';
+  }
+
+  // Group by section
+  const groups = {};
+  comments.forEach(c => {
+    const s = c.section || 'general';
+    if (!groups[s]) groups[s] = [];
+    groups[s].push(c);
+  });
+
+  let html = '';
+  for (const [section, items] of Object.entries(groups)) {
+    html += '<div class="section-label">' + section + '</div>';
+    items.forEach(c => {
+      html += '<div class="comment-item">'
+        + '<div class="meta"><span class="name">' + escHtml(c.name) + '</span> &middot; ' + escHtml(c.time) + '</div>'
+        + '<div class="text">' + escHtml(c.text) + '</div>'
+        + '</div>';
+    });
+  }
+
+  list.innerHTML = html || '<p style="color:#555;font-size:13px;text-align:center;padding:20px;">No comments yet. Be the first!</p>';
+}
+
+async function postComment() {
+  const name = document.getElementById('commenterName').value.trim() || 'Anonymous';
+  const section = document.getElementById('commentSection').value;
+  const text = document.getElementById('commentText').value.trim();
+
+  if (!text) return;
+
+  try {
+    await fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ page: PAGE, section, name, text })
+    });
+    document.getElementById('commentText').value = '';
+    loadComments();
+  } catch(e) {
+    alert('Could not save comment. Please try again.');
+  }
+}
+
+function toggleComments() {
+  document.getElementById('commentsPanel').classList.toggle('open');
+}
+
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+</script>
+
+</body></html>
