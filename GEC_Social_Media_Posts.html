@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEC SME Program — Social Media Content Pack</title>
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --navy-mid: #1A2E45;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F2;
+      --light-gray: #EBEBEB;
+      --mid-gray: #888;
+      --text: #1A1A1A;
+
+      --pillar-1: #1E3A5F;
+      --pillar-2: #2D4A22;
+      --pillar-3: #3D2A5F;
+      --pillar-4: #5F2A2A;
+      --pillar-5: #1A4A4A;
+
+      --pillar-1-light: #EAF0F9;
+      --pillar-2-light: #EBF3E8;
+      --pillar-3-light: #F0EAF9;
+      --pillar-4-light: #F9EAEA;
+      --pillar-5-light: #E8F3F3;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 48px 40px 36px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .site-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .site-header .sub {
+      font-size: 14px;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .site-header .meta {
+      margin-top: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── LAYOUT ── */
+    .layout {
+      display: flex;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
+    }
+    .sidebar h2 {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .sidebar-pillar {
+      margin-bottom: 20px;
+    }
+    .sidebar-pillar-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 8px;
+    }
+    .sidebar ul li {
+      margin-bottom: 4px;
+    }
+    .sidebar ul li a {
+      font-size: 13px;
+      color: var(--navy-mid);
+      text-decoration: none;
+      display: block;
+      padding: 3px 6px;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .sidebar ul li a:hover {
+      background: var(--light-gray);
+    }
+
+    /* ── MAIN ── */
+    .main { flex: 1; min-width: 0; }
+
+    /* ── POST CARD ── */
+    .post-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--light-gray);
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .post-card-header {
+      padding: 20px 28px 16px;
+      border-bottom: 1px solid var(--light-gray);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .post-number {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--mid-gray);
+      min-width: 60px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .tag-pillar-1 { background: var(--pillar-1-light); color: var(--pillar-1); }
+    .tag-pillar-2 { background: var(--pillar-2-light); color: var(--pillar-2); }
+    .tag-pillar-3 { background: var(--pillar-3-light); color: var(--pillar-3); }
+    .tag-pillar-4 { background: var(--pillar-4-light); color: var(--pillar-4); }
+    .tag-pillar-5 { background: var(--pillar-5-light); color: var(--pillar-5); }
+
+    .tag-platform { background: #F0F4FF; color: #2D4A9F; }
+    .tag-format { background: #FFF8E8; color: #7A5A00; }
+
+    .post-title {
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 28px 8px;
+      color: var(--navy);
+    }
+
+    /* ── IMAGE DESCRIPTION ── */
+    .image-desc {
+      margin: 0 28px 20px;
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .image-desc .label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .image-desc p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* ── CAPTIONS ── */
+    .captions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .caption-block {
+      padding: 20px 28px 24px;
+    }
+
+    .caption-block:first-child {
+      border-right: 1px solid var(--light-gray);
+    }
+
+    .caption-block .lang-label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--mid-gray);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .caption-block p {
+      font-size: 14px;
+      line-height: 1.75;
+      white-space: pre-wrap;
+      color: var(--text);
+    }
+
+    /* ── STORY CARD ── */
+    .story-group {
+      padding: 0 28px 24px;
+    }
+    .story-item {
+      background: var(--off-white);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .story-item .story-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--mid-gray);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .story-item h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .story-item p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .story-image-desc {
+      font-size: 13px;
+      color: var(--mid-gray);
+      font-style: italic;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--light-gray);
+    }
+
+    /* ── HASHTAGS ── */
+    .hashtag-row {
+      padding: 14px 28px 20px;
+      border-top: 1px solid var(--light-gray);
+      background: var(--off-white);
+    }
+    .hashtag-row .label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--mid-gray);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .hashtags {
+      font-size: 13px;
+      color: #2D4A9F;
+      line-height: 1.8;
+    }
+
+    /* ── PILLAR DIVIDER ── */
+    .pillar-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 32px 0 24px;
+    }
+    .pillar-divider .line { flex: 1; height: 1px; background: var(--light-gray); }
+    .pillar-divider .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      .sidebar { display: none; }
+      .layout { padding: 0; }
+      .post-card { page-break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+      .captions { grid-template-columns: 1fr 1fr; }
+      body { background: white; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; position: static; }
+      .captions { grid-template-columns: 1fr; }
+      .caption-block:first-child { border-right: none; border-bottom: 1px solid var(--light-gray); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div style="max-width:1300px; margin:0 auto; padding:0 24px;">
+    <h1>GEC SME ბიზნეს ამაღლების პროგრამა</h1>
+    <div class="sub">Social Media Content Pack — Cohort 1, June 11 2026</div>
+    <div class="meta">14 posts · 5 pillars · Facebook · Instagram · LinkedIn · Ready to publish</div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <h2>Jump to Post</h2>
+
+    <div class="sidebar-pillar">
+      <span class="sidebar-pillar-label tag tag-pillar-1">Pillar 1 — Problem Framing</span>
+      <ul>
+        <li><a href="#post-1">01 — The Founder Bottleneck</a></li>
+        <li><a href="#post-2">02 — Courses Didn't Work</a></li>
+        <li><a href="#post-3">03 — Growth Plateau Data</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-pillar">
+      <span class="sidebar-pillar-label tag tag-pillar-2">Pillar 2 — Mentor Credibility</span>
+      <ul>
+        <li><a href="#post-4">04 — The Room (Full Roster)</a></li>
+        <li><a href="#post-5">05 — George Simongulashvili</a></li>
+        <li><a href="#post-6">06 — Iro Tsagareishvili</a></li>
+        <li><a href="#post-7">07 — Ia Tsulaia</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-pillar">
+      <span class="sidebar-pillar-label tag tag-pillar-3">Pillar 3 — Program Mechanics</span>
+      <ul>
+        <li><a href="#post-8">08 — 40 Weeks Timeline</a></li>
+        <li><a href="#post-9">09 — The 95 Hours</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-pillar">
+      <span class="sidebar-pillar-label tag tag-pillar-4">Pillar 4 — Proof / Benchmark</span>
+      <ul>
+        <li><a href="#post-10">10 — Goldman Sachs 10KSB</a></li>
+        <li><a href="#post-11">11 — EU4Georgia Stat</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-pillar">
+      <span class="sidebar-pillar-label tag tag-pillar-5">Pillar 5 — Application Urgency</span>
+      <ul>
+        <li><a href="#post-12">12 — Applications Open</a></li>
+        <li><a href="#post-13">13 — Story Series (3)</a></li>
+        <li><a href="#post-14">14 — Founding Cohort (LI)</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PILLAR 1 — PROBLEM FRAMING -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="pillar-divider">
+      <div class="line"></div>
+      <span class="label tag tag-pillar-1">Pillar 1 — Problem Framing</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- POST 1 -->
+    <article class="post-card" id="post-1">
+      <div class="post-card-header">
+        <span class="post-number">Post 01</span>
+        <span class="tag tag-pillar-1">Problem Framing</span>
+        <span class="tag tag-platform">FB / IG</span>
+        <span class="tag tag-format">Feed Post</span>
+      </div>
+
+      <h2 class="post-title">The Founder Bottleneck — ბიზნესი მხოლოდ შენზეა გათვლილი?</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Split-panel composition, 1:1 ratio. Left panel (50%): dark navy background. A tangled web of thin white arrows all converging on a single filled circle in the center — the circle is labeled "შენ" in small white text. The arrows come from small icons: phone, contract, team, delivery, finance, client. The visual feeling is pressure, overwhelm — but rendered very cleanly, not chaotic. Left panel label at bottom: "ახლა." Right panel (50%): same navy, but the arrows now radiate outward from a central circle to distinct labeled nodes (გუნდი, პროცესი, სტრატეგია, კლიენტი). Orderly, calm, spacious. Right panel label at bottom: "სად უნდა იყო." Thin gold dividing line between panels. GEC logo + program name small at bottom center in gold. Text overlay at top center spanning both panels: "ბიზნესის ყველა გადაწყვეტილება შენ გეკითხება?"</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ბიზნესში ყველა გადაწყვეტილება შენს ნებართვას ელოდება?
+
+ეს ნაცნობი სიტუაციაა. ათი, თხუთმეტი, ოც წელია ბიზნეს-მფლობელი ხარ. ჩვენ ვიცი, როგორ დაიწყო — ყველაფერი შენ გასწევდი, რადგან ასე სწრაფი იყო. შემდეგ ჩამოვიდა გუნდი. შემდეგ კლიენტები, რომლებიც მხოლოდ შენ ენდობოდნენ. შემდეგ პრობლემები, რომელთა გადაჭრაც სხვას არ შეეძლო.
+
+და ახლა? ყოველი ხარჯი — შენი ხელმოწერა. ყოველი კლიენტის ჩივილი — შენი ტელეფონი. ყოველი გადაწყვეტილება — შენი დრო.
+
+ბიზნესი გაიზარდა. შენ — ჩარჩი.
+
+ეს ნიჭის ნაკლოვანება არ არის. ეს სტრუქტურის ხარვეზია. და ის სხვაგვარად წყდება — ვიდრე კიდევ ერთი ტრენინგი.
+
+GEC SME განვითარების პროგრამა. კოჰორტი 1 — 20 ადგილი. 11 ივნისი.</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>Is every decision in your business waiting on you?
+
+You built this company because you were the best at the work. Then the team came. Then clients who only trusted you. Then problems no one else could solve.
+
+Now you are the bottleneck. Not because you are weak — because the structure was never built to carry a company without you at the center.
+
+That is not a talent problem. That is a systems problem. And it has a different solution.
+
+Cohort 1 — 20 spots. June 11, 2026.</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#ბიზნესსკოლა #GEC #ბიზნესი #მეწარმეობა #GECSMEProgram #ბიზნესანაბეჭდება #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #Mentorship</div>
+      </div>
+    </article>
+
+    <!-- POST 2 -->
+    <article class="post-card" id="post-2">
+      <div class="post-card-header">
+        <span class="post-number">Post 02</span>
+        <span class="tag tag-pillar-1">Problem Framing</span>
+        <span class="tag tag-platform">FB</span>
+        <span class="tag tag-format">Feed Post</span>
+      </div>
+
+      <h2 class="post-title">ტრენინგებმა არ გაამართლა — "Courses Didn't Work"</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Slightly moody, editorial photo-style composition on a dark warm-toned background (#1A1410). Center: a half-open desk drawer. Inside, stacked loosely: several A4 certificates — visible details include decorative borders, seals, official-looking logos. They are not framed. They are not displayed. They are simply filed away. One certificate is slightly crumpled at the corner. A leather-bound notebook sits on top of the pile, closed. No people in frame. The lighting is from above, slightly warm, creating soft shadows inside the drawer. The mood is honest, not dramatic — this is a familiar scene. Small text overlay in bottom-left corner in white, serif font: "ფული — გადახდილი. ცოდნა — მიღებული. ბიზნესი — იმავე ადგილას." GEC logo small at bottom-right in muted gold.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ყველაფერი სცადე.
+
+EU4Business-ში იყავი. Enterprise Georgia-ს პროგრამაშიც. კონსულტანტი მოიყვანე — ლამაზი პრეზენტაცია გამოიტანა. შეიძლება EBRD-ის გრანტიც აიღე. სერტიფიკატები — გაქვს. ცოდნა — გაქვს. ბიზნესი კი — იქვეა.
+
+ეს შენი ბრალი არ არის.
+
+ზოგადი კურიკულუმი ზოგადი შედეგს იძლევა. ლექცია ლამაზია — ბაზარში მაგრამ შენს კონკრეტულ ხარვეზს ვერ ეხება. სიმულაცია მოსახერხებელია — შენი კლიენტის პრობლემა კი სხვაა.
+
+სხვა ღირებულებაა, როცა ვიღაც ეუბნება: "ჩემი ბიზნესი ზუსტად ასე იყო. აი, სად გავაწყდი — აი, სად გავიარე." ეს პრაქტიკოსია. ლექტორი კი — სხვა.
+
+GEC SME განვითარების პროგრამაში 13 მენტორი მუშაობს. 13 ადამიანი, ვინც ეს გზა თვითონ გაიარა.
+
+განაცხადი: [APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>You attended the trainings. You joined the EU program. You hired the consultant.
+
+Two years later — the business is in the same place.
+
+Not because you are slow. Not because the programs were poor. Because knowledge that is not tied to your specific problem does not translate into a market result.
+
+A lecture is clean. A simulation is convenient. But someone who says "I was in this exact situation — here is how I moved through it" — that is a different category of value.
+
+That is why every mentor in this program is a practitioner, not a trainer.
+
+Apply: [APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #SME #BusinessGrowth #Georgia #BusinessAcceleration #Mentorship</div>
+      </div>
+    </article>
+
+    <!-- POST 3 -->
+    <article class="post-card" id="post-3">
+      <div class="post-card-header">
+        <span class="post-number">Post 03</span>
+        <span class="tag tag-pillar-1">Problem Framing</span>
+        <span class="tag tag-platform">LinkedIn</span>
+        <span class="tag tag-format">Feed Post — Bilingual</span>
+      </div>
+
+      <h2 class="post-title">The Growth Plateau — Data Point</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Clean, minimal stat card. Navy background (#0D1B2A). Centered layout. Top: "89%" in very large, bold gold font (72px). Below in white, medium weight: "ქართული მცირე და საშუალო ბიზნესისა, რომელსაც არ აქვს ფორმალური მართვის სისტემა." Second line in English, smaller: "of Georgian SMEs operate without a formal management system." Bottom attribution in small gray text: "Source: ISET / World Bank, 2023." Thin gold horizontal rule separating stat from attribution. GEC logo + program name at very bottom in gold. The layout is pure data — no decorative elements, no gradients. Font is clean sans-serif throughout. Total visual: looks like a Bloomberg terminal card meets premium consulting deck.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption (primary) + English (below)</span>
+          <p>ქართული SME-ების 89%-ს ფორმალური მართვის სისტემა არ აქვს.
+
+ISET-ისა და World Bank-ის 2023 წლის მონაცემები. ეს ციფრი ვერ-მომდინარე ბიზნესებს კი არ ეხება — ზუსტად საპირისპიროს. ეხება იმ ბიზნეს-მფლობელებს, ვინც ინტუიციით, გამოცდილებით და პიროვნული ავტორიტეტით 15–20 წელი იბრძოდა, GEL 1.5M–10M ბრუნვაზე ავიდა — და ახლა ჭერს ხედავს.
+
+ეს ჭერი სახელი აქვს: სტრუქტურის ხარვეზი.
+
+გეგმა — თავშია, ქაღალდზე არ არის. სუქცესიაზე ფიქრობ — კარავი არ გაქვს. ინვესტიციაზე გიყვებიან — ბიზნესი კი არ არის მომზადებული. ოპერაციები — შენ მიბმული.
+
+ეს სიტუაცია ნელა, გაუცნობიერებლად კარგავს კონკურენტუნარიანობას.
+
+GEC SME განვითარების პროგრამა ამ სტრუქტურას ქმნის — 40 კვირაში, 13 მენტორთან ერთად, 20 კომპანიასთან.
+
+კოჰორტი 1. 11 ივნისი. 20 ადგილი.
+
+―
+
+89% of Georgian SMEs have no formal management system. (Source: ISET / World Bank, 2023)
+
+This is not a talent problem. This is a systems gap — and it compounds quietly over years. The businesses most affected are not failing ones. They are the ones that grew on instinct, reached GEL 1.5M–10M in revenue, and now face a ceiling they cannot identify, let alone break through.
+
+GEC SME Business Acceleration Program builds that structure. 40 weeks. 13 practitioner mentors. 20 companies per cohort.
+
+Cohort 1. June 11, 2026. 20 spots.</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption (LinkedIn-standalone)</span>
+          <p>89% of Georgian SMEs operate without a formal management system.
+
+That number comes from a joint ISET / World Bank study (2023). It describes businesses that grew on instinct, reached real revenue — GEL 1.5M to 10M — and now face a ceiling they cannot name.
+
+These are not failing businesses. These are businesses that outgrew their original structure without building a new one.
+
+The pattern is consistent: the founder is still the operating system. Succession is a private worry. Investment readiness is discussed but never structured. Growth plateaued — not because the market dried up, but because the internal architecture was never upgraded.
+
+This is the category of company GEC SME Business Acceleration Program was designed for.
+
+40 weeks. 13 practitioner mentors. Cohort 1 opens June 11, 2026. Twenty companies.
+
+If this is your business — this is worth reading carefully.
+
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #ბიზნესმენები</div>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PILLAR 2 — MENTOR CREDIBILITY -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="pillar-divider">
+      <div class="line"></div>
+      <span class="label tag tag-pillar-2">Pillar 2 — Mentor Credibility</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- POST 4 -->
+    <article class="post-card" id="post-4">
+      <div class="post-card-header">
+        <span class="post-number">Post 04</span>
+        <span class="tag tag-pillar-2">Mentor Credibility</span>
+        <span class="tag tag-platform">IG / FB</span>
+        <span class="tag tag-format">Carousel (or single feed)</span>
+      </div>
+
+      <h2 class="post-title">The Room — Full Roster Reveal (ეს ოთახი)</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Single landscape or square card on deep navy (#0D1B2A). Headline centered at top: "ეს ოთახი / This Room" — "ეს ოთახი" in gold (38px bold), "/ This Room" in white (28px regular). Below: a clean typographic grid of 13 mentor entries. Each entry is 2 lines: Line 1 — mentor name in white, 16px, semibold. Line 2 — one credential in gold-muted (#A8896A), 13px, regular. Entries are arranged in a 2-column grid with generous line spacing. A thin gold horizontal rule separates the headline from the grid. At the bottom: "160+ წელი. 13 პრაქტიკოსი. 1 კოჰორტი." in white, centered, 14px. GEC logo bottom-center. The entire card has no photos, no icons — pure typography, premium and dense.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ოთახი ყველაფერს წყვეტს.
+
+ბიზნეს-განვითარებაში სწავლა ბევრი ადგილიდანაა შესაძლებელი — კურსები, ვებინარები, სახელმძღვანელოები. ყველა თავისი ადგილია. მაგრამ არის ოთახები, რომლებშიც ყოფნა სხვა კატეგორიაა.
+
+GEC SME განვითარების პროგრამაში ოთახი ასე გამოიყურება:
+
+— გიორგი სიმონგულაშვილი · Angel Investor, Axel · GEC პარტნიორი · 20+ წელი
+— ია წულაია · HR & OD · 100+ პროექტი · GIZ, EBRD, NATO · 20+ წელი
+— რომან ცუცქირიძე · CPT (ISPI) · Senior PM, Kaizen/Tetra Tech · 20+ წელი
+— ეკა ლეონიძე · CPT · Deloitte · Chemonics · MA ISS The Hague · 15+ წელი
+— თეა გოროზია · Founder, ABGA · Head of Marketing, NIKS Holding · 15+ წელი
+— ნინო კვაჭანტირაძე · Managing Partner, MINDset · DDB Georgia · Exeter University
+— ქეთი ხუნწარია · Angel Investor · Axel · Sales & Pricing · 12+ წელი
+— დავით ციცქიშვილი · Founder, Tsitsko Holding · EBAN · Forbes Georgia · 15+ წელი
+— ირო ცაგარეიშვილი · MD, Axel · Forbes 30 Under 30 Georgia · 20+ deals
+— დეა ჩხაიძე · ICF PCC · Creative Leadership Hub · Former Majid Al Futtaim, UAE
+— გიორგი ჩიქვილაძე · Finance & Ops, GEC · World Bank · Loughborough University
+— ბექა ბაიაშვილი · Strategy Lead, GEC · PhD candidate, Economics, TSU
+— ლია კერესელიძე · Export & Digital, GEC · $5M+ გარიგება · 23 ქვეყანა · 9 ინდუსტრია
+
+160+ წელი. 13 პრაქტიკოსი. ერთ ოთახში — 40 კვირის განმავლობაში.
+
+ამ 13 ადამიანის კერძოდ კონსულტაციაზე წაყვანა ფინანსურად სხვა კატეგორიაა. პროგრამა — სხვა ამბავია.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>This room is different.
+
+Most programs have trainers. GEC SME Business Acceleration has this:
+
+— George Simongulashvili · Angel Investor, Axel · GEC Partner · 20+ years
+— Ia Tsulaia · HR & OD · 100+ projects · GIZ, EBRD, NATO · 20+ years
+— Roman Tsutskiridze · CPT (ISPI) · Senior PM, Kaizen/Tetra Tech · 20+ years
+— Eka Leonidze · CPT · Deloitte · Chemonics · MA ISS The Hague · 15+ years
+— Tea Gorozia · Founder, ABGA · Head of Marketing, NIKS Holding · 15+ years
+— Nino Kvachantiradze · Managing Partner, MINDset · DDB Georgia · Exeter University
+— Keti Khuntsaria · Angel Investor · Axel · Sales & Pricing · 12+ years
+— Davit Tsitskishvili · Founder, Tsitsko Holding · EBAN · Forbes Georgia · 15+ years
+— Iro Tsagareishvili · MD, Axel · Forbes 30 Under 30 Georgia · 20+ deals
+— Dea Chkhaidze · ICF PCC · Creative Leadership Hub · Former Majid Al Futtaim, UAE
+— Giorgi Chikviladze · Finance & Ops, GEC · World Bank · Loughborough University
+— Beka Baiashvili · Strategy Lead, GEC · PhD candidate, Economics
+— Lia Kereselidze · Export & Digital, GEC · $5M+ deal · 23 countries · 9 industries
+
+160+ combined years. 13 practitioners.
+
+You are not paying for a program. You are gaining access to this room.
+
+Cohort 1 — 20 spots — June 11, 2026.</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესმენები #მეწარმეობა #ზრდა #SME #BusinessGrowth #Georgia #Mentorship #Tbilisi #Entrepreneurship #BusinessAcceleration</div>
+      </div>
+    </article>
+
+    <!-- POST 5 -->
+    <article class="post-card" id="post-5">
+      <div class="post-card-header">
+        <span class="post-number">Post 05</span>
+        <span class="tag tag-pillar-2">Mentor Credibility</span>
+        <span class="tag tag-platform">LinkedIn</span>
+        <span class="tag tag-format">Feed Post — Mentor Spotlight</span>
+      </div>
+
+      <h2 class="post-title">Mentor Spotlight — George Simongulashvili</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Portrait-orientation branded card. Navy background (#0D1B2A). Top-left: thin gold vertical accent bar (4px wide, 60px tall). Beside it: "მენტორი / Mentor" in gold, 11px, uppercase, letter-spaced. Below: "გიორგი სიმონგულაშვილი" in white, bold, 28px. Below name: a horizontal gold rule (80px wide). Below rule, three credential lines in white, 14px, regular: "Angel Investor & Strategic Advisor" / "Partner — GEC" / "20+ years · Georgia Management Consulting Association." Below credentials: a short pull-quote in italic white: "სტრატეგია, რომელიც ინვესტორს არ ეჩვენება, ბიზნესსაც ვერ ასაზრდოებს." — formatted as block quote with left gold border. GEC logo bottom-right in gold. The card should feel like a premium executive profile, not a social media template.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>გიორგი სიმონგულაშვილი ანგელ-ინვესტორია. GEC-ის პარტნიორი. Georgia Management Consulting Association-ის წევრი. 20+ წელი ბიზნეს-სტრატეგიაში.
+
+ანგელ-ინვესტორი ოთახში სხვა კითხვებს სვამს.
+
+ლექტორი გეკითხება, რა გაქვს. ინვესტორი გეკითხება, რა ღირს. და ეს სხვაობა ბიზნეს-განვითარების ყველაზე მნიშვნელოვანი გაკვეთილია — ბევრი ბიზნეს-მფლობელი ამ სხვაობას ვერასდროს ხვდება, რადგან ინვესტორი ოთახში არ ყოფილა.
+
+გიორგი ისეთ კითხვებს სვამს, რომლებიც ჩვეულებრივ ლექციაში არ ისმის:
+"ეს ზრდა შენი სიძლიერიდან მოდის — თუ კლიენტის ინერციიდან?"
+"ვინ შეიძლება ეს ბიზნესი იყიდოს 5 წელიწადში?"
+"რა ხდება, თუ შენი ყველაზე დიდი კლიენტი წავა?"
+
+GEC SME განვითარების პროგრამაში ეს ოთახი 40 კვირის განმავლობაში ღიაა.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption (LinkedIn)</span>
+          <p>One of the mentors in GEC SME Business Acceleration Program is George Simongulashvili — Angel Investor, GEC Partner, member of the Georgia Management Consulting Association. 20+ years in business strategy.
+
+What an angel investor brings into a room is different from what a trainer brings. George asks the questions that do not appear in curriculum: "What happens if this market never opens?" "Who would actually buy this business in five years?" "Is this growth driven by your strength or your client's inertia?"
+
+These are the questions that separate a business plan from a business that works.
+
+In GEC SME Business Acceleration Program, you spend 40 weeks in a room where these questions are asked — week after week, applied to your specific company.
+
+Cohort 1. 20 spots. June 11, 2026.
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #SME #BusinessGrowth #Georgia #Mentorship #AngelInvesting #BusinessStrategy #Tbilisi</div>
+      </div>
+    </article>
+
+    <!-- POST 6 -->
+    <article class="post-card" id="post-6">
+      <div class="post-card-header">
+        <span class="post-number">Post 06</span>
+        <span class="tag tag-pillar-2">Mentor Credibility</span>
+        <span class="tag tag-platform">FB / IG</span>
+        <span class="tag tag-format">Feed Post — Mentor Spotlight</span>
+      </div>
+
+      <h2 class="post-title">Mentor Spotlight — Iro Tsagareishvili</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Same template as Post 05 but with distinct credential callout. Navy background. Gold vertical accent bar top-left. "მენტორი / Mentor" in gold, uppercase. Name: "ირო ცაგარეიშვილი" in white, bold, 28px. Gold horizontal rule. Three credential lines: "Forbes 30 Under 30 Georgia" / "Managing Director — Axel" / "20+ investment deals." A secondary callout box (slightly lighter navy, thin gold border): "ინვესტიციის მზაობა — ეს პროგრამის კვირა 32-ია." in white italic. The Forbes credential should feel prominent — put "Forbes 30 Under 30 Georgia" in slightly larger or gold-accented text to make it land. GEC logo bottom-right.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ირო ცაგარეიშვილი Forbes 30 Under 30 Georgia-ს სიაშია. Axel-ის Managing Director. 20-ზე მეტი საინვესტიციო გარიგება — ქართულ ბაზარზე, პირდაპირ.
+
+"ინვესტიციის მზაობა" — ეს ფრაზა ბევრ პროგრამაში გვხვდება. მაგრამ განსხვავება ის არის, ვინ ამბობს.
+
+ინვესტიციის მზაობა ირო ცაგარეიშვილთან ერთად ნიშნავს: ის იცის, სად ჩერდება ინვესტორი. იცის, რა კითხვა კლავს pitch-ს. 20+ გარიგება ნახა — ორივე მხრიდან.
+
+"თქვენი ბიზნესი ინვესტირებადია" — ეს ფრაზა, იროს პირით, სხვაფრივ ჟღერს. GEC SME განვითარების პროგრამის 32-ე კვირაში ეს ფრაზა შენს ბიზნეს-გეგმაზეა მიბმული — EBITDA, exit scenario, ბაზრის ზომა, მენეჯმენტის სიღრმე.
+
+ეს პრეზენტაციის მომზადება კი არ არის. ეს ბიზნეს-სტრუქტურაა — ინვესტიციისთვის.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>"Investment readiness" appears in many programs.
+
+Investment readiness with someone who has sat in 20+ actual investment deals is different.
+
+Iro Tsagareishvili is Forbes 30 Under 30 Georgia. Managing Director at Axel. 20+ investment transactions in the Georgian market.
+
+In Week 32 of GEC SME Business Acceleration Program, investment readiness is not a slide deck exercise. It is answering the exact questions investors ask — EBITDA trajectory, exit scenarios, market sizing, management depth — with someone in the room who has seen what gets funded and what does not.
+
+Cohort 1 — 20 spots — June 11, 2026.
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #SME #BusinessGrowth #Georgia #Mentorship #Investing #Forbes30Under30 #Tbilisi</div>
+      </div>
+    </article>
+
+    <!-- POST 7 -->
+    <article class="post-card" id="post-7">
+      <div class="post-card-header">
+        <span class="post-number">Post 07</span>
+        <span class="tag tag-pillar-2">Mentor Credibility</span>
+        <span class="tag tag-platform">FB / IG</span>
+        <span class="tag tag-format">Feed Post — Mentor Spotlight</span>
+      </div>
+
+      <h2 class="post-title">Mentor Spotlight — Ia Tsulaia</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Same mentor card template, navy background. "მენტორი / Mentor" in gold. Name: "ია წულაია" bold white 28px. Gold rule. Three credential lines: "100+ ორგანიზაციული განვითარების პროექტი" / "GIZ · EBRD · NATO — სერთიფიცირებული პროგრამები" / "20+ წელი HR & OD." Below, a simple 2-column stat block (subtle light navy boxes): left box "100+" large number, below "OD Projects"; right box "3" large number, below "International Frameworks (GIZ, EBRD, NATO)." No stock photos. The visual reads as credentials-first, pure expertise.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ია წულაია 20 წელზე მეტია ორგანიზაციულ განვითარებაში მუშაობს. 100-ზე მეტი OD პროექტი. GIZ-ის, EBRD-ის, NATO-ს სერტიფიცირებული პროგრამები.
+
+ეს ნიშნავს, რომ ია ქართულ ბიზნეს-ოთახებს შიგნიდან ხედავს — სავარაუდოდ, ამ ქვეყანაში ყველაზე მეტი გამოცდილებით ამ სფეროში.
+
+ბიზნეს-ზრდის ყველაზე ხშირი შეფერხება ბაზარი კი არ არის. ადამიანებია.
+
+სწორი ადამიანი არასწორ ფუნქციაში. მმართველი, ვინც 3 კაცს მართავდა — ახლა 30-ს. გუნდი, რომელიც ყოველ გადაწყვეტილებას ლიდერს ელოდება, რადგან სხვა სისტემა არ გაჩენილა.
+
+ია GEC SME განვითარების პროგრამაში მუშაობს ზუსტად ამ ამოცანაზე: ბიზნეს-სტრუქტურა, რომელიც ბიზნეს-მფლობელის ყოველდღიური ჩართულობის გარეშეც ფუნქციონირებს — გუნდის არქიტექტურა, ფუნქციების განაწილება, ლიდერობის გადაცემა.
+
+ეს HR ტრენინგი არ არის. ეს სტრუქტურის ამოცანაა.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>The most common cause of stalled growth is not the market. It is not the finances. It is people.
+
+The right person in the wrong function. A leader who managed 3 — now managing 20. A team that waits for the founder because no other system exists.
+
+Ia Tsulaia has spent 20+ years on organizational development. 100+ OD projects. Programs certified by GIZ, EBRD, NATO.
+
+In GEC SME Business Acceleration Program, Ia works on the architecture that allows a business to function without the owner at the center — team structure, role clarity, leadership transition.
+
+This is not an HR training. This is a structural problem with a structural solution.
+
+Cohort 1 — 20 spots — June 11, 2026.
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #მეწარმეობა #SME #BusinessGrowth #Georgia #Mentorship #OrganizationalDevelopment #Leadership #Tbilisi</div>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PILLAR 3 — PROGRAM MECHANICS -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="pillar-divider">
+      <div class="line"></div>
+      <span class="label tag tag-pillar-3">Pillar 3 — Program Mechanics</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- POST 8 -->
+    <article class="post-card" id="post-8">
+      <div class="post-card-header">
+        <span class="post-number">Post 08</span>
+        <span class="tag tag-pillar-3">Program Mechanics</span>
+        <span class="tag tag-platform">FB / IG</span>
+        <span class="tag tag-format">Carousel (9 slides) or Infographic Feed Post</span>
+      </div>
+
+      <h2 class="post-title">40 კვირა — What the Journey Actually Looks Like</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Vertical infographic card or carousel series. Background: navy (#0D1B2A). Headline at top: "40 კვირა. 9 მოდული. 1 ბიზნეს-გეგმა." in white/gold. Below: a clean vertical timeline with numbered nodes (gold circles with module numbers). Each node has: module number, week range, and module name in Georgian. The timeline uses thin gold connecting lines between nodes. Node styling: gold filled circle (20px) with white number inside, module name to the right in white bold (14px), week range to the right in muted gold (12px). Final node (Week 40) is larger, uses a star or diamond instead of circle, labeled "ინვესტორების და ბანკების წინაშე პრეზენტაცია" — with a subtle glow effect to signal it as the destination. GEC logo bottom-center.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>40 კვირა. ეს ლექციების განრასტია კი არ არის — ეს შენს ბიზნესზე სამუშაო 40 კვირაა.
+
+ყოველი მოდული შენი კომპანიის კონკრეტულ ამოცანებზე მუშაობს. ასე:
+
+კვირები 1–4 → სტრატეგია & ბიზნეს-მოდელი
+სად ხარ. სად უნდა იყო. რა გიშლის ხელს — პირდაპირ, დიაგნოსტიკით.
+
+კვირები 5–8 → ლიდერობა & გუნდი
+ორგანიზაციული სტრუქტურა. ლიდერობის სტილი. ვინ რას აკეთებს — სინამდვილეში.
+
+კვირები 9–12 → ოპერაციები & პროცესები
+KPI-ები. პროცედურები. ოპერაციული ეფექტიანობა.
+
+კვირები 13–16 → ფინანსური სტრატეგია
+P&L, cash flow, ფინანსური მდგომარეობის სრული სურათი.
+
+კვირები 17–20 → მარკეტინგი & გაყიდვები
+ბრენდი, ბაზრის სეგმენტაცია, გაყიდვების სისტემა.
+
+კვირები 21–24 → ციფრული ზრდა & ტექნოლოგია
+ავტომატიზაცია, ინსტრუმენტები, ანალიტიკა.
+
+კვირები 25–28 → ექსპორტი & საერთაშორისო ბაზრები
+ექსპ. მზაობა, ბაზრის შერჩევა, პარტნიორობა.
+
+კვირები 29–36 → ზრდის გეგმა
+ყველა მოდულის სინთეზი — სრული ბიზნეს-გეგმა.
+
+კვირები 37–40 → ინვესტიციის მზაობა & პრეზენტაცია
+ინვ. დოკუმენტები, pitch, ბანკთან/ინვესტორთან შეხვედრა.
+
+40-ე კვირაში შენი ბიზნესი ინვესტორების და ბანკების წინაშე დგება — მომზადებული.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>40 weeks. 9 modules. One business plan presented to investors and banks.
+
+Here is what the structure actually looks like:
+
+Weeks 1–4 → Strategy & Business Model
+Weeks 5–8 → Leadership & Team Architecture
+Weeks 9–12 → Operations & Process Systems
+Weeks 13–16 → Financial Strategy & P&L
+Weeks 17–20 → Marketing & Sales Engine
+Weeks 21–24 → Digital Growth & Automation
+Weeks 25–28 → Export & International Expansion
+Weeks 29–36 → Growth Plan Development
+Weeks 37–40 → Investment Readiness & Presentation
+
+Week 40: your company stands in front of investors and banks. Prepared.
+
+This is not a training program with a certificate. This is 40 weeks of building a company that works.
+
+Cohort 1 — 20 spots — June 11, 2026.
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #სტარტაპი #SME #BusinessGrowth #Georgia #BusinessAcceleration #Mentorship #Tbilisi #Entrepreneurship</div>
+      </div>
+    </article>
+
+    <!-- POST 9 -->
+    <article class="post-card" id="post-9">
+      <div class="post-card-header">
+        <span class="post-number">Post 09</span>
+        <span class="tag tag-pillar-3">Program Mechanics</span>
+        <span class="tag tag-platform">LinkedIn</span>
+        <span class="tag tag-format">Feed Post — Stat + ROI Math</span>
+      </div>
+
+      <h2 class="post-title">95 საათი — The ROI Calculation</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Clean stat card, navy background. Three centered figures stacked vertically, large: "95+" in bold gold (56px), below in white (18px): "საათი პირდაპირი მენტორინგი"; second figure "13" in bold white (56px), below in gold (18px): "პრაქტიკოსი მენტორი"; third figure "1" in bold gold (56px), below in white (18px): "კომპანია — შენი." Then a thin separator line, and below in smaller white text (14px): "11,000 ₾ ÷ 95 სთ = ~116 ₾/სთ" — a simple equation displayed cleanly. Below that in muted gold: "კერძო სტრატეგიული კონსულტაცია საქართველოში: 150–300 ₾/სთ." GEC logo bottom-center. The visual reads like a financial slide — clean, argumentative, number-driven.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>ციფრები პირდაპირ ვთქვათ.
+
+11,000 ₾ — 11 თვის პროგრამის სრული ღირებულება.
+÷ 95 საათი — გარანტირებული პირდაპირი მენტორული დრო.
+= ~116 ₾ ერთ საათში.
+
+შეადარე:
+კერძო სტრატეგიული კონსულტაცია საქართველოში — 150–300 ₾/სთ.
+საერთაშორისო კვალიფიკაციის კონსულტანტი — 400–800 ₾/სთ.
+
+ეს ვებინარი არ არის. ეს ონლაინ-კურსი არ არის. ეს 95+ საათი პირდაპირი, პერსონალიზებული სამუშაოა — 13 სხვადასხვა სფეროს პრაქტიკოსთან, შენი ბიზნესის კონკრეტულ ამოცანებზე.
+
+116 ₾/სთ. 13-ის ექსპერტიზით.
+
+და კიდევ ერთი — კოჰორტის ეფექტი: 10 ბიზნეს-მფლობელი, ვინც ერთ ოთახში ერთდროულად ამ გზას გადიოდა, ერთმანეთის გამოცდილებას ინაწილებს. ეს ცალკე ღირებულებაა.
+
+კოჰორტი 1 — 20 ადგილი — 11 ივნისი.
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption (LinkedIn)</span>
+          <p>95+ hours. 13 mentors. 1 company.
+
+The ROI calculation is simple:
+
+11,000 GEL (full 11-month cost)
+÷ 95 hours of guaranteed mentor time
+= ~116 GEL per hour
+
+Compare that to:
+Private strategic consulting in Georgia: 150–300 GEL/hour
+International-level consultant: 400–800 GEL/hour
+
+The GEC SME Program delivers 95+ hours across 13 practitioners — in individual sessions, cohort workshops, and direct advisory contact — all applied to one company: yours.
+
+The math is not the only argument. The argument is: you get access to a room that, assembled privately, would cost three to five times more and still not give you the cohort effect.
+
+Cohort 1 — 20 spots — June 11, 2026.
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Mentorship #ROI #BusinessAcceleration #Tbilisi #ბიზნესსკოლა #ბიზნესი #მეწარმეობა #ზრდა</div>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PILLAR 4 — PROOF / BENCHMARK -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="pillar-divider">
+      <div class="line"></div>
+      <span class="label tag tag-pillar-4">Pillar 4 — Proof / Benchmark</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- POST 10 -->
+    <article class="post-card" id="post-10">
+      <div class="post-card-header">
+        <span class="post-number">Post 10</span>
+        <span class="tag tag-pillar-4">Proof / Benchmark</span>
+        <span class="tag tag-platform">FB / LinkedIn</span>
+        <span class="tag tag-format">Feed Post — Split Stat Card</span>
+      </div>
+
+      <h2 class="post-title">Goldman Sachs 10KSB Benchmark</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Split-panel stat card, landscape or square. Left panel: deep navy (#0D1B2A). Top label in muted gold uppercase small text: "Goldman Sachs 10,000 Small Businesses." Below: "67%" in very large bold gold (64px). Below: "revenue growth" in white (18px). Below: "within 6 months of program completion" in white, smaller (13px). Bottom: "Source: Babson College / Goldman Sachs, 2021" in muted gray tiny text. Right panel: slightly lighter navy (#1A2E45). Top label in muted gold: "GEC SME ამაღლების პროგრამა." Below: "კოჰორტი 1" in large white bold (36px). Below: "11 ივნისი, 2026" in gold (24px). Below: "20 კომპანია · 13 მენტორი · 40 კვირა" in white (14px). A thin gold vertical line divides the two panels. The visual reads as: "the model works — and this is our version of it."</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>Goldman Sachs 10,000 Small Businesses პროგრამა 2010 წელს დაიწყო. Babson College-ის კვლევა ასეთ შედეგს მოიტანს: დამამთავრებელი ბიზნესების 67% 6 თვეში ბრუნვას ზრდიდა. 47% ახალ სამუშაო ადგილებს ქმნიდა.
+
+ეს მოდელი მუშაობს — ერთდროულად სამი მიზეზით.
+
+პირველი: პრაქტიკოსი მენტორები, არა ლექტორები. მეორე: ბიზნეს-სპეციფიკური სამუშაო — ყველა კომპანიაზე ცალ-ცალკე. მესამე: კოჰორტის ეფექტი — 10 არაკონკურენტი კომპანია ერთ ოთახში, ერთმანეთის გამოცდილებით სარგებლობს.
+
+GEC SME განვითარების პროგრამა ამ მოდელზეა აგებული — Georgia Management Consulting Association-ის მეთოდოლოგიით, 13 ქართველი პრაქტიკოსი ბიზნეს-ლიდერის მონაწილეობით.
+
+ეს Goldman Sachs-ის ასლი არ არის. ეს ქართული ბაზრისთვის შექმნილი ადაპტაციაა — ქართული SME-ების კონკრეტული ხარვეზების გათვალისწინებით.
+
+პირველი კოჰორტი — 11 ივნისი, 2026. 20 ადგილი.
+
+[APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption (LinkedIn)</span>
+          <p>The Goldman Sachs 10,000 Small Businesses program launched in 2010. The Babson College research finding: 67% of graduates reported increased revenue within 6 months. 47% created new jobs.
+
+The model works because it does three things simultaneously:
+1. Practitioner mentors — not trainers
+2. Business-specific work — not generic curriculum
+3. Cohort effect — non-competing companies learning from each other
+
+This is not a replication. It is an adaptation — built for the Georgian SME market, with 13 Georgian practitioner mentors and the methodological framework of the Georgia Management Consulting Association.
+
+GEC SME Business Acceleration Program. Cohort 1. June 11, 2026. 20 companies.
+
+[APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #BusinessAcceleration #GoldmanSachs #10KSB #Mentorship #Tbilisi #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა</div>
+      </div>
+    </article>
+
+    <!-- POST 11 -->
+    <article class="post-card" id="post-11">
+      <div class="post-card-header">
+        <span class="post-number">Post 11</span>
+        <span class="tag tag-pillar-4">Proof / Benchmark</span>
+        <span class="tag tag-platform">Instagram</span>
+        <span class="tag tag-format">Feed Post — Stat Card</span>
+      </div>
+
+      <h2 class="post-title">EU4Georgia — ქართული ბიზნეს-მხარდაჭერის შედეგები</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Clean vertical stat card (4:5 ratio for Instagram). Navy background. Two large stat blocks stacked, separated by a thin gold rule. Block 1: "+12.8%" in very large bold gold (56px), below "ბრუნვის ზრდა" in white bold (18px), below "EU4Georgia მხარდაჭერილ ბიზნესებში" in white regular (13px). Block 2: "+26.5%" in large bold white (48px), below "დასაქმების ზრდა" in gold bold (18px), below "სტრუქტურირებული ექსპერტული მხარდაჭერის შემდეგ" in white (13px). Attribution bottom: "წყარო: EU4Georgia შეფასება, 2023" in muted gray small. GEC logo + "კოჰორტი 1 — 11 ივნისი" at very bottom in gold. The visual is pure data — no illustration, no decorative element.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>+12.8% — ბრუნვის ზრდა.
++26.5% — დასაქმების ზრდა.
+
+EU4Georgia-ს 2023 წლის შეფასება. ბიზნესები, რომლებმაც სტრუქტურირებული, ექსპერტული მხარდაჭერა მიიღეს.
+
+ეს ციფრები ერთ კითხვას ბადებს: სად არის სხვაობა — ზოგად ტრენინგსა და სტრუქტურირებულ, პერსონალიზებულ ექსპერტულ მუშაობას შორის?
+
+ეს ციფრები პასუხია.
+
+GEC SME განვითარების პროგრამა — 40 კვირა. 13 პრაქტიკოსი. 20 კომპანია.
+
+კოჰორტი 1. 11 ივნისი, 2026.</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>+12.8% revenue growth. +26.5% employment growth.
+
+EU4Georgia assessment data (2023) — businesses that received structured expert support.
+
+The question the data answers: what happens when business support is structured, personalized, and expert-led — rather than generic training?
+
+The numbers tell the story.
+
+GEC SME Business Acceleration Program. 40 weeks. 13 practitioners. 20 companies.
+
+Cohort 1. June 11, 2026.</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #EU4Georgia #BusinessAcceleration #Tbilisi #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #ბიზნესმენები</div>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PILLAR 5 — APPLICATION URGENCY -->
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="pillar-divider">
+      <div class="line"></div>
+      <span class="label tag tag-pillar-5">Pillar 5 — Application Urgency</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- POST 12 -->
+    <article class="post-card" id="post-12">
+      <div class="post-card-header">
+        <span class="post-number">Post 12</span>
+        <span class="tag tag-pillar-5">Application Urgency</span>
+        <span class="tag tag-platform">FB / IG / LI</span>
+        <span class="tag tag-format">Feed Post — Bold Launch Graphic</span>
+      </div>
+
+      <h2 class="post-title">Applications Open — 20 ადგილი</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Bold, minimal, full-bleed graphic. Deep navy background (#0D1B2A) with a very subtle diagonal texture (almost imperceptible — just enough to give the navy depth). Center composition: "10" in massive gold bold type (120px), immediately below in white bold: "ადგილი." (22px). Then a thin gold horizontal rule. Below: "10 Spots." in white, smaller (16px). Then below that: "GEC SME ბიზნეს ამაღლების პროგრამა" in white regular (14px). Then: "კოჰორტი 1 · 11 ივნისი, 2026" in gold (16px). Then a visible, clean text block at bottom: application link area — a white rounded rectangle (pill shape) with gold text inside: "[APPLICATION_LINK]." GEC logo top-left in white. The visual is intended to stop the scroll — bold, sparse, premium urgency.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>20 ადგილი.
+
+GEC SME განვითარების პროგრამა — კოჰორტი 1. 11 ივნისი, 2026.
+
+ეს პროგრამა ყველასთვის არ არის. 20 ადგილი შეგნებულია — კოჰორტის ეფექტი სწორედ ამ სიმცირეს ეყრდნობა.
+
+შენი ბიზნესისთვისაა, თუ:
+— ბრუნვა GEL 1.5M–10M შუალედშია
+— ბაზარზე 5+ წელია
+— ოჯახური ბიზნესი, ან დამოუკიდებლად შენებული კომპანია
+— გეგმა — სუქცესია, ექსპანსია, ინვესტიციის მოძიება
+
+13 პრაქტიკოსი მენტორი. 95+ საათი პირდაპირი სამუშაო. 40 კვირა. 11,000 ₾ — 11 თვეში.
+
+განაცხადის ეტაპები:
+1. ფორმის შევსება
+2. GEC გუნდთან გასაუბრება
+3. კომპანიის დადასტურება
+4. ჩარიცხვა
+
+პირველი კოჰორტი სხვა კოჰორტი არ არის. 20 ადგილი. ამ ადგილს ვერ იყიდი მოგვიანებით.
+
+განაცხადი: [APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption</span>
+          <p>Applications are open.
+
+GEC SME Business Acceleration Program — Cohort 1.
+June 11, 2026. 20 spots.
+
+This program is not for everyone.
+
+It is for you if:
+— Revenue GEL 1.5M–10M
+— 5+ years in business
+— Family business or independently built company
+— Planning for succession, expansion, or investment
+
+20 companies. Non-competing. Selected.
+
+13 practitioner mentors. 95+ hours of direct advisory time. 40 weeks. 11,000 GEL over 11 months.
+
+Application process:
+1. Complete the application form
+2. Interview with the GEC team
+3. Confirmation
+4. Enrollment
+
+Cohort 1 is a permanent distinction. GEC's full attention is on the first twenty.
+
+Apply: [APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #სტარტაპი #ბიზნესმენები #ზრდა #მეწარმეობა #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #Mentorship</div>
+      </div>
+    </article>
+
+    <!-- POST 13 -->
+    <article class="post-card" id="post-13">
+      <div class="post-card-header">
+        <span class="post-number">Post 13</span>
+        <span class="tag tag-pillar-5">Application Urgency</span>
+        <span class="tag tag-platform">Instagram</span>
+        <span class="tag tag-format">Story Series — 3 Stories</span>
+      </div>
+
+      <h2 class="post-title">Instagram Story Series — 3 Stories</h2>
+
+      <div class="story-group">
+
+        <div class="story-item">
+          <div class="story-num">Story 1 of 3</div>
+          <h4>Countdown — "კოჰორტი 1 — 11 ივნისი"</h4>
+          <p><strong>Georgian copy:</strong><br>
+          კოჰორტი 1. 11 ივნისი.<br>
+          [Countdown timer sticker — IG native, set to June 11 2026 10:00 AM]<br><br>
+          20 ადგილი.<br>
+          13 მენტორი. 40 კვირა.<br><br>
+          ✦ swipe up → [APPLICATION_LINK]<br><br>
+          <strong>English copy (overlay or alt text):</strong><br>
+          Cohort 1 opens June 11. 20 spots. Tap to apply.</p>
+          <div class="story-image-desc">Design: Full-bleed navy. GEC logo top-center. Large gold "11 ივნისი" centered. Below: IG countdown timer sticker (native — set manually by publisher). Below timer: "20 ადგილი" in white. Swipe-up arrow at bottom pointing up, gold, animated. Clean, no clutter.</div>
+        </div>
+
+        <div class="story-item">
+          <div class="story-num">Story 2 of 3</div>
+          <h4>"10 კითხვა, რომელიც გვეკითხება განაცხადში"</h4>
+          <p><strong>Georgian copy:</strong><br>
+          განაცხადი 10 კითხვაა.<br><br>
+          ეს კითხვები ჭკვიანობას კი არ ამოწმებს.<br>
+          ამოწმებს — მზა ხარ თუ არა.<br><br>
+          3 კითხვა, რომელიც გელოდება:<br><br>
+          1. "ახლა ბიზნესში ყველაზე დიდი ოპერაციული პრობლემა რაა?"<br>
+          2. "2 კვირით წახვედი — ბიზნესი მუშაობს?"<br>
+          3. "5 წელიწადში ეს კომპანია სად უნდა იყოს?"<br><br>
+          → [APPLICATION_LINK]<br><br>
+          <strong>English copy:</strong><br>
+          The application has 10 questions. Three of them: What is your biggest operational challenge? What happens if you leave for 2 weeks? Where should this business be in 5 years? If you know the answers — apply.</p>
+          <div class="story-image-desc">Design: Navy background. Gold "10 კითხვა" headline top. Numbered list of 3 questions in white, readable. Poll sticker option: "მზა ხარ?" — Yes / Maybe. Swipe-up arrow bottom. Or use Instagram "question" sticker to drive DM engagement.</div>
+        </div>
+
+        <div class="story-item">
+          <div class="story-num">Story 3 of 3</div>
+          <h4>"ვინ ირჩევა?" — ICP Qualifier</h4>
+          <p><strong>Georgian copy:</strong><br>
+          ვინ ირჩევა?<br><br>
+          ✓ ბრუნვა GEL 1.5M–10M<br>
+          ✓ ბაზარზე 5+ წელი<br>
+          ✓ გეგმა — ინვ., სუქცესია, ან ექსპანსია<br>
+          ✓ მზადება სტრუქტურაზე სამუშაოდ<br>
+          ✓ თბილისი (კოჰორტი 1)<br><br>
+          ✗ ბიზნესი 0–2 წელი<br>
+          ✗ გრანტის მაძიებელი<br>
+          ✗ "ნახავ" — რეჟიმი<br><br>
+          ეს შენია? → [APPLICATION_LINK]<br><br>
+          <strong>English copy:</strong><br>
+          Who gets selected? GEL 1.5M–10M revenue. 5+ years. A plan for what is next. Ready to work on the structure. Is this you? Apply.</p>
+          <div class="story-image-desc">Design: Navy background. "ვინ ირჩევა?" bold gold headline. Two-column quick-read list: check marks (gold) for qualifying criteria, X marks (muted red) for disqualifying. Clean, no graphics. Poll sticker: "ჩემი ბიზნესი პასუხობს?" — "დიახ, ვრეგისტრირდები" / "ამ კოჰორტს ვაკვირდები." Swipe-up CTA bottom.</div>
+        </div>
+
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags (for story highlight / caption if reshared to feed)</span>
+        <div class="hashtags">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #SME #BusinessGrowth #Georgia #Tbilisi #BusinessAcceleration</div>
+      </div>
+    </article>
+
+    <!-- POST 14 -->
+    <article class="post-card" id="post-14">
+      <div class="post-card-header">
+        <span class="post-number">Post 14</span>
+        <span class="tag tag-pillar-5">Application Urgency</span>
+        <span class="tag tag-platform">LinkedIn</span>
+        <span class="tag tag-format">Long-form Feed Post (Article style)</span>
+      </div>
+
+      <h2 class="post-title">Why the Founding Cohort Matters — პირველი ყოველთვის სხვაგვარია</h2>
+
+      <div class="image-desc">
+        <span class="label">Image Description — for designer (Canva)</span>
+        <p>Minimal, typographic, full-bleed text card. Deep navy (#0D1B2A). Two lines centered, large: "პირველი ყოველთვის სხვაგვარია." in white bold, 32px. Below: "/ The first is always different." in gold, 22px, regular. Nothing else except GEC logo small at bottom-center. The quiet simplicity of this card is the design statement — it should feel like a statement, not an advertisement. Zero decorative elements.</p>
+      </div>
+
+      <div class="captions">
+        <div class="caption-block">
+          <span class="lang-label">Georgian Caption</span>
+          <p>პირველობა — ეს ქართულ ბიზნეს-სივრცეში გამოცდილ ადამიანს ესმის.
+
+GEC SME განვითარების პროგრამის პირველი კოჰორტი 20 კომპანიაა. ეს ციფრი შეგნებულია — 20 ადგილი ისე შეიქმნა, რომ კოჰორტის ეფექტი სრულად იმუშაოს. ათ კომპანიაზე მეტით ეს ხარისხი არ გამოდის.
+
+მაგრამ პირველი კოჰორტი ყოველთვის გამორჩეულია — ეს ლოგიკაა, მარკეტინგი არ არის.
+
+რა ნიშნავს კოჰორტი 1-ში ყოფნა პრაქტიკულად:
+
+სრული ყურადღება. GEC-ის გუნდი, 13 მენტორი — ყველა პირველ კოჰორტზეა ორიენტირებული. შემდეგ კოჰორტებს ეს ყურადღება ექნებათ — სისტემატიზებული. Cohort 1 კი მას სრული კონცენტრაციით იღებს.
+
+Founding Alumni სტატუსი. ქართულ ბიზნეს-სივრცეში GEC SME განვითარების პროგრამა 2026 წელს იწყება. 10 წელიწადში ეს ბრენდი სხვა მნიშვნელობას შეიძენს. პირველი 10 — ყოველთვის პირველი 10 იქნება. ამ სტატუსს ვერ იყიდი Cohort 4-ში.
+
+მენტორ-ქსელი — ახლავე. 13 მენტორს საკუთარი ქსელი, კლიენტები, პარტნიორები ჰყავს. კოჰორტი 1-ის კომპანიები ამ ქსელის პირველები ხდებიან. მომავალი კოჰორტები ამ კავშირებს გაზავებულად მიიღებენ.
+
+ეს პოსტი იმ ბიზნეს-მფლობელისთვისაა, ვინც GEL 1.5M–10M-ზეა, 10–20 წელია ბაზარზეა, და ჯერ სწორი ოთახი ვერ იპოვა.
+
+11 ივნისი. 20 ადგილი.
+
+განაცხადი: [APPLICATION_LINK]</p>
+        </div>
+        <div class="caption-block">
+          <span class="lang-label">English Caption (LinkedIn long-form)</span>
+          <p>The first cohort is always different.
+
+This is not a marketing line. It is a structural reality.
+
+When GEC SME Business Acceleration Program launches Cohort 1 on June 11, 2026 — the twenty companies in that cohort will hold a permanent distinction. Here is what that actually means.
+
+Full attention, undiluted. The first cohort of any serious program receives a quality of attention that cannot be replicated at scale. Not because later cohorts are less valued — but because Cohort 1 is the proof of concept. Every mentor is fully present. Every session is built from scratch. The contact is direct, not systematized.
+
+Founding alumni status. In five years, when the GEC SME program has run six cohorts, the founding alumni will be a recognized network. In the Georgian business ecosystem — where trust networks are everything — being one of the first twenty is not a minor thing. This is a credential that cannot be purchased in Cohort 4.
+
+Direct mentor relationships. The 13 mentors in this program bring their own networks. Cohort 1 companies enter those networks first — before the mentor relationships are distributed across dozens of alumni. That is a different level of access.
+
+The cohort effect. Ten non-competing companies, all at GEL 1.5M–10M revenue, all working simultaneously on strategy, finance, operations, and growth — sharing challenges, sharing contacts, building genuine peer relationships. The first cohort builds this from zero. That foundation is theirs permanently.
+
+This post is for the company owner who has been building for 10–20 years, has real revenue, and has not yet found the right room.
+
+The room opens June 11. Twenty companies.
+
+Apply: [APPLICATION_LINK]</p>
+        </div>
+      </div>
+
+      <div class="hashtag-row">
+        <span class="label">Hashtags</span>
+        <div class="hashtags">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #Mentorship #FoundingCohort #ბიზნესსკოლა #ბიზნესი #ბიზნესმენები #ზრდა #მეწარმეობა #GECSMEProgram</div>
+      </div>
+    </article>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--navy); color:rgba(255,255,255,0.5); padding:32px 40px; text-align:center; font-size:13px; margin-top:40px; border-top:1px solid rgba(255,255,255,0.08);">
+  <div style="max-width:1300px; margin:0 auto;">
+    <div style="color:var(--gold-light); font-weight:700; margin-bottom:8px;">GEC SME ბიზნეს ამაღლების პროგრამა — Social Media Content Pack</div>
+    <div>14 posts · 5 pillars · Cohort 1, June 11 2026 · Replace [APPLICATION_LINK] with live URL before publishing</div>
+    <div style="margin-top:12px; font-size:11px;">GEC Business Growth Services · Georgian Entrepreneurs Club</div>
+  </div>
+</footer>
+
+</body>
+</html>

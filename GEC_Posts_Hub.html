@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEC SME Program — Posts Hub</title>
+<style>
+:root{--navy:#153749;--teal:#226263;--green:#049978;--orange:#F05324;--gold:#F0B91C;--white:#FFF;--off:#F5F4F0;--border:#E0DED8;--text:#1A1A1A;--muted:#6B6B6B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--off);color:var(--text);font-size:15px;line-height:1.6}
+.site-header{background:var(--navy);color:var(--white);padding:28px 32px 20px;border-bottom:3px solid var(--gold)}
+.site-header h1{font-size:22px;font-weight:700}
+.site-header p{font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px}
+.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:12px 24px;font-size:13px;color:#7a5a00}
+.tab-nav{background:var(--white);display:flex;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.06);overflow-x:auto}
+.tab-btn{padding:14px 22px;font-size:14px;font-weight:600;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap}
+.tab-btn:hover{color:var(--navy)}
+.tab-btn.active{color:var(--navy);border-bottom-color:var(--gold)}
+.tab-pane{display:none;max-width:900px;margin:0 auto;padding:32px 24px}
+.tab-pane.active{display:block}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--white);border:none;border-radius:6px;padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;margin-bottom:24px}
+.dl-btn:hover{background:var(--teal)}
+.post-card{background:var(--white);border:1px solid var(--border);border-radius:10px;margin-bottom:28px;overflow:hidden}
+.post-header{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--off)}
+.post-num{font-size:12px;font-weight:700;color:var(--muted);min-width:52px}
+.post-title-text{font-size:15px;font-weight:700;color:var(--navy);flex:1}
+.badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;letter-spacing:.04em}
+.badge-p{background:#EFF3FF;color:#3D5A99}
+.badge-d{background:#FFF0E0;color:#C05000}
+.post-body{padding:20px}
+.cap-section{margin-bottom:16px}
+.cap-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;display:block}
+textarea{width:100%;padding:12px 14px;font-family:inherit;font-size:14px;line-height:1.65;border:1px solid var(--border);border-radius:6px;resize:vertical;color:var(--text);background:var(--off)}
+textarea:focus{outline:2px solid var(--teal);background:var(--white)}
+.copy-btn{margin-top:6px;background:var(--navy);color:var(--white);border:none;border-radius:5px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer}
+.copy-btn:hover{background:var(--teal)}
+.copy-btn.done{background:var(--green)}
+.ht-line{font-size:12px;color:#2D5FA0;padding:10px 20px;border-top:1px solid var(--border);background:var(--off);word-break:break-word}
+.s-section{margin-bottom:32px}
+.s-section h2{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.checklist{list-style:none}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.checklist li input{margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:var(--navy)}
+.cal-table{width:100%;border-collapse:collapse;font-size:13px}
+.cal-table th{background:var(--navy);color:var(--white);padding:8px 12px;text-align:left}
+.cal-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.cal-table tr:nth-child(even) td{background:var(--off)}
+.cal-date{font-weight:700;color:var(--navy);white-space:nowrap}
+.bud-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bud-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 20px}
+.bud-amount{font-size:28px;font-weight:700;color:var(--navy)}
+.bud-label{font-size:12px;color:var(--muted);margin-top:4px}
+.bud-detail{font-size:13px;color:var(--text);margin-top:8px}
+.ad-spec{background:var(--off);border:1px solid var(--border);border-radius:6px;padding:12px 16px;margin-bottom:16px;font-size:13px}
+.ad-spec dt{font-weight:700;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.ad-spec dd{margin:0 0 8px}
+@media(max-width:600px){.tab-btn{padding:12px 14px;font-size:13px}.bud-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<h1>GEC SME Program — Posts Hub</h1>
+<p>SME განვითარების პროგრამა · Cohort 1 · June 11, 2026 · Applications: May 13–25 · 15 GEC Posts · 13 Mentor Posts · 4 Paid Ads</p>
+</header>
+
+<div class="notice">⚠ <strong>Before posting:</strong> Replace every <strong>sme.gecbusiness.com</strong> with the live Google Form URL. Replace <strong>[X]</strong> in AD-04 with remaining spot count.</div>
+
+<nav class="tab-nav">
+<button class="tab-btn active" onclick="showTab('strategy',this)">📋 Strategy</button>
+<button class="tab-btn" onclick="showTab('gec',this)">GEC Posts (14)</button>
+<button class="tab-btn" onclick="showTab('mentors',this)">Mentor Posts (13)</button>
+<button class="tab-btn" onclick="showTab('ads',this)">Paid Ads (4)</button>
+</nav>
+
+<!-- TAB 1: STRATEGY -->
+<div id="strategy" class="tab-pane active">
+
+<div class="s-section">
+<h2>Today's Action Checklist — May 13, 2026</h2>
+<ul class="checklist">
+<li><input type="checkbox"> Create application form → copy URL → replace all sme.gecbusiness.com in every file</li>
+<li><input type="checkbox"> Brief design team: images needed TODAY for Post 01, Post 04, Post 08, Post 12</li>
+<li><input type="checkbox"> Post GEC-01 on Facebook + Instagram (Founder Bottleneck — most urgent for reach)</li>
+<li><input type="checkbox"> Post GEC-12 on Facebook + Instagram + LinkedIn (Applications Open)</li>
+<li><input type="checkbox"> Send mentor frame + caption + posting instructions to all 13 mentors (WhatsApp/email)</li>
+<li><input type="checkbox"> Assign mentor posting window May 15–23 — ask each mentor to confirm their day</li>
+<li><input type="checkbox"> Launch AD-01 (FB/IG Founder Hook) — $120, May 13–20</li>
+<li><input type="checkbox"> Launch AD-03 (LinkedIn 89% stat) — $130, May 13–23</li>
+<li><input type="checkbox"> Send TBC Bank outreach email (Bank Pack, Template 1)</li>
+<li><input type="checkbox"> Send Bank of Georgia outreach email (Bank Pack, Template 1)</li>
+<li><input type="checkbox"> Add landing page link to GEC Facebook, Instagram, LinkedIn bio/about</li>
+<li><input type="checkbox"> Registration closes <strong>May 25</strong> — add this date to all open posts now</li>
+<li><input type="checkbox"> Interviews run <strong>May 26–30</strong> — prepare selection criteria with GEC team</li>
+<li><input type="checkbox"> Program start: <strong>June 11</strong> — confirm venue/format with confirmed participants after June 5</li>
+</ul>
+</div>
+
+<div class="s-section">
+<h2>Posting Calendar — May 13 to June 11</h2>
+<table class="cal-table">
+<thead><tr><th>Date</th><th>Post(s)</th><th>Platform</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="cal-date">May 13</td><td>LAUNCH + GEC-01 + GEC-12</td><td>FB / IG / LI</td><td>LAUNCH DAY — LAUNCH announcement first (boost it). Then GEC-01 + GEC-12. AD-01 (or LAUNCH post) + AD-03 go live.</td></tr>
+<tr><td class="cal-date">May 14</td><td>GEC-03 + GEC-14</td><td>LinkedIn</td><td>LinkedIn credibility push — 89% stat + founding cohort framing</td></tr>
+<tr><td class="cal-date">May 15</td><td>GEC-04</td><td>FB / IG</td><td>Full roster reveal — "This Room" — highest expected engagement</td></tr>
+<tr><td class="cal-date">May 15–16</td><td>Mentors: George, Iro, Davit, Keti</td><td>FB / IG (each)</td><td>Group 1 mentor posts — each posts their own frame + caption</td></tr>
+<tr><td class="cal-date">May 16</td><td>GEC-05</td><td>LinkedIn</td><td>George Simongulashvili mentor spotlight. Start AD-02.</td></tr>
+<tr><td class="cal-date">May 17</td><td>GEC-02</td><td>Facebook</td><td>Courses didn't work — FB audience responds strongly to this</td></tr>
+<tr><td class="cal-date">May 17–18</td><td>Mentors: Ia, Roman, Eka</td><td>FB / IG (each)</td><td>Group 2 mentor posts</td></tr>
+<tr><td class="cal-date">May 18</td><td>GEC-06</td><td>FB / IG</td><td>Iro Tsagareishvili spotlight — Forbes credential, strong reach</td></tr>
+<tr><td class="cal-date">May 19</td><td>GEC-07</td><td>FB / IG</td><td>Ia Tsulaia spotlight — HR/OD angle</td></tr>
+<tr><td class="cal-date">May 19</td><td>Mentors: Tea, Nino</td><td>FB / IG (each)</td><td>Group 3 mentor posts</td></tr>
+<tr><td class="cal-date">May 20</td><td>GEC-08</td><td>FB / IG</td><td>40-week roadmap — save/share driver</td></tr>
+<tr><td class="cal-date">May 20–21</td><td>Mentors: Dea, Giorgi, Beka</td><td>FB / IG (each)</td><td>Group 4 mentor posts</td></tr>
+<tr><td class="cal-date">May 21</td><td>GEC-09</td><td>LinkedIn</td><td>ROI calculation — 116 ₾/hr math. Start AD-04 retargeting.</td></tr>
+<tr><td class="cal-date">May 22</td><td>GEC-10 + Lia (mentor)</td><td>FB / LI</td><td>Goldman Sachs 10KSB benchmark + Lia posts her mentor frame</td></tr>
+<tr><td class="cal-date">May 23</td><td>GEC-11</td><td>Instagram</td><td>EU4Georgia stat card — clean visual, strong numbers</td></tr>
+<tr><td class="cal-date">May 24</td><td>GEC-13 Stories</td><td>Instagram</td><td>3-story series — "applications close tomorrow" urgency</td></tr>
+<tr><td class="cal-date">May 25</td><td>GEC-12 (urgency)</td><td>All</td><td>"Registration closes TODAY" — update caption, repost on all platforms. LAST DAY.</td></tr>
+<tr><td class="cal-date">May 26–30</td><td>Interviews (internal)</td><td>—</td><td>No new posts. Optional: "We're reviewing applications" story update.</td></tr>
+<tr><td class="cal-date">June 5–10</td><td>Participant announcement</td><td>All</td><td>"Cohort 1 is confirmed" — teaser post before launch</td></tr>
+<tr><td class="cal-date">June 11</td><td>Launch Day Post (write fresh)</td><td>All</td><td>Cohort 1 starts today — welcome post from GEC</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="s-section">
+<h2>Budget — $500 Total</h2>
+<div class="bud-grid">
+<div class="bud-card"><div class="bud-amount">$320</div><div class="bud-label">Facebook &amp; Instagram</div><div class="bud-detail">AD-01 Founder Hook: $120 (May 13–20)<br>AD-02 Social Proof: $100 (May 16–22)<br>AD-04 Retargeting: $100 (May 21–25)</div></div>
+<div class="bud-card"><div class="bud-amount">$130</div><div class="bud-label">LinkedIn</div><div class="bud-detail">AD-03 Professional (89% stat): $130 (May 13–23)<br>Target: Business owners, GEO, 500+ connections, 10+ yrs exp</div></div>
+<div class="bud-card"><div class="bud-amount">$50</div><div class="bud-label">Tools &amp; Scheduling</div><div class="bud-detail">Buffer/Later for post scheduling<br>Canva Pro for image design (if needed)</div></div>
+<div class="bud-card" style="border-color:var(--gold)"><div class="bud-amount" style="color:var(--teal)">$500</div><div class="bud-label">Total</div><div class="bud-detail">20 days · 14 organic posts · 4 ad campaigns<br>13 mentor amplification posts (zero cost)</div></div>
+</div>
+</div>
+
+<div class="s-section">
+<h2>Sales Activation — Banks &amp; Associations</h2>
+<ul class="checklist">
+<li><input type="checkbox"> TBC Bank: send one-pager + email template 1 (Bank Pack)</li>
+<li><input type="checkbox"> Bank of Georgia: send one-pager + email template 1 (Bank Pack)</li>
+<li><input type="checkbox"> Follow up with bank contacts in 3 days if no reply</li>
+<li><input type="checkbox"> GEC member organizations: forward program one-pager + personal note</li>
+<li><input type="checkbox"> Georgian Employers Association: send announcement</li>
+<li><input type="checkbox"> 3 warm personal referrals from GEC board — ask directly for 1 intro each</li>
+</ul>
+</div>
+
+</div>
+<!-- END TAB 1 -->
+
+<!-- TAB 2: GEC POSTS -->
+<div id="gec" class="tab-pane">
+<button class="dl-btn" onclick="downloadTab('gec')">⬇ Download All GEC Posts (.txt)</button>
+
+<!-- GEC-00 LAUNCH ANNOUNCEMENT -->
+<div class="post-card" style="border:2px solid var(--gold)">
+<div class="post-header" style="background:var(--navy)"><span class="post-num" style="color:var(--gold)">LAUNCH</span><span class="post-title-text" style="color:#fff">პროგრამის ოფიციალური გამოცხადება — Program Announcement</span><span class="badge badge-p">FB / IG / LI</span><span class="badge badge-d" style="background:var(--orange);color:#fff">May 13 — BOOST THIS</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-0" rows="18" data-lang="Georgian">GEC SME განვითარების პროგრამა — ოფიციალურად გაიხსნა.
+
+ეს არ არის ტრენინგი. ეს არ არის ვებინარი.
+ეს არის 40-კვირიანი სამუშაო პროგრამა SME-ს დამფუძნებლებისა და CEO-ებისთვის, რომლებსაც ბიზნესის სტრუქტურა, ზრდა და მდგრადობა სჭირდებათ.
+
+👤 ვისთვისაა:
+— ბრუნვა GEL 1.5M–10M
+— ბიზნესი შენზეა დამოკიდებული და ამ ჩაკეტვიდან გამოსვლა გინდა
+— ფიქრობ ექსპანსიაზე, კაპიტალის მოზიდვაზე ან მემკვიდრეობის გადაცემაზე
+
+📌 პროგრამის შინაარსი:
+✅ სტრატეგია და ბიზნეს-მოდელი
+✅ ფინანსური მართვა და P&L
+✅ გუნდი, სტრუქტურა, HR
+✅ მარკეტინგი და გაყიდვები
+✅ ექსპორტი და საერთაშორისო ბაზარი
+✅ ციფრული ტრანსფორმაცია
+✅ საინვესტიციო მზაობა
+
+13 მენტორი — ყველა პრაქტიკოსი. ყველამ ააგო, გაყიდა, ექსპორტი გასცა ან ინვესტიცია მოიზიდა.
+160+ წელი კომბინირებული გამოცდილება ქართულ და საერთაშორისო ბაზარზე.
+
+📍 ფორმატი: ჰიბრიდი · თბილისი
+📅 ნაკადი 1 · 11 ივნისი, 2026
+🗓 განაცხადის ბოლო ვადა: 7 ივნისი · 20 ადგილი
+
+👉 განაცხადი: sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-0')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-0" rows="16" data-lang="English">GEC SME Business Development Program — officially open.
+
+This is not a training. Not a webinar.
+This is a 40-week working program for SME founders and CEOs who need business structure, growth, and sustainability.
+
+👤 Built for:
+— Revenue GEL 1.5M–10M
+— Business that runs on you — and you want to change that
+— Thinking about expansion, raising capital, or succession
+
+📌 What's covered:
+✅ Strategy & business model
+✅ Financial management & P&L
+✅ Team, structure & HR
+✅ Marketing & sales
+✅ Export & international markets
+✅ Digital transformation
+✅ Investment readiness
+
+13 mentors — all practitioners. Every one of them has built, sold, exported, or raised capital.
+160+ combined years of experience in Georgian and international markets.
+
+📍 Format: Hybrid · Tbilisi
+📅 Cohort 1 · June 11, 2026
+🗓 Application deadline: June 7 · 20 spots
+
+👉 Apply: sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-0')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #მეწარმეობა #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #Mentorship #ნაკადი1</div>
+</div>
+
+<!-- GEC-01 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-01</span><span class="post-title-text">ბიზნესი მხოლოდ შენზეა გათვლილი? — Founder Bottleneck</span><span class="badge badge-p">FB / IG</span><span class="badge badge-d">May 13 — LAUNCH</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-1" rows="14" data-lang="Georgian">🎯 ბიზნეს-გადაწყვეტილება ყველა შენს ნებართვას ელოდება?
+
+ეს ნაცნობი სიტუაციაა.
+10–20 წელი ბიზნეს-მფლობელი ხარ.
+ყველაფერი შენ გასწევდი — სწრაფი ასე იყო.
+
+⚠️ ყოველი ხარჯი — შენი ხელმოწერა
+⚠️ ყოველი კლიენტის ჩივილი — შენი ტელეფონი
+⚠️ ყოველი გადაწყვეტილება — შენი დრო
+
+ბიზნესი გაიზარდა — სტრუქტურა კი ვერ გაყვა.
+
+✅ ეს ნიჭის ნაკლოვანება არ არის.
+ეს სტრუქტურის ხარვეზია — და ის სხვაგვარად წყდება.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026
+🗓 რეგისტრაცია: 13–25 მაისი · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-1')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-1" rows="10" data-lang="English">🎯 Every decision in your business waiting on you?
+
+You built this company on instinct.
+The team came. The clients followed.
+
+⚠️ Every expense — your signature
+⚠️ Every complaint — your phone
+⚠️ Every decision — your time
+
+The business grew. You became the ceiling.
+
+✅ Not a talent problem.
+A structure problem — with a different solution.
+
+📅 Cohort 1 · June 11, 2026
+🗓 Registration: May 13–25 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-1')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#ბიზნესსკოლა #GEC #ბიზნესი #მეწარმეობა #GECSMEProgram #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #Mentorship</div>
+</div>
+
+<!-- GEC-02 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-02</span><span class="post-title-text">გამოცდილება გაქვს. სტრუქტურა — სხვა ამბავია.</span><span class="badge badge-p">Facebook</span><span class="badge badge-d">May 17</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-2" rows="14" data-lang="Georgian">💡 გამოცდილება — გაქვს.
+სტრუქტურა — სხვა ამბავია.
+
+10–20 წელი ბიზნეს-მფლობელი ხარ.
+ბაზარი კარგად იცი. ურთიერთობები — გაქვს. ინტუიცია — გამომუშავებული.
+
+მაგრამ ბიზნეს-ზრდის გარკვეულ ეტაპზე ინტუიცია სისტემად უნდა იქცეს.
+
+გეგმა — ქაღალდზე.
+პროცესები — სტრუქტურაში.
+ზრდა — განსაზღვრული, არა შემთხვევითი.
+
+✅ GEC SME განვითარების პროგრამა სწორედ ამ გარდამავალ ეტაპს ემსახურება.
+13 მენტორი — ვინც ეს გზა პირადად გაიარა.
+40 კვირა — შენი ბიზნესის კონკრეტულ ამოცანებზე.
+
+💡 "ჩემი ბიზნესი ზუსტად ამ წერტილზე იდგა.
+სად გავაწყდი — სად გავიარე."
+ეს არის პრაქტიკოსის ღირებულება.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026
+🗓 20 ადგილი · რეგისტრაცია: 13–25 მაისი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-2')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-2" rows="10" data-lang="English">💡 Experience — you have it.
+Structure — that's a different story.
+
+10–20 years in business.
+You know the market. You have the relationships. The instinct is built.
+
+But at a certain stage of growth, instinct needs to become system.
+
+A plan — on paper.
+Processes — in structure.
+Growth — defined, not accidental.
+
+✅ GEC SME Business Acceleration Program serves exactly this transition.
+13 mentors — who walked this road themselves.
+40 weeks — applied to your company's specific challenges.
+
+💡 "My business was at exactly this point.
+Here's where I got stuck — here's how I moved through it."
+That is the value of a practitioner.
+
+📅 Cohort 1 · June 11, 2026
+🗓 20 spots · Registration: May 13–25
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-2')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #SME #BusinessGrowth #Georgia #BusinessAcceleration #Mentorship</div>
+</div>
+
+<!-- GEC-03 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-03</span><span class="post-title-text">The Growth Plateau — 89% Data Point</span><span class="badge badge-p">LinkedIn</span><span class="badge badge-d">May 14</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption (LinkedIn — bilingual)</span>
+<textarea id="ka-3" rows="18" data-lang="Georgian">📊 ქართული SME-ების 89%-ს ფორმალური მართვის სისტემა არ აქვს.
+(ISET / World Bank, 2023)
+
+ეს ციფრი ვარდნის მაჩვენებელი კი არ არის.
+ეს ზუსტად საპირისპიროა.
+
+ეხება ბიზნეს-მფლობელებს, ვინც 15–20 წელი ინტუიციით მართავდა,
+GEL 1.5M–10M ბრუნვაზე ავიდა — და ახლა ჭერს ხედავს.
+
+⚠️ გეგმა — თავშია, ქაღალდზე არ არის
+⚠️ სუქცესია — ფიქრია, გეგმა არ არის
+⚠️ ინვესტიციაზე ლაპარაკობენ — ბიზნესი მზად არ არის
+⚠️ ოპერაციები — მეპატრონეზე მიბმული
+
+✅ GEC SME განვითარების პროგრამა ამ სტრუქტურას ქმნის.
+40 კვირა · 13 მენტორი · 20 ადგილი
+
+📅 ნაკადი 1 · 11 ივნისი, 2026
+🗓 20 ადგილი · რეგისტრაცია: 13–25 მაისი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com
+
+―
+
+📊 89% of Georgian SMEs have no formal management system.
+(ISET / World Bank, 2023)
+
+This is not a failing-business statistic.
+It describes businesses that grew on instinct — reached real revenue — and now face a ceiling.
+
+⚠️ Plan — in the founder's head, not on paper
+⚠️ Succession — a private worry, no roadmap
+⚠️ Investment — discussed but never structured
+⚠️ Operations — tied to the owner
+
+✅ GEC SME Business Acceleration Program builds this structure.
+40 weeks · 13 practitioners · 20 companies
+
+📅 Cohort 1 · June 11, 2026
+🗓 20 spots · Registration: May 13–25
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-3')" data-orig="Copy Caption">Copy Caption</button></div>
+<div class="cap-section"><span class="cap-label">English Caption (standalone for LinkedIn)</span>
+<textarea id="en-3" rows="12" data-lang="English (standalone)">📊 89% of Georgian SMEs operate without a formal management system.
+(ISET / World Bank, 2023)
+
+This is not about struggling businesses.
+It describes the ones that grew on instinct — reached GEL 1.5M–10M — and now face a ceiling they cannot name.
+
+⚠️ The founder is still the operating system
+⚠️ Succession is a private worry — no plan
+⚠️ Investment readiness is discussed, never built
+⚠️ Growth stalled — not because the market dried up
+
+✅ GEC SME Business Acceleration Program builds the structure that breaks through this ceiling.
+
+📅 Cohort 1 · June 11, 2026
+🗓 20 spots · Registration: May 13–25
+
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-3')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #ბიზნესმენები</div>
+</div>
+
+<!-- GEC-04 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-04</span><span class="post-title-text">The Room — Full Roster Reveal (ეს ოთახი)</span><span class="badge badge-p">FB / IG</span><span class="badge badge-d">May 15</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-4" rows="22" data-lang="Georgian">🎯 ოთახი ყველაფერს წყვეტს.
+
+GEC SME განვითარების პროგრამაში 13 პრაქტიკოსი მუშაობს.
+ოთახი ასე გამოიყურება:
+
+✅ გიორგი სიმონგულაშვილი · Angel Investor, Axel · 20+ წელი
+✅ ია წულაია · HR & OD · GIZ, EBRD, NATO · 20+ წელი
+✅ რომან ცუცქირიძე · CPT (ISPI) · Senior PM, Kaizen/Tetra Tech · 20+ წელი
+✅ ეკა ლეონიძე · CPT · Deloitte · Chemonics · MA ISS The Hague · 15+ წელი
+✅ თეა გოროზია · Founder, ABGA · Head of Marketing, NIKS Holding · 15+ წელი
+✅ ნინო კვაჭანტირაძე · Managing Partner, MINDset · DDB Georgia · Exeter
+✅ ქეთი ხუნწარია · Angel Investor · Axel · Sales &amp; Pricing · 12+ წელი
+✅ დავით ციცქიშვილი · Founder, Tsitsko Holding · EBAN · Forbes Georgia · 15+ წელი
+✅ ირო ცაგარეიშვილი · MD, Axel · Forbes 30 Under 30 Georgia · 20+ deals
+✅ დეა ჩხაიძე · ICF PCC · Creative Leadership Hub · Former Majid Al Futtaim, UAE
+✅ გიორგი ჩიქვილაძე · Finance &amp; Ops, GEC · World Bank · Loughborough University
+✅ ბექა ბაიაშვილი · Strategy Lead, GEC · PhD candidate, TSU
+✅ ლია კერესელიძე · Export &amp; Digital, GEC · $5M+ გარიგება · 23 ქვეყანა
+
+🏆 160+ წელი. 13 პრაქტიკოსი. ერთ ოთახში — 40 კვირა.
+
+ამ 13 ადამიანის კერძო კონსულტაციაზე წაყვანა — სხვა კატეგორიაა.
+პროგრამა — სხვა ამბავია.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-4')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-4" rows="16" data-lang="English">🎯 The room changes everything.
+
+GEC SME Business Acceleration Program. 13 practitioners. One room:
+
+✅ George Simongulashvili · Angel Investor, Axel · 20+ years
+✅ Ia Tsulaia · HR &amp; OD · GIZ, EBRD, NATO · 20+ years
+✅ Roman Tsutskiridze · CPT (ISPI) · Senior PM, Kaizen/Tetra Tech · 20+ years
+✅ Eka Leonidze · CPT · Deloitte · Chemonics · MA ISS The Hague · 15+ years
+✅ Tea Gorozia · Founder, ABGA · Head of Marketing, NIKS Holding · 15+ years
+✅ Nino Kvachantiradze · Managing Partner, MINDset · DDB Georgia · Exeter
+✅ Keti Khuntsaria · Angel Investor · Axel · Sales &amp; Pricing · 12+ years
+✅ Davit Tsitskishvili · Founder, Tsitsko Holding · EBAN · Forbes Georgia · 15+ years
+✅ Iro Tsagareishvili · MD, Axel · Forbes 30 Under 30 Georgia · 20+ deals
+✅ Dea Chkhaidze · ICF PCC · Creative Leadership Hub · Former Majid Al Futtaim, UAE
+✅ Giorgi Chikviladze · Finance &amp; Ops, GEC · World Bank · Loughborough University
+✅ Beka Baiashvili · Strategy Lead, GEC · PhD candidate, Economics
+✅ Lia Kereselidze · Export &amp; Digital, GEC · $5M+ deal · 23 countries · 9 industries
+
+🏆 160+ combined years. 13 practitioners. One room — 40 weeks.
+
+Hiring each of them privately: a different price bracket entirely.
+This program: a different story.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-4')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესმენები #მეწარმეობა #ზრდა #SME #BusinessGrowth #Georgia #Mentorship #Tbilisi #Entrepreneurship #BusinessAcceleration</div>
+</div>
+
+<!-- GEC-05 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-05</span><span class="post-title-text">Mentor Spotlight — George Simongulashvili</span><span class="badge badge-p">LinkedIn</span><span class="badge badge-d">May 16</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-5" rows="14" data-lang="Georgian">💡 ინვესტორი ოთახში სხვა კითხვებს სვამს.
+
+გიორგი სიმონგულაშვილი — Angel Investor · GEC-ის პარტნიორი · 20+ წელი ბიზნეს-სტრატეგიაში.
+
+ლექტორი გეკითხება, რა გაქვს.
+ინვესტორი გეკითხება, რა ღირს.
+
+👉 გიორგი სვამს კითხვებს, რომლებიც ლექციაში არ ისმის:
+"ეს ზრდა შენი სიძლიერიდან მოდის — თუ კლიენტის ინერციიდან?"
+"ვინ შეიძლება ეს ბიზნესი 5 წელიწადში იყიდოს?"
+"რა ხდება, თუ შენი ყველაზე დიდი კლიენტი წავა?"
+
+✅ GEC SME განვითარების პროგრამაში ეს ოთახი 40 კვირა ღიაა.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-5')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-5" rows="12" data-lang="English">💡 An investor in the room asks different questions.
+
+George Simongulashvili — Angel Investor · GEC Partner · 20+ years in business strategy.
+
+A trainer asks what you have.
+An investor asks what it's worth.
+
+👉 George asks questions you won't hear in a lecture:
+"Is this growth driven by your strength — or your client's inertia?"
+"Who would actually buy this business in five years?"
+"What happens if your biggest client leaves?"
+
+✅ In GEC SME Business Acceleration Program, this room is open for 40 weeks.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-5')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #SME #BusinessGrowth #Georgia #Mentorship #AngelInvesting #BusinessStrategy #Tbilisi</div>
+</div>
+
+<!-- GEC-06 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-06</span><span class="post-title-text">Mentor Spotlight — Iro Tsagareishvili</span><span class="badge badge-p">FB / IG</span><span class="badge badge-d">May 18</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-6" rows="14" data-lang="Georgian">💡 "ინვესტიციის მზაობა" — ბევრ პროგრამაში გვხვდება ეს ფრაზა.
+
+მაგრამ სხვაობა ის არის, ვინ ამბობს.
+
+ირო ცაგარეიშვილი — Forbes 30 Under 30 Georgia · MD, Axel · 20+ საინვ. გარიგება ქართულ ბაზარზე.
+
+👉 ირო იცის:
+⚠️ სად ჩერდება ინვესტორი pitch-ის დროს
+⚠️ რა კითხვა კლავს გარიგებას
+⚠️ EBITDA, exit scenario, management depth — ინვესტორის თვალით
+
+✅ GEC SME განვითარების პროგრამის 37–40-ე კვირაში
+ეს ფრაზა შენს ბიზნეს-გეგმაზეა მიბმული — რეალური ციფრებით.
+
+ეს პრეზენტაციის სავარჯიშო კი არ არის.
+ეს სტრუქტურაა — ინვესტიციისთვის.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-6')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-6" rows="10" data-lang="English">💡 "Investment readiness" appears in many programs.
+
+What matters is who's saying it.
+
+Iro Tsagareishvili — Forbes 30 Under 30 Georgia · MD, Axel · 20+ investment transactions in Georgia.
+
+👉 Iro knows:
+⚠️ Where investors stop listening during a pitch
+⚠️ Which question kills the deal
+⚠️ EBITDA, exit scenarios, management depth — from the investor's side
+
+✅ In weeks 37–40 of GEC SME Business Acceleration Program,
+investment readiness is not a slide exercise — it's your business, with real numbers.
+
+Not preparation for a presentation.
+A structure built for investment.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-6')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #SME #BusinessGrowth #Georgia #Mentorship #Investing #Forbes30Under30 #Tbilisi</div>
+</div>
+
+<!-- GEC-07 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-07</span><span class="post-title-text">Mentor Spotlight — Ia Tsulaia</span><span class="badge badge-p">FB / IG</span><span class="badge badge-d">May 19</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-7" rows="14" data-lang="Georgian">💡 ბიზნეს-ზრდის ყველაზე ხშირი შეფერხება ბაზარი კი არ არის.
+
+ადამიანებია.
+
+ია წულაია — 20+ წელი ორგანიზაციულ განვითარებაში · 100+ OD პროექტი · GIZ, EBRD, NATO.
+
+⚠️ სწორი ადამიანი — არასწორ ფუნქციაში
+⚠️ მმართველი, ვინც 3-ს მართავდა — ახლა 30-ს
+⚠️ გუნდი, რომელიც ყოველ გადაწყვეტილებას ლიდერს ელოდება
+
+👉 ია GEC SME განვითარების პროგრამაში მუშაობს ამ ამოცანაზე:
+✅ გუნდის არქიტექტურა
+✅ ფუნქციების განაწილება
+✅ ლიდერობის გადაცემა
+
+ეს სტრუქტურული ამოცანაა — GEC SME განვითარების პროგრამის მიდგომა ზუსტად ამ ამოცანაზეა.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-7')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-7" rows="10" data-lang="English">💡 The most common cause of stalled growth is not the market.
+
+It's people.
+
+Ia Tsulaia — 20+ years in organizational development · 100+ OD projects · GIZ, EBRD, NATO certified.
+
+⚠️ Right person — wrong function
+⚠️ A leader who managed 3 — now managing 30
+⚠️ A team that waits for the founder — because no other system was built
+
+👉 Ia works on exactly this in GEC SME Business Acceleration Program:
+✅ Team architecture
+✅ Role clarity and delegation
+✅ Leadership transition
+
+A structural challenge — with a structural solution. That is GEC's approach.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-7')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #მეწარმეობა #SME #BusinessGrowth #Georgia #Mentorship #OrganizationalDevelopment #Leadership #Tbilisi</div>
+</div>
+
+<!-- GEC-08 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-08</span><span class="post-title-text">40 კვირა — The Full Roadmap</span><span class="badge badge-p">FB / IG Carousel</span><span class="badge badge-d">May 20</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-8" rows="18" data-lang="Georgian">🎯 40 კვირა. შენი ბიზნესი. კონკრეტული ამოცანები.
+
+✅ კვირები 1–4 → სტრატეგია &amp; ბიზნეს-მოდელი
+სად ხარ. სად უნდა იყო. რა გიშლის ხელს.
+
+✅ კვირები 5–8 → ლიდერობა &amp; გუნდი
+სტრუქტურა. ლიდერობის სტილი. ვინ რას აკეთებს.
+
+✅ კვირები 9–12 → ოპერაციები &amp; პროცესები
+KPI-ები. პროცედურები. ოპერაციული ეფექტიანობა.
+
+✅ კვირები 13–16 → ფინანსური სტრატეგია
+P&amp;L, cash flow, სრული ფინანსური სურათი.
+
+✅ კვირები 17–20 → მარკეტინგი &amp; გაყიდვები
+ბრენდი, ბაზრის სეგმენტაცია, გაყიდვების სისტემა.
+
+✅ კვირები 21–24 → ციფრული ზრდა &amp; ავტომატიზაცია
+ინსტრუმენტები, ანალიტიკა, პროცესების ავტომატიზაცია.
+
+✅ კვირები 25–28 → ექსპორტი &amp; საერთაშორისო ბაზრები
+ექსპ. მზაობა, ბაზრის შერჩევა, პარტნიორობა.
+
+✅ კვირები 29–36 → ზრდის გეგმა
+ყველა მოდულის სინთეზი — სრული ბიზნეს-გეგმა.
+
+✅ კვირები 37–40 → ინვესტიციის მზაობა
+Pitch, ბანკთან/ინვესტორთან შეხვედრა — მომზადებული.
+
+🏆 40-ე კვირაში შენი ბიზნესი ინვესტორების წინაშე დგება.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-8')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-8" rows="14" data-lang="English">🎯 40 weeks. Your business. Specific challenges.
+
+✅ Weeks 1–4 → Strategy &amp; Business Model
+✅ Weeks 5–8 → Leadership &amp; Team Architecture
+✅ Weeks 9–12 → Operations &amp; Process Systems
+✅ Weeks 13–16 → Financial Strategy &amp; P&amp;L
+✅ Weeks 17–20 → Marketing &amp; Sales Engine
+✅ Weeks 21–24 → Digital Growth &amp; Automation
+✅ Weeks 25–28 → Export &amp; International Markets
+✅ Weeks 29–36 → Full Growth Plan Development
+✅ Weeks 37–40 → Investment Readiness &amp; Presentation
+
+🏆 Week 40: your company stands in front of investors and banks. Prepared.
+
+This is not a program with a certificate.
+This is 40 weeks of building a company that works.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-8')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #ზრდა #SME #BusinessGrowth #Georgia #BusinessAcceleration #Mentorship #Tbilisi #Entrepreneurship</div>
+</div>
+
+<!-- GEC-09 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-09</span><span class="post-title-text">95 საათი — The ROI Calculation</span><span class="badge badge-p">LinkedIn</span><span class="badge badge-d">May 21</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-9" rows="14" data-lang="Georgian">📊 ციფრები პირდაპირ ვთქვათ.
+
+💰 11,000 ₾ — 11 თვის პროგრამის სრული ღირებულება
+÷ 95 საათი — გარანტირებული პირდაპირი მენტორული დრო
+= ~116 ₾ ერთ საათში
+
+შეადარე:
+⚠️ კერძო სტრატეგიული კონსულტაცია — 150–300 ₾/სთ
+⚠️ საერთ. კვალიფიკაციის კონსულტანტი — 400–800 ₾/სთ
+
+✅ 116 ₾/სთ. 13 სფეროს ექსპერტიზით.
+95+ საათი პირდაპირი, პერსონალიზებული სამუშაო — შენი ბიზნესის კონკრეტულ ამოცანებზე.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-9')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-9" rows="12" data-lang="English">📊 The math is simple.
+
+💰 11,000 GEL — full 11-month program cost
+÷ 95 hours — guaranteed direct mentor time
+= ~116 GEL per hour
+
+Compare that to:
+⚠️ Private strategic consulting in Georgia: 150–300 GEL/hr
+⚠️ International-level consultant: 400–800 GEL/hr
+
+✅ 116 GEL/hr. Across 13 areas of expertise.
+95+ hours of direct, personalized work — applied to one company: yours.
+
+Plus the peer learning effect: 20 non-competing business owners in the same room.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-9')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Mentorship #ROI #BusinessAcceleration #Tbilisi #ბიზნესსკოლა #ბიზნესი #მეწარმეობა #ზრდა</div>
+</div>
+
+<!-- GEC-10 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-10</span><span class="post-title-text">Goldman Sachs 10KSB Benchmark</span><span class="badge badge-p">FB / LinkedIn</span><span class="badge badge-d">May 22</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-10" rows="14" data-lang="Georgian">📊 Goldman Sachs 10,000 Small Businesses პროგრამა 2010 წელს დაიწყო.
+
+Babson College-ის კვლევა:
+✅ 67% — 6 თვეში ბრუნვა გაიზარდა
+✅ 47% — ახალი სამუშაო ადგილები შეიქმნა
+
+ეს მოდელი მუშაობს — 3 მიზეზით:
+
+👉 პრაქტიკოსი მენტორები, არა ლექტორები
+👉 ბიზნეს-სპეციფიკური სამუშაო — ყველა კომპანიაზე ცალ-ცალკე
+👉 ნაკადის ეფექტი — 20 არაკონკურენტი მეწარმე ერთ ოთახში
+
+GEC SME განვითარების პროგრამა ამ მოდელზეა აგებული.
+ქართული ბაზრისთვის ადაპტირებული. 13 ქართველი პრაქტიკოსი. Georgia Management Consulting Association-ის მეთოდოლოგია.
+
+ეს მოდელი ქართული SME-ების კონკრეტული ამოცანებისთვის ადაპტირდა.
+13 ქართველი პრაქტიკოსი. Georgia Management Consulting Association-ის მეთოდოლოგია.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-10')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-10" rows="12" data-lang="English">📊 Goldman Sachs 10,000 Small Businesses launched in 2010.
+
+Babson College research outcomes:
+✅ 67% reported revenue growth within 6 months
+✅ 47% created new jobs
+
+The model works for three reasons:
+👉 Practitioner mentors — not trainers
+👉 Business-specific work — not generic curriculum
+👉 Cohort effect — non-competing companies learning from each other
+
+GEC SME Business Acceleration Program is built on this model.
+Adapted for the Georgian market. 13 Georgian practitioners. GMCA methodology.
+
+Adapted for the Georgian market. 13 Georgian practitioners. GMCA methodology.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-10')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #BusinessAcceleration #GoldmanSachs #10KSB #Mentorship #Tbilisi #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა</div>
+</div>
+
+<!-- GEC-11 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-11</span><span class="post-title-text">EU4Georgia — ქართული ბიზნეს-მხარდაჭერის შედეგები</span><span class="badge badge-p">Instagram</span><span class="badge badge-d">May 23</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-11" rows="12" data-lang="Georgian">📊 +12.8% — ბრუნვის ზრდა.
+📊 +26.5% — დასაქმების ზრდა.
+
+EU4Georgia-ს 2023 წლის შეფასება.
+ბიზნესები, რომლებმაც სტრუქტურირებული, ექსპერტული მხარდაჭერა მიიღეს.
+
+💡 სხვაობა ზოგად ტრენინგსა და
+პერსონალიზებულ, სტრუქტურირებულ ექსპერტულ მუშაობას შორის —
+ეს ციფრებში ჩანს.
+
+✅ GEC SME განვითარების პროგრამა — 40 კვირა · 13 პრაქტიკოსი · 20 ადგილი.
+
+📅 ნაკადი 1 · 11 ივნისი, 2026 · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-11')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-11" rows="10" data-lang="English">📊 +12.8% revenue growth.
+📊 +26.5% employment growth.
+
+EU4Georgia assessment data (2023).
+Businesses that received structured, expert-led support.
+
+💡 The difference between generic training and
+structured, personalized expert work
+shows up in the numbers.
+
+✅ GEC SME Business Acceleration Program — 40 weeks · 13 practitioners · 20 companies.
+
+📅 Cohort 1 · June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-11')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #EU4Georgia #BusinessAcceleration #Tbilisi #ბიზნესსკოლა #ბიზნესი #ზრდა #მეწარმეობა #ბიზნესმენები</div>
+</div>
+
+<!-- GEC-12 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-12</span><span class="post-title-text">Applications Open — 20 ადგილი</span><span class="badge badge-p">FB / IG / LI</span><span class="badge badge-d">May 13 + May 25</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-12" rows="18" data-lang="Georgian">🎯 20 ადგილი. ნაკადი 1. 11 ივნისი, 2026.
+
+ეს პროგრამა ყველასთვის არ არის.
+20 ადგილი შეგნებულია — ნაკადის ეფექტი სწორედ ამ სიმცირეს ეყრდნობა.
+
+👉 შენი ბიზნესისთვისაა, თუ:
+✅ ბრუნვა GEL 1.5M–10M წლიურად
+✅ ზრდა შეჩერებულია — ან დელეგირება არ მუშაობს
+✅ ფიქრობ კაპიტალზე, სუქცესიაზე ან ექსპანსიაზე
+✅ მფლობელი ან CEO · თბილისი
+
+13 პრაქტიკოსი მენტორი · 95+ საათი · 40 კვირა · 11,000 ₾
+
+📅 რეგისტრაცია: 13–25 მაისი
+🗓 გასაუბრებები: 26–30 მაისი
+🚀 პროგრამა იწყება: 11 ივნისი
+
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com
+
+პირველი ნაკადი სხვა ნაკადი არ არის.
+20 ადგილი. ამ ადგილს ვერ იყიდი მოგვიანებით.</textarea>
+<button class="copy-btn" onclick="copyText('ka-12')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-12" rows="16" data-lang="English">🎯 20 spots. Cohort 1. June 11, 2026.
+
+This program is not for everyone.
+20 spots — by design. The peer learning effect depends on it.
+
+👉 It's for you if:
+✅ Revenue GEL 1.5M–10M annually
+✅ Growth has slowed — or delegation isn't working
+✅ Thinking about capital, succession, or expansion
+✅ Founder or CEO · Tbilisi-based
+
+13 practitioner mentors · 95+ hours · 40 weeks · 11,000 GEL
+
+📅 Registration: May 13–25
+🗓 Interviews: May 26–30
+🚀 Program starts: June 11, 2026
+
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com
+
+Cohort 1 is not the same as Cohort 2.
+20 spots. You cannot buy this spot later.</textarea>
+<button class="copy-btn" onclick="copyText('en-12')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #სტარტაპი #ბიზნესმენები #ზრდა #მეწარმეობა #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #Mentorship</div>
+</div>
+
+<!-- GEC-13 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-13</span><span class="post-title-text">Instagram Story Series — 3 Stories</span><span class="badge badge-p">Instagram Stories</span><span class="badge badge-d">May 24</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Story 1 — Countdown</span>
+<textarea id="ka-13a" rows="10" data-lang="Story 1 Georgian">ნაკადი 1. 11 ივნისი.
+[Add IG countdown timer sticker — set to June 11 10:00 AM]
+
+20 ადგილი.
+13 მენტორი. 40 კვირა.
+
+→ sme.gecbusiness.com
+
+---
+English: Cohort 1 opens June 11. 20 spots. Tap to apply.</textarea>
+<button class="copy-btn" onclick="copyText('ka-13a')" data-orig="Copy Story 1">Copy Story 1</button></div>
+<div class="cap-section"><span class="cap-label">Story 2 — 3 Application Questions</span>
+<textarea id="ka-13b" rows="12" data-lang="Story 2 Georgian">განაცხადი 10 კითხვაა.
+
+ეს კითხვები ჭკვიანობას კი არ ამოწმებს.
+ამოწმებს — მზა ხარ თუ არა.
+
+3 კითხვა, რომელიც გელოდება:
+
+1. "ახლა ბიზნესში ყველაზე დიდი ოპერაციული პრობლემა რაა?"
+2. "2 კვირით წახვედი — ბიზნესი მუშაობს?"
+3. "5 წელიწადში ეს კომპანია სად უნდა იყოს?"
+
+→ sme.gecbusiness.com
+
+---
+English: The application has 10 questions. Three of them: biggest operational challenge? What happens if you leave 2 weeks? Where in 5 years? Know the answers — apply.</textarea>
+<button class="copy-btn" onclick="copyText('ka-13b')" data-orig="Copy Story 2">Copy Story 2</button></div>
+<div class="cap-section"><span class="cap-label">Story 3 — ICP Qualifier</span>
+<textarea id="ka-13c" rows="14" data-lang="Story 3 Georgian">ვინ ირჩევა?
+
+✓ ბრუნვა GEL 1.5M–10M წლიურად
+✓ ზრდა შეჩერდა ან დელეგირება არ მუშაობს
+✓ ფიქრობ კაპიტალზე, სუქცესიაზე ან ექსპანსიაზე
+✓ მფლობელი ან CEO · თბილისი
+
+✗ სტარტაპი ან ახალი ბიზნესი
+✗ გრანტის მაძიებელი
+✗ "ნახავ" — რეჟიმი
+
+ეს შენია? → sme.gecbusiness.com
+
+---
+English: Who gets selected? Revenue GEL 1.5M–10M. Founder or CEO in Tbilisi. Growth stalled or delegation failing. Thinking about capital, succession, or expansion. Is this you? Apply.</textarea>
+<button class="copy-btn" onclick="copyText('ka-13c')" data-orig="Copy Story 3">Copy Story 3</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #ბიზნესსკოლა #ბიზნესი #SME #BusinessGrowth #Georgia #Tbilisi #BusinessAcceleration</div>
+</div>
+
+<!-- GEC-14 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">GEC-14</span><span class="post-title-text">Why the Founding Cohort Matters — პირველი ყოველთვის სხვაგვარია</span><span class="badge badge-p">LinkedIn</span><span class="badge badge-d">May 14</span></div>
+<div class="post-body">
+<div class="cap-section"><span class="cap-label">Georgian Caption</span>
+<textarea id="ka-14" rows="18" data-lang="Georgian">🎯 პირველი ნაკადი — ყოველთვის სხვაგვარია.
+
+ეს მარკეტინგი არ არის. ეს ლოგიკაა.
+
+GEC SME განვითარების პროგრამის ნაკადი 1 — 20 ადგილი. 11 ივნისი, 2026.
+
+👉 ნაკადი 1-ში ყოფნა პრაქტიკულად ნიშნავს:
+
+✅ სრული ყურადღება — GEC-ის გუნდი + 13 მენტორი პირველ ნაკადზეა კონცენტრირებული
+✅ Founding Alumni სტატუსი — "GEC SME Cohort 1" 10 წელიწადში სხვა წონა ექნება
+✅ მენტორ-ქსელი — ახლავე — 13 მენტორის ქსელის პირველები ხდებიან
+
+⚠️ ეს პოსტი იმ ბიზნეს-მფლობელისთვისაა:
+— GEL 1.5M–10M ბრუნვა
+— 10–20 წელი ბაზარზე
+— სწორი ოთახი ჯერ ვერ ნახა
+
+📅 11 ივნისი · 20 ადგილი
+👉 განაცხადი: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-14')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Caption</span>
+<textarea id="en-14" rows="16" data-lang="English">🎯 The founding cohort is always different.
+
+Not a marketing line. A structural reality.
+
+GEC SME Business Acceleration Program — Cohort 1. 20 participants. June 11, 2026.
+
+👉 What being in Cohort 1 means in practice:
+
+✅ Full attention — GEC team + 13 mentors are fully focused on the first cohort
+✅ Founding alumni status — "GEC SME Cohort 1" will carry different weight in 10 years
+✅ Mentor networks — first access, before relationships are distributed across dozens of alumni
+
+⚠️ This post is for the business owner who:
+— Has GEL 1.5M–10M in revenue
+— Has been building for 10–20 years
+— Has not yet found the right room
+
+📅 June 11, 2026 · 20 spots
+👉 Apply: sme.gecbusiness.com
+🌐 www.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-14')" data-orig="Copy English">Copy English</button></div>
+</div>
+<div class="ht-line">#GEC #GECSMEProgram #SME #BusinessGrowth #Georgia #Tbilisi #Entrepreneurship #BusinessAcceleration #Mentorship #FoundingCohort #ბიზნესსკოლა #ბიზნესი #ბიზნესმენები #ზრდა #მეწარმეობა</div>
+</div>
+
+</div>
+<!-- END TAB 2 -->
+
+<!-- TAB 3: MENTOR POSTS -->
+<div id="mentors" class="tab-pane">
+
+<div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:24px 28px;margin-bottom:28px;">
+<h2 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold)">How to use this template</h2>
+<ol style="font-size:14px;line-height:2;padding-left:20px;color:var(--text)">
+<li>Copy the Georgian template below</li>
+<li>Send each mentor their frame image + the template + instructions to fill in the blank line themselves</li>
+<li>Posting window: <strong>May 15–22</strong> (before applications close May 25)</li>
+<li>Platform: Facebook + Instagram (same image, same caption)</li>
+</ol>
+</div>
+
+<div class="post-card">
+<div class="post-header">
+<span class="post-num">TEMPLATE</span>
+<span class="post-title-text">Mentor Caption Template — all 13 mentors use this</span>
+<span class="badge badge-p">FB / IG</span>
+<span class="badge badge-d">May 15–22</span>
+</div>
+<div class="post-body">
+<div class="cap-section">
+<span class="cap-label">Georgian Template — mentor fills in the blank line</span>
+<textarea id="ka-mentor-template" rows="10" data-lang="Georgian">გამარჯობა! მე ვარ [სახელი], GEC SME განვითარების პროგრამის მენტორი.
+
+[ერთი პირადი წინადადება — რატომ ხარ ამ პროგრამაში, საკუთარი სიტყვებით]
+
+ნაკადი 1 იწყება 11 ივნისს. განაცხადი ღიაა 25 მაისის ჩათვლით.
+sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-mentor-template')" data-orig="Copy Georgian Template">Copy Georgian Template</button>
+</div>
+<div class="cap-section">
+<span class="cap-label">English Template</span>
+<textarea id="en-mentor-template" rows="8" data-lang="English">Hi, I'm [Name] — a mentor in GEC SME Business Acceleration Program.
+
+[One personal line — in your own words, why you joined this program]
+
+Cohort 1 starts June 11. Applications open until May 25.
+sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-mentor-template')" data-orig="Copy English Template">Copy English Template</button>
+</div>
+</div>
+<div class="ht-line">#GECSMEProgram #GECMentors #ბიზნესსკოლა #GEC #SME #BusinessGrowth #Georgia #Mentorship #ნაკადი1</div>
+</div>
+
+<div style="background:var(--off);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-top:4px;">
+<div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">All 13 Mentors — posting window May 15–22</div>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+<thead><tr style="background:var(--navy);color:var(--white)"><th style="padding:8px 12px;text-align:left">Name</th><th style="padding:8px 12px;text-align:left">Domain</th><th style="padding:8px 12px;text-align:left">Suggested Day</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">George Simongulashvili</td><td style="padding:8px 12px">Strategy &amp; Business Development</td><td style="padding:8px 12px">May 15</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Iro Tsagareishvili</td><td style="padding:8px 12px">Investment Readiness</td><td style="padding:8px 12px">May 15</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Davit Tsitskishvili</td><td style="padding:8px 12px">Leadership &amp; Entrepreneurship</td><td style="padding:8px 12px">May 16</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Keti Khuntsaria</td><td style="padding:8px 12px">Sales &amp; Pricing</td><td style="padding:8px 12px">May 16</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Ia Tsulaia</td><td style="padding:8px 12px">HR Systems &amp; Culture</td><td style="padding:8px 12px">May 17</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Roman Tsutskiridze</td><td style="padding:8px 12px">Performance Management</td><td style="padding:8px 12px">May 17</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Eka Leonidze</td><td style="padding:8px 12px">Organizational Performance</td><td style="padding:8px 12px">May 18</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Tea Gorozia</td><td style="padding:8px 12px">Marketing Strategy &amp; Brand</td><td style="padding:8px 12px">May 19</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Nino Kvachantiradze</td><td style="padding:8px 12px">Brand Strategy</td><td style="padding:8px 12px">May 19</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Dea Chkhaidze</td><td style="padding:8px 12px">Leadership Coaching</td><td style="padding:8px 12px">May 20</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Giorgi Chikviladze</td><td style="padding:8px 12px">Finance &amp; Operations</td><td style="padding:8px 12px">May 20</td></tr>
+<tr style="background:var(--off);border-bottom:1px solid var(--border)"><td style="padding:8px 12px">Beka Baiashvili</td><td style="padding:8px 12px">Business Strategy</td><td style="padding:8px 12px">May 21</td></tr>
+<tr><td style="padding:8px 12px">Lia Kereselidze</td><td style="padding:8px 12px">Export &amp; Digital</td><td style="padding:8px 12px">May 22</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<!-- END TAB 3 -->
+
+<!-- TAB 4: PAID ADS -->
+<div id="ads" class="tab-pane">
+<button class="dl-btn" onclick="downloadTab('ads')">⬇ Download All Ad Copies (.txt)</button>
+
+<p style="font-size:13px;color:var(--muted);margin-bottom:24px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:12px 16px">Total ad budget: <strong>$500</strong> — FB/IG: $320 · LinkedIn: $130 · Tools: $50. Replace <strong>sme.gecbusiness.com</strong> and <strong>[X]</strong> before launching.</p>
+
+<!-- AD-LAUNCH -->
+<div class="post-card" style="border:2px solid var(--gold)">
+<div class="post-header"><span class="post-num" style="color:var(--gold)">AD-LAUNCH</span><span class="post-title-text">FB/IG/LI — Program Announcement (Boosted)</span><span class="badge badge-p">Facebook / Instagram / LinkedIn</span><span class="badge badge-d" style="background:var(--orange);color:#fff">$120 · May 17–24</span></div>
+<div class="post-body">
+<dl class="ad-spec">
+<dt>Objective</dt><dd>Reach + Brand Awareness (program launch)</dd>
+<dt>Budget</dt><dd>$120 total · ~$15/day · 8 days</dd>
+<dt>Audience</dt><dd>Georgia · 35–58 · Business owners / CEOs / Founders · Interests: business management, entrepreneurship, SME · LinkedIn: 500+ connections, Director/Owner seniority</dd>
+<dt>Format</dt><dd>Single image (announcement visual — GEC logo + "SME განვითარების პროგრამა" headline) · 1:1 for FB/IG · Link: sme.gecbusiness.com</dd>
+<dt>CTA Button</dt><dd>Apply</dd>
+</dl>
+<div class="cap-section"><span class="cap-label">Georgian Ad Copy</span>
+<textarea id="ka-ad-launch" rows="8" data-lang="Georgian">GEC SME განვითარების პროგრამა ოფიციალურად გაიხსნა!
+
+თუ ხართ SME-ს დამფუძნებელი ან CEO, ეს პროგრამა თქვენთვისაა.
+
+✅ სტრატეგია და ბიზნეს-მოდელი
+✅ ფინანსური მართვა — P&L, ფულის ნაკადი
+✅ გუნდი, სტრუქტურა, დელეგირება
+✅ მარკეტინგი და გაყიდვები
+✅ ექსპორტი და საერთაშორისო ბაზრები
+✅ ციფრული ტრანსფორმაცია
+✅ საინვესტიციო მზაობა
+
+13 პრაქტიკოსი მენტორი.
+
+📍 თბილისი
+📅 ნაკადი 1 — 11 ივნისი, 2026
+⏳ 20 ადგილი · განაცხადის ბოლო ვადა: 7 ივნისი
+
+👉 სრული ინფორმაცია და განაცხადი: sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-ad-launch')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Ad Copy</span>
+<textarea id="en-ad-launch" rows="8" data-lang="English">GEC SME Business Development Program — officially open.
+
+Are you an SME founder or CEO? Has your business hit a growth ceiling?
+
+This program is built for you.
+
+✅ Strategy & business model
+✅ Financial management — P&L, cash flow
+✅ Team, structure & delegation
+✅ Marketing & sales
+✅ Export & international markets
+✅ Digital transformation
+✅ Investment readiness
+
+13 mentors — all practitioners. Not trainers, not consultants — people who built, sold, exported, and raised capital.
+
+📍 Hybrid · Tbilisi
+📅 Cohort 1 — June 11, 2026
+⏳ 20 spots · Application deadline: June 7
+
+👉 Full info & application: sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-ad-launch')" data-orig="Copy English">Copy English</button></div>
+</div>
+</div>
+
+<!-- AD-01 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">AD-01</span><span class="post-title-text">FB/IG Lead Gen — Founder Bottleneck Hook</span><span class="badge badge-p">Facebook / Instagram</span><span class="badge badge-d">$120 · May 13–20</span></div>
+<div class="post-body">
+<dl class="ad-spec">
+<dt>Objective</dt><dd>Lead Generation (application form)</dd>
+<dt>Budget</dt><dd>$120 total · ~$15/day · 8 days</dd>
+<dt>Audience</dt><dd>Georgia · 35–58 · Business owners / entrepreneurs · Interests: business management, entrepreneurship, SME · Custom: exclude existing followers</dd>
+<dt>Format</dt><dd>Single image (use GEC-01 visual) or short video · 1:1 ratio for feed · Link in button: sme.gecbusiness.com</dd>
+<dt>CTA Button</dt><dd>Learn More → Apply</dd>
+</dl>
+<div class="cap-section"><span class="cap-label">Georgian Ad Copy</span>
+<textarea id="ka-ad1" rows="8" data-lang="Georgian">ბიზნესი გაიზარდა — სტრუქტურა კი ვერ გაყვა.
+
+ყოველი გადაწყვეტილება შენს ნებართვას ელოდება. ყოველი კლიენტი — შენი ნომერი. ყოველი პრობლემა — შენი ტელეფონი.
+
+ეს ნიჭის ნაკლოვანება არ არის. ეს სტრუქტურის ხარვეზია.
+
+GEC SME განვითარების პროგრამა. 20 ადგილი. 11 ივნისი.
+
+განაცხადი → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-ad1')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Ad Copy</span>
+<textarea id="en-ad1" rows="8" data-lang="English">Your business grew. And now you are the bottleneck.
+
+Every decision waits on you. Every problem lands on your phone. This is not a talent problem. This is a structure problem.
+
+GEC SME Business Acceleration Program. 20 spots. June 11, 2026.
+
+Apply → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-ad1')" data-orig="Copy English">Copy English</button></div>
+</div>
+</div>
+
+<!-- AD-02 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">AD-02</span><span class="post-title-text">FB/IG Lead Gen — Social Proof (160+ Years)</span><span class="badge badge-p">Facebook / Instagram</span><span class="badge badge-d">$100 · May 16–22</span></div>
+<div class="post-body">
+<dl class="ad-spec">
+<dt>Objective</dt><dd>Lead Generation</dd>
+<dt>Budget</dt><dd>$100 total · ~$12.50/day · 8 days</dd>
+<dt>Audience</dt><dd>Georgia · 35–58 · Lookalike from AD-01 engagements + Business owners · Interests: investment, business growth, strategic management</dd>
+<dt>Format</dt><dd>Single image (use GEC-04 "The Room" visual) · Link: sme.gecbusiness.com</dd>
+<dt>CTA Button</dt><dd>Apply Now</dd>
+</dl>
+<div class="cap-section"><span class="cap-label">Georgian Ad Copy</span>
+<textarea id="ka-ad2" rows="8" data-lang="Georgian">160+ წელი. 13 პრაქტიკოსი. 1 ოთახი.
+
+Angel Investors. Forbes 30 Under 30. Deloitte. World Bank. Majid Al Futtaim.
+
+GEC SME განვითარების პროგრამა — Cohort 1.
+20 ადგილი. 11 ივნისი.
+
+განაცხადი → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-ad2')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Ad Copy</span>
+<textarea id="en-ad2" rows="8" data-lang="English">160+ combined years. 13 practitioners. One room.
+
+Angel Investors. Forbes 30 Under 30. Deloitte. World Bank. Majid Al Futtaim.
+
+GEC SME Business Acceleration Program — Cohort 1.
+20 spots. June 11, 2026.
+
+Apply → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-ad2')" data-orig="Copy English">Copy English</button></div>
+</div>
+</div>
+
+<!-- AD-03 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">AD-03</span><span class="post-title-text">LinkedIn Lead Gen — 89% Stat (Professional)</span><span class="badge badge-p">LinkedIn</span><span class="badge badge-d">$130 · May 13–23</span></div>
+<div class="post-body">
+<dl class="ad-spec">
+<dt>Objective</dt><dd>Lead Generation (LinkedIn Lead Gen Form)</dd>
+<dt>Budget</dt><dd>$130 total · ~$9.30/day · 14 days</dd>
+<dt>Audience</dt><dd>Georgia · Business owners / Founders / CEOs / MDs · Company size: 10–200 employees · Seniority: Director, VP, Owner · 500+ connections preferred · Exclude: startups under 3 years</dd>
+<dt>Format</dt><dd>Single image (use GEC-03 stat card) · LinkedIn Lead Gen Form (name, company, email, phone) · Link: sme.gecbusiness.com</dd>
+<dt>CTA Button</dt><dd>Learn More</dd>
+</dl>
+<div class="cap-section"><span class="cap-label">Georgian Ad Copy</span>
+<textarea id="ka-ad3" rows="10" data-lang="Georgian">ქართული SME-ების 89%-ს ფორმალური მართვის სისტემა არ აქვს.
+(ISET / World Bank, 2023)
+
+ეს ბიზნესები ვერ-ამჩნევდა — GEL 1.5M–10M ბრუნვაზე, 10–20 წელი ბაზარზე, და მაინც ჭერი.
+
+GEC SME განვითარების პროგრამა ამ სტრუქტურას ქმნის.
+40 კვირა. 13 მენტორი. 20 ადგილი.
+
+ნაკადი 1 — 11 ივნისი. → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-ad3')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Ad Copy</span>
+<textarea id="en-ad3" rows="10" data-lang="English">89% of Georgian SMEs operate without a formal management system.
+(ISET / World Bank, 2023)
+
+You built to GEL 1.5M–10M. 10–20 years in market. And you hit a ceiling.
+
+GEC SME Business Acceleration Program builds the structure that breaks it.
+40 weeks. 13 practitioner mentors. 20 participants.
+
+Cohort 1. June 11, 2026. → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-ad3')" data-orig="Copy English">Copy English</button></div>
+</div>
+</div>
+
+<!-- AD-04 -->
+<div class="post-card">
+<div class="post-header"><span class="post-num">AD-04</span><span class="post-title-text">FB/IG Retargeting — Urgency ([X] Spots Left)</span><span class="badge badge-p">Facebook / Instagram</span><span class="badge badge-d">$100 · May 21–25</span></div>
+<div class="post-body">
+<dl class="ad-spec">
+<dt>Objective</dt><dd>Conversions (application form submission)</dd>
+<dt>Budget</dt><dd>$100 total · ~$10/day · 10 days</dd>
+<dt>Audience</dt><dd>RETARGETING: people who visited landing page / clicked AD-01 or AD-02 / engaged with GEC posts but did not submit form · Also: website custom audience (pixel)</dd>
+<dt>Format</dt><dd>Bold urgency graphic — navy background, large "[X] ადგილი დარჩა" in gold · Update [X] every 2 days manually</dd>
+<dt>CTA Button</dt><dd>Apply Now</dd>
+</dl>
+<div class="cap-section"><span class="cap-label">Georgian Ad Copy</span>
+<textarea id="ka-ad4" rows="8" data-lang="Georgian">20 ადგილიდან [X] დარჩა.
+
+ნაკადი 1 სხვა ნაკადი არ არის — პირველი ნაკადის სტატუსი ვერ გამეორდება.
+
+GEC SME განვითარების პროგრამა.
+11 ივნისი. → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('ka-ad4')" data-orig="Copy Georgian">Copy Georgian</button></div>
+<div class="cap-section"><span class="cap-label">English Ad Copy</span>
+<textarea id="en-ad4" rows="8" data-lang="English">[X] spots left of 20.
+
+Founding cohort status cannot be purchased in Cohort 4.
+
+GEC SME Business Acceleration Program.
+June 11, 2026. → sme.gecbusiness.com</textarea>
+<button class="copy-btn" onclick="copyText('en-ad4')" data-orig="Copy English">Copy English</button></div>
+</div>
+</div>
+
+</div>
+<!-- END TAB 4 -->
+
+<script>
+function showTab(name,btn){
+  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  btn.classList.add('active');
+}
+function copyText(id){
+  const el=document.getElementById(id);
+  navigator.clipboard.writeText(el.value).then(()=>{
+    const btn=el.parentElement.querySelector('.copy-btn');
+    btn.textContent='Copied!';btn.classList.add('done');
+    setTimeout(()=>{btn.textContent=btn.dataset.orig;btn.classList.remove('done')},2000);
+  });
+}
+function downloadTab(tabId){
+  const pane=document.getElementById(tabId);
+  const tas=pane.querySelectorAll('textarea');
+  let out='GEC SME Program — '+tabId.toUpperCase()+' POSTS\n'+'='.repeat(50)+'\n\n';
+  tas.forEach(ta=>{
+    const card=ta.closest('.post-card');
+    const title=card?.querySelector('.post-title-text')?.textContent||'';
+    const lang=ta.dataset.lang||'';
+    out+='--- '+title+' ['+lang+'] ---\n'+ta.value+'\n\n';
+  });
+  const b=new Blob([out],{type:'text/plain;charset=utf-8'});
+  const u=URL.createObjectURL(b);
+  const a=document.createElement('a');a.href=u;a.download=tabId+'_posts.txt';a.click();
+}
+document.querySelectorAll('.copy-btn').forEach(btn=>{btn.dataset.orig=btn.textContent});
+</script>
+</body>
+</html>

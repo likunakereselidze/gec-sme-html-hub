@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEC SME Business Acceleration Program — Mentor Social Media Post Kit</title>
+<style>
+  :root {
+    --navy: #153749;
+    --teal: #226263;
+    --green: #049978;
+    --orange: #F05324;
+    --gold: #F0B91C;
+    --light: #f4f6f8;
+    --text: #1a2a35;
+    --muted: #5a7080;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #eef1f4;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    color: white;
+    padding: 40px 48px 32px;
+    border-bottom: 4px solid var(--gold);
+  }
+  .site-header .label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .site-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .site-header p {
+    font-size: 14px;
+    color: #a8c0cc;
+    max-width: 700px;
+  }
+  .site-header .meta {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .site-header .meta span {
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 14px;
+    border-radius: 20px;
+    color: #cce0ea;
+  }
+
+  /* ── NAV ── */
+  .nav-bar {
+    background: white;
+    border-bottom: 1px solid #dde4ea;
+    padding: 16px 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .nav-bar .nav-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--navy);
+    background: var(--light);
+    border: 1px solid #d0dae0;
+    border-radius: 16px;
+    padding: 4px 13px;
+    transition: all 0.18s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+  }
+  .nav-links a.section-link {
+    background: var(--navy);
+    color: var(--gold);
+    border-color: var(--navy);
+  }
+
+  /* ── MAIN SECTIONS ── */
+  .section {
+    max-width: 1280px;
+    margin: 48px auto;
+    padding: 0 32px;
+  }
+  .section-header {
+    margin-bottom: 32px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .section-header .num {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .section-header h2 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-top: 4px;
+  }
+
+  /* ── DESIGN SPEC SECTION ── */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 800px) {
+    .spec-grid { grid-template-columns: 1fr; }
+  }
+  .spec-card {
+    background: white;
+    border-radius: 10px;
+    padding: 22px 26px;
+    border: 1px solid #dde4ea;
+  }
+  .spec-card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eef1f4;
+  }
+  .spec-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .spec-card ul li {
+    font-size: 13.5px;
+    color: var(--text);
+    padding: 5px 0;
+    border-bottom: 1px solid #f4f6f8;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .spec-card ul li:last-child { border-bottom: none; }
+  .spec-card ul li::before {
+    content: '·';
+    color: var(--gold);
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .spec-card code {
+    background: #f0f4f7;
+    border: 1px solid #dde4ea;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    color: var(--navy);
+  }
+
+  .color-swatches {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .swatch-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.12);
+  }
+  .swatch span {
+    font-size: 10px;
+    color: var(--muted);
+    font-family: monospace;
+  }
+
+  .frame-diagram {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 28px;
+    color: white;
+    font-size: 12.5px;
+  }
+  .frame-diagram .zone {
+    border: 1.5px dashed rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .frame-diagram .zone.photo-zone {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.04);
+  }
+  .frame-diagram .zone.name-zone {
+    border-color: rgba(240,185,28,0.5);
+    background: rgba(240,185,28,0.07);
+  }
+  .frame-diagram .zone.strip-zone {
+    border-color: rgba(34,98,99,0.6);
+    background: rgba(34,98,99,0.2);
+    margin-bottom: 0;
+  }
+  .frame-diagram .zone-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ── MENTOR GRID ── */
+  .mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  @media (max-width: 1100px) {
+    .mentor-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 680px) {
+    .mentor-grid { grid-template-columns: 1fr; }
+  }
+
+  .mentor-block {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #dde4ea;
+    box-shadow: 0 3px 16px rgba(21,55,73,0.07);
+  }
+
+  /* ── FRAME CARD (the actual post visual) ── */
+  .frame-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--navy);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 28px 20px 0;
+    overflow: hidden;
+  }
+
+  .frame-card .gec-logo {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+    padding: 3px 9px;
+    border-radius: 4px;
+  }
+
+  .frame-card .photo-circle {
+    width: 42%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(22px, 5vw, 36px);
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    margin-top: 10px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .frame-card .name-block {
+    margin-top: 14px;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .frame-card .mentor-name {
+    font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .frame-card .mentor-title {
+    font-size: clamp(9px, 1.5vw, 12px);
+    color: #6ec4c5;
+    margin-top: 5px;
+    line-height: 1.35;
+    font-weight: 400;
+  }
+
+  .frame-card .domain-tag {
+    margin-top: 8px;
+    font-size: clamp(8px, 1.2vw, 10px);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 7px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .frame-card .bottom-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--teal);
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .frame-card .bottom-strip .prog-name {
+    font-size: clamp(8px, 1.3vw, 11px);
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+  .frame-card .bottom-strip .prog-date {
+    font-size: clamp(7px, 1.1vw, 9.5px);
+    color: rgba(255,255,255,0.7);
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── CAPTION PANEL ── */
+  .caption-panel {
+    padding: 20px 22px;
+  }
+  .mentor-meta-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eef1f4;
+  }
+  .mentor-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .mentor-meta-header .mentor-name-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .mentor-meta-header .domain-text {
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  .caption-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #eef1f4;
+  }
+  .caption-tab {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    padding: 7px 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.15s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    letter-spacing: 0.5px;
+  }
+  .caption-tab.active {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+  }
+
+  .caption-content {
+    display: none;
+    padding: 16px 0 0;
+  }
+  .caption-content.active {
+    display: block;
+  }
+
+  .caption-text {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--text);
+    white-space: pre-line;
+  }
+  .caption-text.georgian {
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+
+  .hashtags {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eef1f4;
+    font-size: 12px;
+    color: var(--teal);
+    line-height: 1.7;
+  }
+
+  .copy-note {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── CANVA SECTION ── */
+  .canva-steps {
+    counter-reset: canva-step;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 800px) {
+    .canva-steps { grid-template-columns: 1fr; }
+  }
+  .canva-step {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1px solid #dde4ea;
+    position: relative;
+  }
+  .canva-step::before {
+    counter-increment: canva-step;
+    content: counter(canva-step);
+    position: absolute;
+    top: -12px;
+    left: 18px;
+    width: 26px;
+    height: 26px;
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 26px;
+  }
+  .canva-step h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+  .canva-step p, .canva-step li {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .canva-step ul {
+    padding-left: 16px;
+    margin-top: 6px;
+  }
+  .canva-step ul li {
+    margin-bottom: 4px;
+  }
+  .canva-step code {
+    background: #f0f4f7;
+    border: 1px solid #dde4ea;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-family: monospace;
+    font-size: 11.5px;
+    color: var(--navy);
+  }
+
+  .batch-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 12.5px;
+  }
+  .batch-table th {
+    background: var(--navy);
+    color: var(--gold);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .batch-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #eef1f4;
+    color: var(--text);
+    vertical-align: middle;
+  }
+  .batch-table tr:nth-child(even) td { background: #f8fafb; }
+  .batch-table .circle-preview {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 28px;
+    font-size: 12px;
+    margin-top: 64px;
+  }
+  .footer strong { color: var(--gold); }
+
+  /* Utility */
+  .full-spec-note {
+    background: #fffbe8;
+    border: 1px solid #f0d060;
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #5a4a10;
+    margin-bottom: 28px;
+  }
+  .divider { height: 1px; background: #dde4ea; margin: 40px 0; }
+  .anchor-offset { scroll-margin-top: 90px; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="label">Internal Team Document</div>
+  <h1>GEC SME Business Acceleration Program<br>Mentor Social Media Post Kit</h1>
+  <p>Complete visual frames, captions, and Canva instructions for all 13 mentors. Use this file to preview each mentor's post card, copy the captions, and recreate the frames in Canva with real photos.</p>
+  <div class="meta">
+    <span>Cohort 1 · June 11, 2026</span>
+    <span>13 Mentors</span>
+    <span>Facebook + Instagram</span>
+    <span>1080 × 1080 px</span>
+    <span>Georgian + English captions</span>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════ -->
+<nav class="nav-bar">
+  <div class="nav-label">Jump to section</div>
+  <div class="nav-links">
+    <a href="#design-spec" class="section-link">Design Spec</a>
+    <a href="#mentors" class="section-link">All Mentor Frames</a>
+    <a href="#m1">1 · George S.</a>
+    <a href="#m2">2 · Ia T.</a>
+    <a href="#m3">3 · Roman T.</a>
+    <a href="#m4">4 · Eka L.</a>
+    <a href="#m5">5 · Tea G.</a>
+    <a href="#m6">6 · Nino K.</a>
+    <a href="#m7">7 · Keti K.</a>
+    <a href="#m8">8 · Davit T.</a>
+    <a href="#m9">9 · Iro T.</a>
+    <a href="#m10">10 · Dea C.</a>
+    <a href="#m11">11 · Giorgi C.</a>
+    <a href="#m12">12 · Beka B.</a>
+    <a href="#m13">13 · Lia K.</a>
+    <a href="#canva" class="section-link">Canva Guide</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 1: DESIGN SPECIFICATION
+══════════════════════════════════════════════ -->
+<section class="section" id="design-spec">
+  <div class="section-header anchor-offset">
+    <div class="num">Section 01</div>
+    <h2>Design Specification — For the Canva / Design Team</h2>
+  </div>
+
+  <div class="full-spec-note">
+    This section is the full brief for whoever builds the template in Canva. Read all of it before opening Canva. The goal is a premium professional speaker card — not a social media advertisement. Restraint and clarity are the design values.
+  </div>
+
+  <div class="spec-grid">
+
+    <div class="spec-card">
+      <h3>Canvas & Format</h3>
+      <ul>
+        <li>Format: <code>1080 × 1080 px</code> (square — Instagram standard, also works for Facebook)</li>
+        <li>Resolution: <code>72 dpi</code> for digital, export as PNG</li>
+        <li>Color mode: RGB</li>
+        <li>Safe zone: keep all text within <code>80px</code> margin from edges</li>
+        <li>No rounded corners on the canvas itself — full bleed square</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Brand Colors</h3>
+      <div class="color-swatches">
+        <div class="swatch">
+          <div class="swatch-box" style="background:#153749;"></div>
+          <span>#153749</span>
+          <span style="font-size:9px;color:#888;">Navy</span>
+        </div>
+        <div class="swatch">
+          <div class="swatch-box" style="background:#226263;"></div>
+          <span>#226263</span>
+          <span style="font-size:9px;color:#888;">Teal</span>
+        </div>
+        <div class="swatch">
+          <div class="swatch-box" style="background:#049978;"></div>
+          <span>#049978</span>
+          <span style="font-size:9px;color:#888;">Green</span>
+        </div>
+        <div class="swatch">
+          <div class="swatch-box" style="background:#F05324;"></div>
+          <span>#F05324</span>
+          <span style="font-size:9px;color:#888;">Orange</span>
+        </div>
+        <div class="swatch">
+          <div class="swatch-box" style="background:#F0B91C;"></div>
+          <span>#F0B91C</span>
+          <span style="font-size:9px;color:#888;">Gold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-card">
+      <h3>Layout Zones (Top → Bottom)</h3>
+      <ul>
+        <li><strong>Top zone (55%):</strong> Circle photo, centered. Diameter: <code>450 px</code>. Circle has a <code>4px gold border</code> stroke.</li>
+        <li><strong>GEC logo:</strong> top-right corner, <code>24px</code> from edges. Use GEC wordmark or "GEC" text in gold with a gold rectangle border (<code>2px</code>).</li>
+        <li><strong>Middle band:</strong> Mentor name (gold, bold) + title/credential line (teal) + domain tag (white/muted). Center-aligned.</li>
+        <li><strong>Bottom strip (≈ 12% height):</strong> Solid teal <code>#226263</code> background. Program name + date. Center-aligned white text.</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Typography</h3>
+      <ul>
+        <li>Mentor name: <strong>Bold</strong>, <code>48–52 px</code>, color: Gold <code>#F0B91C</code></li>
+        <li>Title/credential: Regular, <code>26–30 px</code>, color: Teal <code>#6ec4c5</code> (lighter teal for readability on dark)</li>
+        <li>Domain tag: Light/Regular, <code>18–20 px</code>, color: White at 55% opacity</li>
+        <li>Bottom strip program name: SemiBold, <code>22 px</code>, White</li>
+        <li>Bottom strip date: Regular, <code>17 px</code>, White at 70% opacity</li>
+        <li>Font recommendation: <strong>Montserrat</strong> (free on Google Fonts — clean, international, works in Georgian/Latin)</li>
+        <li>For Georgian text, Montserrat renders correctly. Alternatively use <strong>BPG Arial</strong> (Georgian standard) for the Georgian name if needed.</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Photo Circle — Execution</h3>
+      <ul>
+        <li>In Canva: upload mentor's professional headshot</li>
+        <li>Add a circle shape (<code>450 × 450 px</code>), centered at the upper portion of the canvas</li>
+        <li>Right-click photo → "Edit image" → crop to circle, OR use "Frames" → circle frame in Canva</li>
+        <li>Add a circle outline on top: stroke <code>4px</code>, color Gold <code>#F0B91C</code>, fill: none</li>
+        <li>Photo should be cropped to show face + upper chest (professional headshot style)</li>
+        <li>Avoid photos with busy backgrounds — they compete with the dark navy canvas</li>
+        <li>If mentor has no suitable headshot: use the initials placeholder circle (as shown in the previews below) and request a photo</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Bottom Program Strip</h3>
+      <ul>
+        <li>Strip height: <code>110–120 px</code></li>
+        <li>Background: Teal <code>#226263</code></li>
+        <li>Line 1: <code>GEC SME Business Acceleration Program</code> — SemiBold, 22px, White</li>
+        <li>Line 2: <code>Cohort 1 · June 11, 2026</code> — Regular, 17px, White 70%</li>
+        <li>Add subtle GEC logo mark (small, white) at left or right of strip if available</li>
+        <li>Separator dot (·) between cohort and date: use a real centered dot, not a hyphen</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Design Principles — What Not To Do</h3>
+      <ul>
+        <li>No emojis anywhere on the frame</li>
+        <li>No gradients on backgrounds — solid navy only</li>
+        <li>No drop shadows on text</li>
+        <li>No decorative borders or patterns — clean and minimal</li>
+        <li>No promotional language on the frame itself (no "Join Now", "Register", "Limited Spots")</li>
+        <li>No clutter — the photo and name are the heroes</li>
+        <li>Consistent frame across all 13 mentors — only the initials circle color changes per mentor (for placeholder); actual headshot replaces this in production</li>
+      </ul>
+    </div>
+
+    <div class="spec-card">
+      <h3>Frame Layout Diagram</h3>
+      <div class="frame-diagram">
+        <div style="position:relative; text-align:right; margin-bottom:6px;">
+          <span style="font-size:10px;color:rgba(240,185,28,0.6); border:1px solid rgba(240,185,28,0.4);padding:2px 7px;border-radius:3px;">GEC</span>
+        </div>
+        <div class="zone photo-zone">
+          <div>
+            <div style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(240,185,28,0.6);background:rgba(255,255,255,0.08);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:rgba(255,255,255,0.6);">GS</div>
+            <span class="zone-label">450×450 px · circle photo</span>
+          </div>
+        </div>
+        <div class="zone name-zone">
+          <span class="zone-label">name + credential band</span>
+          <div style="color:#F0B91C;font-weight:700;font-size:13px;">Mentor Full Name</div>
+          <div style="color:#6ec4c5;font-size:11px;margin-top:3px;">Title · Organization · Credential</div>
+          <div style="color:rgba(255,255,255,0.4);font-size:10px;margin-top:3px;letter-spacing:1px;">DOMAIN TAG</div>
+        </div>
+        <div class="zone strip-zone">
+          <span class="zone-label">bottom program strip · teal #226263</span>
+          <div style="font-weight:600;font-size:11px;">GEC SME Business Acceleration Program</div>
+          <div style="font-size:10px;opacity:0.7;">Cohort 1 · June 11, 2026</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 2: ALL 13 MENTOR FRAMES
+══════════════════════════════════════════════ -->
+<section class="section" id="mentors">
+  <div class="section-header anchor-offset">
+    <div class="num">Section 02</div>
+    <h2>All 13 Mentor Frames — Visual Preview + Captions</h2>
+  </div>
+
+  <div class="full-spec-note">
+    Each card below is a screen-preview of the final frame (scaled to ~480px). Below each card: the Georgian caption, English caption, and hashtags — ready to copy. Tabs switch between Georgian and English.
+  </div>
+
+  <div class="mentor-grid">
+
+    <!-- ── MENTOR 1: GEORGE SIMONGULASHVILI ── -->
+    <div class="mentor-block" id="m1">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#049978;">GS</div>
+        <div class="name-block">
+          <div class="mentor-name">George Simongulashvili</div>
+          <div class="mentor-title">Partner, GEC &nbsp;|&nbsp; Angel Investor, Axel</div>
+          <div class="domain-tag">Strategy &amp; Business Development &nbsp;·&nbsp; 20+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">1</div>
+          <div>
+            <div class="mentor-name-text">George Simongulashvili</div>
+            <div class="domain-text">Strategy &amp; Business Development</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-1')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-1')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-1')">Hashtags</button>
+        </div>
+        <div id="geo-1" class="caption-content active">
+          <p class="caption-text georgian">ოც წელზე მეტია, ბიზნესსა და ინვესტიციებში ვარ — ჯერ სტრატეგის სახით, შემდეგ Axel-ის ანგელოზ ინვესტორად. ამ დროში ასობით ქართული კომპანია ვნახე ახლოდან.
+
+ერთი რამ მაქვს გამოტანილი: ბიზნეს ჩერდება არა ცუდი პროდუქტის გამო. ჩერდება, რადგან სტრატეგიული ინფრასტრუქტურა არ გამართეს. მეწარმე მარტო, ინტუიციით, ყოველდღიური ზეწოლის ქვეშ — და სტრატეგია, რომელიც თავში ატარებს, ვერასოდეს ქაღალდზე ჩამოდის. ვერ ქმნის სისტემას. ვერ სკალირდება.
+
+GEC-ის SME განვითარების პროგრამა სწორედ ამ ხარვეზს ხსნის — 40 კვირა, სტრუქტურულად, პრაქტიკოსებთან ერთად, შენს ბიზნესსა.
+
+თუ გინდა შემდეგი ეტაპი ისე გააკეთო, სწორად — Cohort 1 იწყება 25 მაისს.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram. Adjust the sign-off to match your personal style.</p>
+        </div>
+        <div id="en-1" class="caption-content">
+          <p class="caption-text">Twenty years of working inside Georgian businesses — first as a strategist, then as an investor — taught me one consistent truth: most businesses don't stall because of a bad product. They stall because the strategic infrastructure was never built properly.
+
+That's what this program is designed to fix. Forty weeks of structured, practitioner-led work on your actual business. Not a seminar. Not a lecture. Work.
+
+If you're serious about your next growth phase, Cohort 1 starts June 11.
+
+GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-1" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #ბიზნესსტრატეგია #BusinessStrategy #GeorgianBusiness #SME #ბიზნესაჩქარება #ანგელოზინვესტორი #AngelInvestor #Axel #GECGeorgia #ქართულიბიზნესი #კოჰორტი1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 2: IA TSULAIA ── -->
+    <div class="mentor-block" id="m2">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#226263;">IT</div>
+        <div class="name-block">
+          <div class="mentor-name">Ia Tsulaia</div>
+          <div class="mentor-title">HR &amp; OD Expert &nbsp;|&nbsp; 100+ Projects &nbsp;|&nbsp; GIZ, EBRD, NATO</div>
+          <div class="domain-tag">HR Systems &nbsp;·&nbsp; Culture &nbsp;·&nbsp; Change Management &nbsp;·&nbsp; 20+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">2</div>
+          <div>
+            <div class="mentor-name-text">Ia Tsulaia</div>
+            <div class="domain-text">HR Systems · Culture · Change Management</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-2')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-2')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-2')">Hashtags</button>
+        </div>
+        <div id="geo-2" class="caption-content active">
+          <p class="caption-text georgian">ოც წელზე მეტია ვმუშაობ ორგანიზაციებთან — GIZ-ში, EBRD-ში, NATO-სთვის, ქართულ კერძო სექტორში. 100-ზე მეტი პროექტი. და ყველა შემთხვევაში, ერთ და იმავე ადგილს ვხვდები: ადამიანთა სისტემა — ყველაზე ძვირი, ყველაზე ნაკლებად მოწყობილი.
+
+სტრატეგია ლამაზია. გუნდი, რომელიც ამ სტრატეგიას ახორციელებს — ხშირად სტრუქტურის გარეშეა. შეფასება არ ხდება. ცვლილება არ იმართება. ადამიანი "ისე მუშაობს" — ახსნის, მოტივაციის, სიცხადის გარეშე.
+
+ეს ბიზნეს პრობლემაა. ადამიანური კაპიტალი ხარჯი კი არ არის — ის ზრდის მთავარი ბერკეტია.
+
+GEC-ის SME განვითარების პროგრამაში ამ კუთხეს ვხსნი — პრაქტიკულად, კონკრეტულ ბიზნეს კონტექსტში. 11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-2" class="caption-content">
+          <p class="caption-text">The question I hear most often: "Why would we invest in HR right now — we have so many other priorities?"
+
+That question is usually the problem.
+
+In over 20 years and 100+ projects across GIZ, EBRD, NATO, and Georgian private companies, the pattern is the same: smart strategy, reasonable business model — but the people running it have no system around them.
+
+Human capital is the most expensive and least managed asset in most Georgian SMEs.
+
+This program works on exactly that. If your business has grown past the point where you can manage everything by feel, Cohort 1 starts June 11.
+
+GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-2" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #HR #HRDevelopment #ორგანიზაციულიგანვითარება #OrganizationalDevelopment #ქართულიბიზნესი #ადამიანურიკაპიტალი #HumanCapital #SME #GECGeorgia #კოჰორტი1 #ChangeManagement</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 3: ROMAN TSUTSKIRIDZE ── -->
+    <div class="mentor-block" id="m3">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#153749; border: 3px solid #F0B91C; outline: 2px solid #226263;">RT</div>
+        <div class="name-block">
+          <div class="mentor-name">Roman Tsutskiridze</div>
+          <div class="mentor-title">CPT (ISPI) &nbsp;|&nbsp; Senior PM, Kaizen / Tetra Tech</div>
+          <div class="domain-tag">Performance Management &nbsp;·&nbsp; Process Transformation &nbsp;·&nbsp; 20+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">3</div>
+          <div>
+            <div class="mentor-name-text">Roman Tsutskiridze</div>
+            <div class="domain-text">Performance Management · Process Transformation</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-3')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-3')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-3')">Hashtags</button>
+        </div>
+        <div id="geo-3" class="caption-content active">
+          <p class="caption-text georgian">ოც წელზე მეტია ვმუშაობ ეფექტიანობის ტრანსფორმაციაზე — Kaizen-ში, Tetra Tech-ში, სხვადასხვა სექტორში. CPT სერტიფიკატი ISPI-სგან — ეს ჩემი სფეროს ყველაზე მკაცრი პრაქტიკული სტანდარტია.
+
+ამ წლებში ერთი პარადოქსი ყველგან ვნახე: ადამიანები ბევრს მუშაობენ, ბიზნესი კი სტაბილურ შედეგს ვერ იძლევა. ეს მოტივაციის პრობლემა არ არის. ეს სისტემის პრობლემაა — სწორი ინდიკატორები არ ზომება, პროცესები არ გამართულა, გადაწყვეტილება ინტუიციაზეა, არა მონაცემზე.
+
+ბიზნესი, რომელიც სწორ რამეებს ზომავს, სხვა სიჩქარით მოძრაობს.
+
+GEC-ის SME განვითარების პროგრამაში ამ სიცხადეს ვქმნი — რა ზომო, რატომ, და რა შეიცვლება შეზომვის შემდეგ. Cohort 1, 11 ივნისი.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-3" class="caption-content">
+          <p class="caption-text">The phrase I hear too often in Georgian business: "Everyone is working hard" — but results are inconsistent.
+
+That's not a motivation problem. That's a system problem.
+
+As a Certified Performance Technologist (ISPI) with 20+ years in performance transformation across Kaizen and Tetra Tech, I've seen what changes when you build the right measurement and process infrastructure.
+
+Effort without a system is just expensive noise.
+
+In this program, we work on building the framework that turns effort into measurable outcomes — in your specific business, your specific context.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-3" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #PerformanceManagement #ProcessTransformation #CPT #ISPI #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #ბიზნესეფექტიანობა #BusinessPerformance #Kaizen</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 4: EKA LEONIDZE ── -->
+    <div class="mentor-block" id="m4">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#F05324;">EL</div>
+        <div class="name-block">
+          <div class="mentor-name">Eka Leonidze</div>
+          <div class="mentor-title">CPT &nbsp;|&nbsp; Deloitte &nbsp;|&nbsp; Chemonics &nbsp;|&nbsp; MA ISS The Hague</div>
+          <div class="domain-tag">Organizational Performance &nbsp;·&nbsp; 15+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">4</div>
+          <div>
+            <div class="mentor-name-text">Eka Leonidze</div>
+            <div class="domain-text">Organizational Performance</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-4')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-4')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-4')">Hashtags</button>
+        </div>
+        <div id="geo-4" class="caption-content active">
+          <p class="caption-text georgian">Deloitte, Chemonics, ISS The Hague — ეს სახელები ბიოგრაფიაში კი არ ჩნდება, ეს ისეთი სკოლებია, სადაც ორგანიზაციული ეფექტიანობა ფენა-ფენად ისწავლება: სტრუქტურა, პროცესი, ადამიანი, კულტურა. ცალ-ცალკე, ყველა ეს ფენა ინსტრუმენტია. ერთად — ეს არის ის, რასაც ბიზნეს-სისტემა ჰქვია.
+
+საქართველოში დაბრუნება ნიშნავდა ამ ყველაფრის ახალი თვალით ხედვას. ქართული SME-ს გამოწვევები სხვაა — ხშირად ინფრასტრუქტურული, ხშირად ლიდერობის, ხშირად კულტურული. გლობალური სტანდარტები "პირდაპირ" ვერ ედება. სჭირდება ადამიანი, ვინც ორივე სამყარო იცის.
+
+ეს ჩემი ადგილია GEC-ის SME განვითარების პროგრამაში.
+
+11 ივნისი, Cohort 1 — თუ გინდა შენი ბიზნეს ეფექტიანობა სტრუქტურულ საფუძველზე დადგეს.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-4" class="caption-content">
+          <p class="caption-text">Deloitte, Chemonics, ISS The Hague — these experiences taught me that organizational performance isn't one thing. It operates in layers: structure, process, people, culture.
+
+When I returned to Georgia, I saw those same layers — but in a very different context. Global frameworks don't transfer directly onto Georgian SMEs. They need interpretation, adaptation, and someone who understands both sides.
+
+That's the bridge I bring to this program.
+
+If you want to build a business that performs — not just survives — Cohort 1 starts June 11.
+
+GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-4" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #OrganizationalPerformance #Deloitte #Chemonics #ISS #TheHague #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #CPT #ბიზნესეფექტიანობა</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 5: TEA GOROZIA ── -->
+    <div class="mentor-block" id="m5">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#F0B91C; color: #153749;">TG</div>
+        <div class="name-block">
+          <div class="mentor-name">Tea Gorozia</div>
+          <div class="mentor-title">Founder, ABGA &nbsp;|&nbsp; Head of Marketing, NIKS Holding</div>
+          <div class="domain-tag">Marketing Strategy &amp; Brand &nbsp;·&nbsp; 15+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">5</div>
+          <div>
+            <div class="mentor-name-text">Tea Gorozia</div>
+            <div class="domain-text">Marketing Strategy &amp; Brand</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-5')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-5')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-5')">Hashtags</button>
+        </div>
+        <div id="geo-5" class="caption-content active">
+          <p class="caption-text georgian">ABGA დავაარსე. NIKS Holding-ის მარკეტინგი ვხელმძღვანელე. 15 წელია ვმუშაობ ბრენდებსა და სტრატეგიაზე. ამ გზაში ვისწავლე ერთი: კარგი პროდუქტი ხმაურის გარეშე — უხილავია.
+
+ქართულ SME-ებს ხშირად კარგი პროდუქტი აქვს. მარკეტინგი — ქაოტური. ბიუჯეტი იხარჯება, შედეგი — გაურკვეველი. ეს კრეატიულობის ნაკლი არ არის. ეს სისტემის ნაკლია: გაურკვეველი სეგმენტი, გაუმართავი პოზიციონირება, სწორი არხი ვერ ნაპოვნი, გზავნილი — ბუნდოვანი.
+
+მარკეტინგი, სტრატეგიის გარეშე, ხარჯია. სტრატეგიასთან — ინვესტიციაა.
+
+GEC-ის SME განვითარების პროგრამაში ამ განსხვავებაზე ვმუშაობ მეწარმეებთან ერთად. Cohort 1, 11 ივნისი.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-5" class="caption-content">
+          <p class="caption-text">I always ask founders: "Where does your marketing budget actually go?"
+
+There are always many answers. Results — fewer.
+
+15 years in marketing strategy — founding ABGA, leading marketing at NIKS Holding — taught me that marketing without strategy is just spending money on noise.
+
+The gap in most Georgian SMEs isn't creativity. It's the system: positioning, segmentation, right channels, right message, measurement.
+
+In this program, we build that structure — together, on your actual business.
+
+If you want marketing to be an investment, not a cost, Cohort 1 starts June 11.
+
+GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-5" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #MarketingStrategy #BrandStrategy #ბრენდი #მარკეტინგი #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #ABGA #NIKS #ბიზნესაჩქარება</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 6: NINO KVACHANTIRADZE ── -->
+    <div class="mentor-block" id="m6">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#049978;">NK</div>
+        <div class="name-block">
+          <div class="mentor-name">Nino Kvachantiradze</div>
+          <div class="mentor-title">Managing Partner, MINDset &nbsp;|&nbsp; DDB Georgia &nbsp;|&nbsp; Exeter (UK)</div>
+          <div class="domain-tag">Marketing &nbsp;·&nbsp; Brand Strategy &nbsp;·&nbsp; 13+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">6</div>
+          <div>
+            <div class="mentor-name-text">Nino Kvachantiradze</div>
+            <div class="domain-text">Marketing · Brand Strategy</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-6')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-6')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-6')">Hashtags</button>
+        </div>
+        <div id="geo-6" class="caption-content active">
+          <p class="caption-text georgian">Exeter University-ში ბრენდი ვისწავლე. DDB Georgia-ში ვნახე, როგორ მუშაობს კრეატივი ბაზარზე. MINDset ავაშენე, რადგან ვჯერი — ბრენდი ბიზნეს სტრატეგიაა, დეკორი კი არა.
+
+ქართულ ბაზარზე ჯერ კიდევ ვხვდები ბიზნესებს, რომლებიც ფასზე კონკურენციას ირჩევენ. ეს სტრატეგია ყოველთვის ქვემოთ მიდის — და ყოველთვის ვიღაც უფრო იაფად გაყიდის. ბრენდი, რომელსაც პოზიცია, ამბავი, ემოციური სიცხადე აქვს — ის ფასს კი არ ვაჭრობს, ის არჩეულია.
+
+ეს ცვლილება ერთ გადამჭრელ კითხვაზე დგება: რატომ ირჩევს შენი მომხმარებელი შენ?
+
+GEC-ის SME განვითარების პროგრამაში ამ კითხვაზე ვმუშაობ — სტრუქტურულად, შენი ბაზრის კონტექსტში. 11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-6" class="caption-content">
+          <p class="caption-text">In Georgian business, price is still a competitive advantage. That's a problem.
+
+Competing on price is always a race to the bottom. A brand that positions correctly, communicates at an emotional level — that brand gets chosen. Not on price. On preference.
+
+Exeter University, DDB Georgia, MINDset — all of it comes back to one question: why does a customer choose one business over another?
+
+That question is exactly what I work on in this program — systematically, in the specific context of your market and your customer.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-6" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #BrandStrategy #Branding #მარკეტინგი #ბრენდი #Positioning #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #MINDset #DDB</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 7: KETI KHUNTSARIA ── -->
+    <div class="mentor-block" id="m7">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#226263;">KK</div>
+        <div class="name-block">
+          <div class="mentor-name">Keti Khuntsaria</div>
+          <div class="mentor-title">Angel Investor, Axel &nbsp;|&nbsp; Sales &amp; Pricing Strategy</div>
+          <div class="domain-tag">Sales &nbsp;·&nbsp; Pricing &nbsp;·&nbsp; 12+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">7</div>
+          <div>
+            <div class="mentor-name-text">Keti Khuntsaria</div>
+            <div class="domain-text">Sales · Pricing Strategy</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-7')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-7')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-7')">Hashtags</button>
+        </div>
+        <div id="geo-7" class="caption-content active">
+          <p class="caption-text georgian">Axel-ში ანგელოზ ინვესტორი ვარ. ბიზნეს ვაფასებ ყოველდღე. და ყველაზე ხშირი სურათი, რასაც ვხვდები, ასეთია: კარგი პროდუქტი, ლოიალური კლიენტი, ბაზარი — ყველაფერი. მაგრამ ფასი — ძალიან დაბალია.
+
+ეს არ ხდება, რადგან ბაზარი ვერ იხდის. ხდება, რადგან ბიზნესი ვერ ხსნის, რატომ ღირს. ვალუე პროპოზიცია ბუნდოვანია. გაყიდვის სისტემა — სუსტი. მომხმარებელი ვაჭრობს — და ბიზნესი დათმობს, რადგან ფასის დასაცავი ენა არ გამოუმუშავებია.
+
+ფასი ცხრილი კი არ არის. ეს ნდობაა — ნდობა, რომ შენი ღირებულება ამ ციფრს ამართლებს.
+
+GEC-ის SME განვითარების პროგრამაში გაყიდვების სტრატეგიასა და ფასწარმოქმნაზე ვმუშაობ — ისე, რომ ფასი სწორ ადგილას დადგეს. 11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-7" class="caption-content">
+          <p class="caption-text">As an angel investor, the most common pattern I see: good product, loyal customers, real market — but underpriced.
+
+Not because the market can't pay more. Because the business hasn't built the system that justifies a premium.
+
+Pricing isn't a spreadsheet. Pricing is your value proposition made visible. If your customer can't see why it costs what it costs — they'll negotiate. And they'll keep negotiating until a cheaper competitor appears.
+
+In this program, we break that cycle. We work on understanding what your business is actually worth — and how to sell it at the right price.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-7" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #Sales #PricingStrategy #ფასი #გაყიდვები #AngelInvestor #Axel #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #ValueProposition</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 8: DAVIT TSITSKISHVILI ── -->
+    <div class="mentor-block" id="m8">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#F05324;">DT</div>
+        <div class="name-block">
+          <div class="mentor-name">Davit Tsitskishvili</div>
+          <div class="mentor-title">Founder, Tsitsko Holding &nbsp;|&nbsp; EBAN &nbsp;|&nbsp; Forbes Georgia</div>
+          <div class="domain-tag">Leadership &nbsp;·&nbsp; Entrepreneurship &nbsp;·&nbsp; 15+ Years</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">8</div>
+          <div>
+            <div class="mentor-name-text">Davit Tsitskishvili</div>
+            <div class="domain-text">Leadership · Entrepreneurship</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-8')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-8')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-8')">Hashtags</button>
+        </div>
+        <div id="geo-8" class="caption-content active">
+          <p class="caption-text georgian">Tsitsko Holding ავაშენე. EBAN-ში გავწევრიანდი. Forbes Georgia-ს სიაში მოვხვდი. ეს ლამაზი ციფრები და სახელებია, მაგრამ ამ გზის უმძიმესი ნაწილი სხვაა — ის მომენტი, როდესაც ფაუნდერი ხვდება: "ყველაფრის გაკეთება" და "ბიზნეს ლიდერობა" — ეს სხვადასხვა საქმეა.
+
+ბევრ მეწარმეს ვხვდები, ვინც ძირითადად ყველაფერს მარტო აკეთებს. გუნდი ჰყავს, მაგრამ გუნდი კი არ მუშაობს — ემუშავებინება. ეს ზრდის ჭერია. მართვა ლიდერობა არ არის.
+
+ლიდერობა ნიშნავს — გარემოს შექმნა, სადაც სხვები ფიქრობენ, წყვეტენ, პასუხს აგებენ. ეს ისწავლება. მე ვისწავლე — გზაში, შეცდომებში, ყოველ გადაწყვეტილებაში.
+
+GEC-ის SME განვითარების პროგრამაში ეს გარდამავალი ნაბიჯი ჩემი ნაწილია. Cohort 1, 11 ივნისი.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-8" class="caption-content">
+          <p class="caption-text">Founder is a beautiful word. Building a business is a different story.
+
+Building Tsitsko Holding meant dozens of pivots, thousands of mistakes, a new challenge every year. EBAN membership, Forbes Georgia — those are markers on the road, not the destination.
+
+What I learned: leadership in business doesn't mean managing your team. It means creating an environment where your team uses their own minds. That's hard. It has to be learned.
+
+In this program, I'm most interested in that transition — from founder-who-does-everything to leader.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-8" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #Leadership #Entrepreneurship #ლიდერობა #მეწარმეობა #EBAN #ForbesGeorgia #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #TsitskoHolding</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 9: IRO TSAGAREISHVILI ── -->
+    <div class="mentor-block" id="m9">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#153749; outline: 3px solid #226263;">ირ</div>
+        <div class="name-block">
+          <div class="mentor-name">Iro Tsagareishvili</div>
+          <div class="mentor-title">MD, Axel &nbsp;|&nbsp; Forbes 30 Under 30 Georgia &nbsp;|&nbsp; 20+ deals</div>
+          <div class="domain-tag">Investment Readiness &nbsp;·&nbsp; Angel Networks &nbsp;·&nbsp; Forbes 30u30</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">9</div>
+          <div>
+            <div class="mentor-name-text">Iro Tsagareishvili</div>
+            <div class="domain-text">Investment Readiness · Angel Networks</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-9')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-9')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-9')">Hashtags</button>
+        </div>
+        <div id="geo-9" class="caption-content active">
+          <p class="caption-text georgian">Axel-ის MD ვარ. Forbes Georgia-ს 30 Under 30. 20-ზე მეტი ინვესტიციის დილი ჩვენს პორტფელში. ეს ნიშნავს, რომ ყოველ კვირა ბიზნეს ვაფასებ — ვხედავ, ვინ მზადაა, ვინ კი — არა.
+
+სიმართლე ასეთია: კარგი პრეზენტაცია ბევრია. ინვესტირებადი ბიზნესი — ნაკლები. სხვაობა ყოველთვის ერთ და იმავეზე ჩამოდის: ბიზნეს-მფლობელი ვერ ხსნის — ნათლად, ციფრებით, ლოგიკურად — სად მიდის, რატომ, და რა ეღირება.
+
+ეს სიცხადე თავისთავად არ ჩნდება. ის სამუშაოა.
+
+GEC-ის SME განვითარების პროგრამა ამ სიცხადეს ქმნის — 40 კვირა, სტრუქტურულად. მე ამ პროგრამის ნაწილი ვარ, რადგან ვჯერი: ქართული ბიზნეს ინვესტირებადი გახდება. 11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-9" class="caption-content">
+          <p class="caption-text">20+ investment deals at Axel. Dozens of pitches reviewed. Many good presentations. Far fewer — investable businesses.
+
+The difference is always the same: an investable business knows what makes it different. Knows where it's going. Knows what it's worth. And can communicate all of it clearly.
+
+That clarity doesn't appear spontaneously. It's built.
+
+The 40-week structure of this program builds exactly that. Week 40 — the investor presentation — is a real opportunity. In front of people like me.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-9" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #InvestmentReadiness #AngelInvestor #Forbes30Under30 #Axel #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #Pitch #ინვესტიცია #StartupGeorgia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 10: DEA CHKHAIDZE ── -->
+    <div class="mentor-block" id="m10">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#F0B91C; color:#153749;">DC</div>
+        <div class="name-block">
+          <div class="mentor-name">Dea Chkhaidze</div>
+          <div class="mentor-title">ICF PCC &nbsp;|&nbsp; Former Head of Expansion, Majid Al Futtaim (UAE)</div>
+          <div class="domain-tag">Leadership Coaching &nbsp;·&nbsp; Executive Development</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">10</div>
+          <div>
+            <div class="mentor-name-text">Dea Chkhaidze</div>
+            <div class="domain-text">Leadership Coaching · Executive Development</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-10')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-10')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-10')">Hashtags</button>
+        </div>
+        <div id="geo-10" class="caption-content active">
+          <p class="caption-text georgian">UAE-ში, Majid Al Futtaim-ში ვმუშაობდი — ექსპანსიის ხელმძღვანელი, სწრაფი ბაზარი, კომპლექსური გარემო. იქ ვისწავლე ერთი, რაც ყველა კულტურაში ერთნაირია: გადაწყვეტილების მიმღები ყოველთვის მარტოა ამ გადაწყვეტილებასთან.
+
+ICF PCC სერტიფიცირებული კოუჩი ვარ. ჩემი სამუშაო ზუსტად ამ "მარტო" მომენტში იწყება. ბევრი ლიდერი ზუსტად იცის, რა გასაკეთებელია — და მაინც ვერ ადის, ან ნელა ადის. ეს ცოდნის ნაკლი არ არის. ეს გადამჭრელობის, ფოკუსის, შიდა სიცხადის ნაკლია — ის, რასაც არც ერთი ბიზნეს-სახელმძღვანელო არ გასწავლის.
+
+GEC-ის SME განვითარების პროგრამაში ეს განზომილება ჩემი ნაწილია — ბიზნეს ინსტრუმენტებთან ერთად, ლიდერის განვითარება.
+
+11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-10" class="caption-content">
+          <p class="caption-text">At Majid Al Futtaim in the UAE, I worked in expansion — fast pace, complex markets, multiple cultures. I learned that business challenges are the same everywhere. And the person making the decision is always alone with it.
+
+I'm an ICF PCC certified coach. My work sits in the gap between knowing and doing.
+
+Many business leaders know exactly what needs to happen. And still don't move. That's not a knowledge gap. That's a leadership infrastructure gap — decisiveness, focus, stress management, internal clarity.
+
+In this program, I work on exactly that dimension. Alongside the business methodology — the person leading it.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-10" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #LeadershipCoaching #ExecutiveCoaching #ICF #PCC #MajidAlFuttaim #UAE #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #ლიდერობა</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 11: GIORGI CHIKVILADZE ── -->
+    <div class="mentor-block" id="m11">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#049978;">GC</div>
+        <div class="name-block">
+          <div class="mentor-name">Giorgi Chikviladze</div>
+          <div class="mentor-title">Finance &amp; Ops, GEC &nbsp;|&nbsp; World Bank &nbsp;|&nbsp; Loughborough (UK)</div>
+          <div class="domain-tag">Finance &nbsp;·&nbsp; Operations &nbsp;·&nbsp; World Bank Experience</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">11</div>
+          <div>
+            <div class="mentor-name-text">Giorgi Chikviladze</div>
+            <div class="domain-text">Finance · Operations</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-11')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-11')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-11')">Hashtags</button>
+        </div>
+        <div id="geo-11" class="caption-content active">
+          <p class="caption-text georgian">Loughborough University-ში ვისწავლე. World Bank-ში ვიმუშავე. ახლა GEC-ში ვარ, ფინანსებსა და ოპერაციებზე. ეს გზა ერთ დასკვნამდე მიმიყვანა: ბიზნეს-მფლობელი, ვინც ფინანსური ანგარიშის ენა არ იცის, ბრმად მართავს.
+
+SME ბიზნეს-მფლობელებს ხშირად ვეკითხები: "P&L-ის რომელ ხაზს ყველაზე ხშირად უყურებ?" — "შემოსავალს" — ყველაზე გავრცელებული პასუხია. ეს პრობლემაა. შემოსავალი ამბის ერთი ნაწილია. მარჟა, ფულადი ნაკადი, ვალდებულების სტრუქტურა, ინვესტიციის ანაზღაურება — ეს ყველაფერი ერთად ქმნის სურათს, საიდანაც ჭკვიანი გადაწყვეტილება იღება.
+
+ბუღალტერი P&L-ს ამზადებს. ის კი — უნდა გაიგო შენ.
+
+GEC-ის SME განვითარების პროგრამაში ამ ენას ვასწავლი — პრაქტიკულად, შენი ციფრებით. 11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-11" class="caption-content">
+          <p class="caption-text">I ask SME owners often: "Which line of your P&L do you look at most?"
+
+"Revenue" — the most common answer.
+
+That's a problem. Revenue is only part of the story. Margin, cash flow, liabilities, return on investment — together these create the financial picture in which smart decisions get made.
+
+World Bank experience, Loughborough University foundation, GEC finance and operations — all of it leads to one conviction: the business owner needs to own the financial language. The accountant isn't the one who reads the P&L. That's you.
+
+I teach that language in this program.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-11" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #Finance #BusinessFinance #ფინანსები #WorldBank #Loughborough #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #FinancialLiteracy #Operations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 12: BEKA BAIASHVILI ── -->
+    <div class="mentor-block" id="m12">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#226263;">BB</div>
+        <div class="name-block">
+          <div class="mentor-name">Beka Baiashvili</div>
+          <div class="mentor-title">Strategy Lead, GEC &nbsp;|&nbsp; PhD Candidate, Economics (TSU)</div>
+          <div class="domain-tag">Business Strategy &nbsp;·&nbsp; Sustainability &nbsp;·&nbsp; PhD Researcher</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">12</div>
+          <div>
+            <div class="mentor-name-text">Beka Baiashvili</div>
+            <div class="domain-text">Business Strategy · Sustainability</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-12')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-12')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-12')">Hashtags</button>
+        </div>
+        <div id="geo-12" class="caption-content active">
+          <p class="caption-text georgian">TSU-ში ეკონომიკის PhD კანდიდატი ვარ. GEC-ში სტრატეგიის ლიდი. ეს ორი სამყარო ჩემთვის ერთია — ანალიტიკური სიზუსტე, ბიზნეს-პრაქტიკის გამოცდილებასთან.
+
+ბიზნეს-მფლობელებს ყველაზე მარტივ კითხვას ვუსვამ: "სად ხარ 3 წელში?" — და პასუხი ყოველთვის ამხელს, სტრატეგია გაქვს თუ სურვილი. ეს სხვადასხვა რამეა. სტრატეგია — ეს გადაწყვეტილებების სისტემაა: რას გავაკეთებ, რას — არა, რატომ ახლა, რატომ ჩვენ. ამ კითხვებზე პასუხი რომ არ გაქვს, ბიზნესი ნაბიჯ-ნაბიჯ კი არ მიდის — გარემოებების მიხედვით მიქრის.
+
+GEC-ის SME განვითარების პროგრამაში სტრატეგია ცოდნიდან სამუშაო ინსტრუმენტად გარდაიქმნება — შენი ბიზნესსა და შენს კონტექსტზე.
+
+11 ივნისი, Cohort 1.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-12" class="caption-content">
+          <p class="caption-text">The most revealing question I ask business owners: "Where are you in 3 years?"
+
+The answer always shows whether you have a strategy. A comprehensive list is an operational plan. A vague vision is a wish. Strategy is a system of decisions: what to do, what not to do, why now, why you.
+
+PhD candidate in Economics at TSU. Strategy Lead at GEC. The meeting of these two worlds — analytical rigor and business practice — is the most powerful instrument I have.
+
+In this program, strategy becomes a working tool — applied to each founder's actual business and context.
+
+Cohort 1 · June 11. GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-12" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #BusinessStrategy #სტრატეგია #Sustainability #PhD #TSU #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #StrategyLead #Economics</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MENTOR 13: LIA KERESELIDZE ── -->
+    <div class="mentor-block" id="m13">
+      <div class="frame-card">
+        <div class="gec-logo">GEC</div>
+        <div class="photo-circle" style="background:#F05324;">LK</div>
+        <div class="name-block">
+          <div class="mentor-name">Lia Kereselidze</div>
+          <div class="mentor-title">Export &amp; Digital, GEC &nbsp;|&nbsp; $5M+ გარიგება &nbsp;|&nbsp; 23 ქვეყანა &nbsp;|&nbsp; 9 ინდუსტრია</div>
+          <div class="domain-tag">Export Strategy &nbsp;·&nbsp; Digital Sales &nbsp;·&nbsp; saletool.ninja &nbsp;·&nbsp; 8+ წელი</div>
+        </div>
+        <div class="bottom-strip">
+          <div class="prog-name">GEC SME Business Acceleration Program</div>
+          <div class="prog-date">Cohort 1 &nbsp;·&nbsp; June 11, 2026</div>
+        </div>
+      </div>
+      <div class="caption-panel">
+        <div class="mentor-meta-header">
+          <div class="mentor-num">13</div>
+          <div>
+            <div class="mentor-name-text">Lia Kereselidze</div>
+            <div class="domain-text">Export Strategy · Digital Sales</div>
+          </div>
+        </div>
+        <div class="caption-tabs">
+          <button class="caption-tab active" onclick="switchTab(this, 'geo-13')">Georgian</button>
+          <button class="caption-tab" onclick="switchTab(this, 'en-13')">English</button>
+          <button class="caption-tab" onclick="switchTab(this, 'ht-13')">Hashtags</button>
+        </div>
+        <div id="geo-13" class="caption-content active">
+          <p class="caption-text georgian">8 წელი. 23 ქვეყანა. 9 ინდუსტრია. $5M+-ის გარიგება.
+
+GEC-ში ექსპორტისა და ციფრული განვითარების მიმართულება ჩემია.
+
+"ექსპორტისთვის მზადა ვართ" — ეს ყოველ კვირა მესმის. მაგრამ მზადაობასა და დაწყებას შორის სხვა ამბავია. ექსპორტი მხოლოდ პროდუქტის ხარისხით არ იწყება. სჭირდება — სწორი ბაზრის შერჩევა, ზუსტი პოზიციონირება, ციფრული ყოფნა, რომელიც ენდობა, და სწორი კარები.
+
+ყოველივე ეს ისწავლება. მე ველზე ვისწავლე — 23 ქვეყნის, 9 ინდუსტრიის გავლით.
+
+GEC SME განვითარების პროგრამაში ამ გამოცდილებას ცოცხლად შემოვაქვი. კოჰორტი 1, 11 ივნისი — თუ ექსპორტი შენი შემდეგი ნაბიჯია.</p>
+          <p class="copy-note">Copy the caption above directly into Facebook / Instagram.</p>
+        </div>
+        <div id="en-13" class="caption-content">
+          <p class="caption-text">I know many Georgian businesses that are "ready for export" — and at the same time don't know where to start.
+
+That paradox is my working territory.
+
+8 years. 23 countries. 9 industries. $5M+ deal closed.
+
+At GEC, export strategy and digital growth is my module.
+
+"We're ready to export" — I hear this every week. But readiness and starting are two different things. Export doesn't begin with a good product alone. It requires: the right market, precise positioning, a trustworthy digital presence, and the right doors. All of this can be learned. I learned it in the field — across 23 countries and 9 industries.
+
+I'm bringing that experience directly into the GEC SME Development Program. Cohort 1, June 11 — if export is your next move.
+
+In this program, I bring that knowledge live — practically, on your business and your market.
+
+Cohort 1 · June 11. If export is your next step — this program teaches you step one.
+
+GEC SME Business Acceleration Program.</p>
+        </div>
+        <div id="ht-13" class="caption-content">
+          <p class="hashtags">#GECMentors #GECSMEProgram #ExportStrategy #DigitalSales #ექსპორტი #ციფრულიგაყიდვები #SaletoolNinja #ქართულიბიზნესი #SME #GECGeorgia #კოჰორტი1 #ExportGeorgia #B2B</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end mentor-grid -->
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 3: CANVA TEMPLATE INSTRUCTIONS
+══════════════════════════════════════════════ -->
+<section class="section" id="canva">
+  <div class="section-header anchor-offset">
+    <div class="num">Section 03</div>
+    <h2>Canva Template Instructions — Step-by-Step for the Design Team</h2>
+  </div>
+
+  <div class="full-spec-note">
+    These instructions are written for a team member who has access to Canva Pro (or free). Follow each step in order. Build ONE master frame first, duplicate it 12 times, and only swap the photo + name data per mentor.
+  </div>
+
+  <div class="canva-steps">
+
+    <div class="canva-step">
+      <h3>Set Up the Canvas</h3>
+      <ul>
+        <li>Open Canva → click <strong>"Create a design"</strong></li>
+        <li>Select <strong>"Custom size"</strong></li>
+        <li>Enter: <code>1080</code> × <code>1080</code> pixels</li>
+        <li>Click <strong>"Create new design"</strong></li>
+        <li>Name the file: <code>GEC_Mentor_Frame_MASTER</code></li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Set the Background</h3>
+      <ul>
+        <li>Click the canvas background</li>
+        <li>In the left panel → <strong>Background color</strong></li>
+        <li>Enter hex code: <code>#153749</code> (Navy)</li>
+        <li>This is your base. Every mentor frame uses this same navy background.</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Add the GEC Logo (Top-Right Corner)</h3>
+      <ul>
+        <li>If you have the GEC logo PNG: upload it, place it top-right, <code>24px</code> from each edge</li>
+        <li>Resize to approximately <code>100 × 40 px</code></li>
+        <li>If no logo file: add a Text element with the word <strong>GEC</strong>, font size <code>28px</code>, bold, color <code>#F0B91C</code></li>
+        <li>Draw a rectangle around it: no fill, stroke <code>2px</code>, color <code>#F0B91C</code></li>
+        <li>Group the text + rectangle → position top-right at <code>24px</code> margin</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Add the Photo Circle</h3>
+      <ul>
+        <li>In Canva left panel → <strong>Elements</strong> → search <strong>"Frame"</strong> → select the circle frame</li>
+        <li>Resize to <code>450 × 450 px</code></li>
+        <li>Position: horizontally centered (<code>X: 315px</code> from left), vertically at approximately <code>Y: 60px</code> from top</li>
+        <li>Upload the mentor's headshot photo → drag and drop it INTO the circle frame</li>
+        <li>Adjust the photo crop so the face is centered and visible</li>
+        <li>Add a circle shape over it: <code>460 × 460 px</code>, no fill, border stroke <code>4px</code>, color <code>#F0B91C</code> (gold)</li>
+        <li>Center this outline circle exactly over the photo circle</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Add Mentor Name</h3>
+      <ul>
+        <li>Add a Text element below the photo circle</li>
+        <li>Font: <strong>Montserrat Bold</strong> (search in Canva font list)</li>
+        <li>Font size: <code>48–52 px</code> (reduce to 44px if name is long)</li>
+        <li>Color: <code>#F0B91C</code> (Gold)</li>
+        <li>Alignment: <strong>Center</strong></li>
+        <li>Position: approximately <code>30px</code> below the bottom of the photo circle</li>
+        <li>Do not use ALL CAPS — use title case exactly as shown in the mentor list</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Add Title / Credential Line</h3>
+      <ul>
+        <li>Add another Text element directly below the name</li>
+        <li>Font: <strong>Montserrat Regular</strong></li>
+        <li>Font size: <code>22–26 px</code> (reduce if line is long)</li>
+        <li>Color: <code>#6ec4c5</code> (lighter teal — better contrast on dark background than brand teal)</li>
+        <li>Alignment: Center</li>
+        <li>Gap from name: <code>10–14 px</code></li>
+        <li>Use a pipe character <code> | </code> as the separator between credential items</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Add Domain Tag</h3>
+      <ul>
+        <li>Add a third Text element below the credential line</li>
+        <li>Font: <strong>Montserrat Light</strong> or Regular</li>
+        <li>Font size: <code>18–20 px</code></li>
+        <li>Color: White at <strong>50% opacity</strong> (in Canva: set color to white, then reduce transparency to 50%)</li>
+        <li>Alignment: Center</li>
+        <li>Add a thin horizontal line above this text: <code>1px</code>, white at 20% opacity, width ~350px centered</li>
+        <li>This line visually separates the name/credential from the domain tag</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Build the Bottom Program Strip</h3>
+      <ul>
+        <li>Draw a Rectangle: <code>1080px wide</code> × <code>120px tall</code></li>
+        <li>Position it anchored to the bottom: <code>Y = 960px</code> (so it sits flush at the bottom)</li>
+        <li>Fill color: <code>#226263</code> (Teal)</li>
+        <li>No stroke/border needed</li>
+        <li>Add Text inside the strip:<br>
+          Line 1: <strong>GEC SME Business Acceleration Program</strong> — Montserrat SemiBold, 22px, White<br>
+          Line 2: <strong>Cohort 1 · June 11, 2026</strong> — Montserrat Regular, 17px, White 70%</li>
+        <li>Center both lines horizontally and vertically within the strip</li>
+        <li>Group the rectangle + both text elements → name this group "Bottom Strip"</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Spacing &amp; Final Check</h3>
+      <ul>
+        <li>Ensure the photo circle does not overlap the bottom strip</li>
+        <li>Ideal spacing between the domain tag text and the strip top edge: <code>20–28px</code></li>
+        <li>All text must be within the safe zone: <code>80px</code> from left/right edges</li>
+        <li>Preview the design — check it looks clean at mobile screen size (most viewers see it on phone)</li>
+        <li>No elements should touch or feel cramped — white space is intentional</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Save the Master Template</h3>
+      <ul>
+        <li>Select all elements → Group them (<code>Ctrl/Cmd + G</code>)</li>
+        <li>Ungroup — so all elements remain individually editable</li>
+        <li>Go to the page name at the bottom → right-click → <strong>"Duplicate page"</strong></li>
+        <li>Duplicate 12 times (for a total of 13 pages — one per mentor)</li>
+        <li>Name each page with the mentor's name: e.g., <code>01 George S.</code>, <code>02 Ia T.</code>, etc.</li>
+        <li>On each duplicate page, only swap: (1) mentor photo, (2) name text, (3) credential text, (4) domain tag text</li>
+        <li>The GEC logo, background, bottom strip, and layout stay identical on all 13</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Export All 13 Frames</h3>
+      <ul>
+        <li>Click <strong>Share</strong> → <strong>Download</strong></li>
+        <li>File type: <strong>PNG</strong></li>
+        <li>Select <strong>"All pages"</strong></li>
+        <li>Resolution: <code>72 dpi</code> is fine for social (do not choose print resolution)</li>
+        <li>Canva will export a ZIP file with all 13 PNGs</li>
+        <li>Name files as: <code>GEC_Mentor_01_GeorgeSimongulashvili.png</code> etc. before distributing</li>
+        <li>Send each mentor their own PNG file + the caption from this document (Section 2)</li>
+      </ul>
+    </div>
+
+    <div class="canva-step">
+      <h3>Distributing to Mentors</h3>
+      <ul>
+        <li>Each mentor receives: (1) their PNG frame, (2) their Georgian caption text, (3) their English caption text, (4) their hashtags</li>
+        <li>Recommend posting window: <strong>May 19–24</strong> (the week before Cohort 1 launch on June 11)</li>
+        <li>Ideal posting time: weekday mornings, 9:00–11:00 AM or evenings 7:00–9:00 PM</li>
+        <li>Ask mentors to post to <strong>both Facebook and Instagram</strong> (same image and caption)</li>
+        <li>Caption can be pasted directly — no editing required, but mentors can personalize the last line</li>
+        <li>Mentors should add the program registration link in their bio or as a comment, not in the caption itself (better for reach)</li>
+      </ul>
+    </div>
+
+  </div><!-- end canva-steps -->
+
+  <div style="margin-top:40px;">
+    <h3 style="font-size:15px;color:var(--navy);margin-bottom:16px;font-weight:700;">Quick Reference: All 13 Mentors — Circle Colors &amp; Initials</h3>
+    <table class="batch-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Mentor Name</th>
+          <th>Circle Color</th>
+          <th>Initials</th>
+          <th>Domain</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>George Simongulashvili</td>
+          <td><span class="circle-preview" style="background:#049978;"></span>#049978 Green</td>
+          <td>GS</td>
+          <td>Strategy &amp; Business Development</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Ia Tsulaia</td>
+          <td><span class="circle-preview" style="background:#226263;"></span>#226263 Teal</td>
+          <td>IT</td>
+          <td>HR Systems · Culture</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Roman Tsutskiridze</td>
+          <td><span class="circle-preview" style="background:#153749;"></span>#153749 Navy*</td>
+          <td>RT</td>
+          <td>Performance Management</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>Eka Leonidze</td>
+          <td><span class="circle-preview" style="background:#F05324;"></span>#F05324 Orange</td>
+          <td>EL</td>
+          <td>Organizational Performance</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>Tea Gorozia</td>
+          <td><span class="circle-preview" style="background:#F0B91C;"></span>#F0B91C Gold</td>
+          <td>TG</td>
+          <td>Marketing Strategy &amp; Brand</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>Nino Kvachantiradze</td>
+          <td><span class="circle-preview" style="background:#049978;"></span>#049978 Green</td>
+          <td>NK</td>
+          <td>Marketing · Brand Strategy</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>Keti Khuntsaria</td>
+          <td><span class="circle-preview" style="background:#226263;"></span>#226263 Teal</td>
+          <td>KK</td>
+          <td>Sales · Pricing</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>Davit Tsitskishvili</td>
+          <td><span class="circle-preview" style="background:#F05324;"></span>#F05324 Orange</td>
+          <td>DT</td>
+          <td>Leadership · Entrepreneurship</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>Iro Tsagareishvili</td>
+          <td><span class="circle-preview" style="background:#153749;"></span>#153749 Navy*</td>
+          <td>ირ</td>
+          <td>Investment Readiness</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Dea Chkhaidze</td>
+          <td><span class="circle-preview" style="background:#F0B91C;"></span>#F0B91C Gold</td>
+          <td>DC</td>
+          <td>Leadership Coaching</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Giorgi Chikviladze</td>
+          <td><span class="circle-preview" style="background:#049978;"></span>#049978 Green</td>
+          <td>GC</td>
+          <td>Finance · Operations</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Beka Baiashvili</td>
+          <td><span class="circle-preview" style="background:#226263;"></span>#226263 Teal</td>
+          <td>BB</td>
+          <td>Business Strategy · Sustainability</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Lia Kereselidze</td>
+          <td><span class="circle-preview" style="background:#F05324;"></span>#F05324 Orange</td>
+          <td>LK</td>
+          <td>Export & Digital · 23 Countries · 9 Industries · saletool.ninja</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:10px;">* Mentors 03 and 09 use navy circles — add a visible teal <code>#226263</code> outline (3px stroke) so the circle is distinguishable from the navy background.</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <strong>GEC SME Business Acceleration Program</strong> &nbsp;·&nbsp; Cohort 1 · June 11, 2026 &nbsp;·&nbsp; Mentor Post Kit &nbsp;·&nbsp; Internal Document<br>
+  <span style="font-size:11px;margin-top:6px;display:block;">13 mentors · Facebook + Instagram · 1080×1080 px frames · Georgian + English captions</span>
+</footer>
+
+<script>
+  function switchTab(btn, contentId) {
+    // Find the parent caption-panel
+    const panel = btn.closest('.caption-panel');
+
+    // Deactivate all tabs in this panel
+    panel.querySelectorAll('.caption-tab').forEach(t => t.classList.remove('active'));
+
+    // Deactivate all content panels in this panel
+    panel.querySelectorAll('.caption-content').forEach(c => c.classList.remove('active'));
+
+    // Activate clicked tab
+    btn.classList.add('active');
+
+    // Activate matching content
+    const target = document.getElementById(contentId);
+    if (target) target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

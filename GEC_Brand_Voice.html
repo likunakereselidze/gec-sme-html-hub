@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEC — Brand Voice & Posting Guide</title>
+<style>
+:root{
+  --navy:#153749;--teal:#226263;--green:#049978;
+  --orange:#E8471C;--gold:#F0B91C;
+  --white:#FFF;--off:#F5F4F0;--border:#E0DED8;
+  --text:#1A1A1A;--muted:#6B6B6B
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--off);color:var(--text);font-size:15px;line-height:1.65}
+.page-header{background:var(--navy);color:var(--white);padding:40px 40px 32px;border-bottom:4px solid var(--orange)}
+.page-header h1{font-size:26px;font-weight:800;letter-spacing:-.02em}
+.page-header .sub{font-size:13px;color:rgba(255,255,255,0.55);margin-top:6px}
+.page-header .tagline{margin-top:16px;font-size:13px;color:var(--gold);font-style:italic}
+.toc{background:var(--white);border-bottom:1px solid var(--border);padding:16px 40px;display:flex;gap:24px;flex-wrap:wrap;font-size:13px}
+.toc a{color:var(--teal);text-decoration:none;font-weight:600}
+.toc a:hover{color:var(--orange);text-decoration:underline}
+.content{max-width:960px;margin:0 auto;padding:40px 32px}
+.section{margin-bottom:56px}
+.section-title{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:24px;padding-bottom:10px;border-bottom:3px solid var(--orange)}
+.section-title span{font-size:13px;font-weight:400;color:var(--muted);margin-left:10px}
+.rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.rule-card{border-radius:10px;padding:20px 24px;font-size:14px;line-height:1.7}
+.rule-yes{background:#EDFBF2;border:1.5px solid #2EA851}
+.rule-no{background:#FFF3F0;border:1.5px solid #D64A2A}
+.rule-card .label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.rule-yes .label{color:#1A7A3A}
+.rule-no .label{color:#C03B1A}
+.rule-card pre{font-family:inherit;white-space:pre-wrap;font-size:13.5px;line-height:1.7}
+.pill-list{list-style:none;margin:0;padding:0}
+.pill-list li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.pill-list li:last-child{border-bottom:none}
+.pill{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.pill-yes{background:#EDFBF2;color:#1A7A3A}
+.pill-no{background:#FFF3F0;color:#C03B1A}
+.pill-tip{background:#EFF4FF;color:#2D5FA0}
+.structure-card{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:24px 28px;margin-bottom:20px}
+.structure-card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.structure-card p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.structure-card .example{background:var(--off);border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;line-height:1.75;white-space:pre-wrap;font-family:inherit}
+.compare-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.compare-cell{border-radius:8px;padding:16px 20px;font-size:13.5px;line-height:1.75;white-space:pre-wrap;font-family:inherit}
+.compare-bad{background:#FFF3F0;border:1.5px solid #D64A2A}
+.compare-good{background:#EDFBF2;border:1.5px solid #2EA851}
+.compare-head{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.compare-bad .compare-head{color:#C03B1A}
+.compare-good .compare-head{color:#1A7A3A}
+.emoji-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.emoji-table th{background:var(--navy);color:var(--white);padding:10px 14px;text-align:left;font-weight:600}
+.emoji-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.emoji-table tr:nth-child(even) td{background:var(--off)}
+.emoji-big{font-size:22px}
+.checklist-block{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:24px 28px}
+.checklist-block h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
+.check-item:last-child{border-bottom:none}
+.check-item input[type=checkbox]{width:17px;height:17px;flex-shrink:0;margin-top:2px;accent-color:var(--navy)}
+.template-box{background:var(--navy);color:var(--white);border-radius:10px;padding:24px 28px;margin-bottom:20px}
+.template-box h3{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:14px}
+.template-box pre{font-size:13.5px;line-height:1.8;white-space:pre-wrap;font-family:inherit;color:rgba(255,255,255,0.92)}
+.template-box .copy-btn{margin-top:14px;background:var(--orange);color:var(--white);border:none;border-radius:5px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer}
+.template-box .copy-btn:hover{opacity:.85}
+.template-box .copy-btn.done{background:var(--green)}
+.visual-spec{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.spec-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 20px}
+.spec-item h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.color-swatch{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:13px}
+.swatch{width:28px;height:28px;border-radius:5px;flex-shrink:0;border:1px solid rgba(0,0,0,0.08)}
+.note-box{background:#FFF8E6;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;font-size:13.5px;margin-bottom:20px}
+.note-box strong{color:#7A5000}
+@media(max-width:640px){
+  .rule-grid,.compare-row,.visual-spec{grid-template-columns:1fr}
+  .content{padding:24px 16px}
+  .page-header{padding:28px 20px}
+  .toc{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>GEC — Brand Voice &amp; Posting Guide</h1>
+  <div class="sub">Source of truth for all social media content · SME Business Acceleration Program</div>
+  <div class="tagline">"From Delivery to Lasting Impact"</div>
+</header>
+
+<div class="toc">
+  <a href="#identity">Brand Identity</a>
+  <a href="#post-structure">Post Structure</a>
+  <a href="#language">Language Rules</a>
+  <a href="#emojis">Emoji Guide</a>
+  <a href="#do-dont">Do / Don't</a>
+  <a href="#templates">Templates</a>
+  <a href="#visuals">Visual Specs</a>
+  <a href="#checklist">Pre-Post Checklist</a>
+</div>
+
+<div class="content">
+
+<!-- ─── BRAND IDENTITY ─── -->
+<div id="identity" class="section">
+  <div class="section-title">1 · Brand Identity <span>Who GEC is and how it speaks</span></div>
+
+  <div class="rule-grid">
+    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:20px 24px;grid-column:1/-1">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">GEC in one sentence</div>
+      <p style="font-size:16px;font-weight:600;color:var(--navy);line-height:1.5">GEC is the only institution in Georgia that takes an SME owner from where they are and builds the structure, skills, and network needed to grow — not through theory, but through practitioners who have done it themselves.</p>
+    </div>
+  </div>
+
+  <ul class="pill-list">
+    <li><span class="pill pill-yes">Voice</span> <div>Warm but professional. Speaks like a smart colleague — not a lecturer, not a brand robot. Uses "you" (შენ/თქვენ) directly.</div></li>
+    <li><span class="pill pill-yes">Tone</span> <div>Energetic and practical. GEC celebrates what's possible. Posts motivate — they don't preach.</div></li>
+    <li><span class="pill pill-yes">Authority</span> <div>Comes from the <strong>practitioners</strong> and <strong>track record</strong> — not corporate language or statistics alone.</div></li>
+    <li><span class="pill pill-yes">Community</span> <div>GEC sees SME owners as a peer community. Posts say "ერთად" (together) and "ჩვენ" (we/us) — it's not GEC talking down to business owners.</div></li>
+    <li><span class="pill pill-no">Never</span> <div>GEC never sounds bureaucratic, distant, or like a government agency. No passive voice. No jargon-heavy academic tone.</div></li>
+  </ul>
+</div>
+
+<!-- ─── POST STRUCTURE ─── -->
+<div id="post-structure" class="section">
+  <div class="section-title">2 · Post Structure <span>The 5-part formula GEC uses</span></div>
+
+  <div class="note-box">
+    <strong>Key rule:</strong> Every GEC post is bilingual — full Georgian text first, then <code>―</code> (em-dash divider), then full English text. Never mix languages in the same block.
+  </div>
+
+  <div class="structure-card">
+    <h3>Part 1 — Hook (1–2 lines)</h3>
+    <p>Opens with a question, a problem, or a bold statement. Always emoji-led. Should stop the scroll.</p>
+    <div class="example">🎯 თქვენი ბიზნესი ზრდა შეწყვიტა — მაგრამ არ იცით რატომ?
+👉 ეს გავრცელებული სცენარია. და მას სახელი აქვს.</div>
+  </div>
+
+  <div class="structure-card">
+    <h3>Part 2 — Problem Unpacking (3–5 short lines)</h3>
+    <p>Describes the problem in simple, relatable language. Short sentences. Often bullet-style with emojis.</p>
+    <div class="example">⚠️ მენეჯმენტი — ყველაფერი თქვენზეა მიბმული
+⚠️ გეგმა — თავში გაქვთ, ქაღალდზე არ არის
+⚠️ ინვესტიციაზე ლაპარაკობენ — მაგრამ ბიზნესი მზად არ არის</div>
+  </div>
+
+  <div class="structure-card">
+    <h3>Part 3 — Solution Bridge (2–3 lines)</h3>
+    <p>How GEC / this program addresses it. Specific, not generic. Mentions mentors, weeks, cohort.</p>
+    <div class="example">✅ GEC SME განვითარების პროგრამა — 40 კვირა, 13 პრაქტიკოსი, 20 კომპანია.
+სტრუქტურა, რომელიც ბიზნესს ბიზნესისთვის მუშაობს.</div>
+  </div>
+
+  <div class="structure-card">
+    <h3>Part 4 — Program Details (compact)</h3>
+    <p>Cohort, dates, spots, registration window. Always on its own line for scannability.</p>
+    <div class="example">📅 კოჰორტი 1 · 11 ივნისი, 2026
+🗓 რეგისტრაცია: 5–31 მაისი · ინტერვიუ: 1–5 ივნისი
+🏷 20 ადგილი · 20 კომპანია</div>
+  </div>
+
+  <div class="structure-card">
+    <h3>Part 5 — CTA</h3>
+    <p>Clear next action. Link + phone + website. Short and direct — no passive "feel free to..."</p>
+    <div class="example">👉 განაცხადი: [APPLICATION_LINK]
+📞 +995 XXX XXX XXX
+🌐 www.gecbusiness.com</div>
+  </div>
+</div>
+
+<!-- ─── LANGUAGE RULES ─── -->
+<div id="language" class="section">
+  <div class="section-title">3 · Language Rules <span>How to write Georgian and English correctly</span></div>
+
+  <div style="margin-bottom:24px">
+    <h3 style="font-size:15px;color:var(--navy);margin-bottom:14px;font-weight:700">Georgian</h3>
+    <ul class="pill-list">
+      <li><span class="pill pill-yes">Register</span> <div>Formal but warm. Use <strong>თქვენ</strong> (formal you) for addressing business owners. Not too stiff.</div></li>
+      <li><span class="pill pill-yes">Sentences</span> <div>Short and punchy. One idea per sentence. Rhetorical questions work well as hooks.</div></li>
+      <li><span class="pill pill-yes">Verbs</span> <div>Active. Use action verbs: <em>შემოდით, გამოიყენეთ, გაიარეთ, მიიღეთ</em> — not passive constructions.</div></li>
+      <li><span class="pill pill-yes">Numbers</span> <div>Use digits, not spelled-out words: <strong>20 ადგილი</strong>, <strong>40 კვირა</strong>, <strong>13 მენტორი</strong></div></li>
+      <li><span class="pill pill-no">Avoid</span> <div>Literary prose, long subordinate clauses, academic vocabulary. GEC posts are not essays — they are social copy.</div></li>
+      <li><span class="pill pill-no">Avoid</span> <div>"ლამაზი", "ღირებული", "ინოვაციური" — vague flattery words. Replace with specific facts.</div></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 style="font-size:15px;color:var(--navy);margin-bottom:14px;font-weight:700">English</h3>
+    <ul class="pill-list">
+      <li><span class="pill pill-yes">Register</span> <div>Direct and confident. Speaks to a business owner as a peer. Second person: "you", "your business".</div></li>
+      <li><span class="pill pill-yes">Sentences</span> <div>Short. No dependent-clause chains. Max 20 words per sentence.</div></li>
+      <li><span class="pill pill-yes">Specificity</span> <div>Name numbers, outcomes, credentials — no vague promises. "40 weeks, 13 mentors" beats "intensive program".</div></li>
+      <li><span class="pill pill-no">Avoid</span> <div>British over-formality: "Please note that...", "We would like to inform you..." — cut these entirely.</div></li>
+      <li><span class="pill pill-no">Avoid</span> <div>Long editorial paragraphs. The English block mirrors the Georgian: scannable, punchy, action-oriented.</div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ─── EMOJI GUIDE ─── -->
+<div id="emojis" class="section">
+  <div class="section-title">4 · Emoji Guide <span>What to use, where, and how much</span></div>
+
+  <div class="note-box">
+    <strong>Rule of thumb:</strong> Each paragraph or bullet gets 1 leading emoji. Never stack emojis side-by-side (🚀🎯🔥). Never use decorative emojis mid-sentence.
+  </div>
+
+  <table class="emoji-table">
+    <thead>
+      <tr><th>Emoji</th><th>Use Case</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="emoji-big">🎯</td><td>Hook, main point, program focus</td><td>🎯 ბიზნესი გაჩერდა? ეს გავრცელებული სცენარია.</td></tr>
+      <tr><td class="emoji-big">⚠️</td><td>Problem statement, warning, challenge</td><td>⚠️ ოპერაციები — მთლიანად შენზეა მიბმული</td></tr>
+      <tr><td class="emoji-big">✅</td><td>Solution, feature, benefit, what GEC offers</td><td>✅ 40 კვირა · 13 პრაქტიკოსი · 20 კომპანია</td></tr>
+      <tr><td class="emoji-big">👉</td><td>CTA, next step, link</td><td>👉 განაცხადი: [LINK]</td></tr>
+      <tr><td class="emoji-big">📅</td><td>Date, deadline, schedule</td><td>📅 კოჰორტი 1 · 11 ივნისი, 2026</td></tr>
+      <tr><td class="emoji-big">📞</td><td>Phone CTA</td><td>📞 +995 XXX XXX XXX</td></tr>
+      <tr><td class="emoji-big">🌐</td><td>Website, online presence</td><td>🌐 www.gecbusiness.com</td></tr>
+      <tr><td class="emoji-big">📊</td><td>Data, statistics, research findings</td><td>📊 89% of Georgian SMEs have no formal management system</td></tr>
+      <tr><td class="emoji-big">🏆</td><td>Achievement, milestone, success story</td><td>🏆 160+ combined years of practitioner experience</td></tr>
+      <tr><td class="emoji-big">🗓</td><td>Registration window, interview dates</td><td>🗓 რეგისტრაცია: 5–31 მაისი</td></tr>
+      <tr><td class="emoji-big">🚀</td><td>Growth, launch, energy (use sparingly — max 1 per post)</td><td>🚀 ბიზნესის ზრდის შემდეგი ეტაპი — ახლავე</td></tr>
+      <tr><td class="emoji-big">💡</td><td>Insight, tip, realization</td><td>💡 ბიზნეს-ზრდა სისტემის საკითხია, ნიჭის კი — არა</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ─── DO / DON'T ─── -->
+<div id="do-dont" class="section">
+  <div class="section-title">5 · Do / Don't <span>Side-by-side comparison with real examples</span></div>
+
+  <div style="margin-bottom:28px">
+    <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Post Opening (Hook)</div>
+    <div class="compare-row">
+      <div class="compare-bad">
+        <div class="compare-head">❌ Wrong — Too editorial</div>
+        <pre>ეს შენი ბრალი არ არის.
+
+ზოგადი კურიკულუმი ზოგადი შედეგს
+იძლევა. ლექცია ლამაზია — ბაზარში
+მაგრამ შენს კონკრეტულ ხარვეზს
+ვერ ეხება.</pre>
+      </div>
+      <div class="compare-good">
+        <div class="compare-head">✅ Right — GEC's real style</div>
+        <pre>🎯 ტრენინგებზე დადიხართ.
+EU პროგრამებში შეხვედით.
+კონსულტანტი დაქირავეთ.
+
+2 წელი გავიდა — ბიზნესი იქვეა.
+
+⚠️ პრობლემა ცოდნაში არ არის.
+პრობლემა — <strong>თქვენს კონკრეტულ
+ხარვეზთან</strong> კავშირის არარსებობაში.</pre>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:28px">
+    <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Program Description</div>
+    <div class="compare-row">
+      <div class="compare-bad">
+        <div class="compare-head">❌ Wrong — Cold and corporate</div>
+        <pre>GEC SME Business Acceleration Program
+builds that structure. 40 weeks.
+13 practitioner mentors. 20 companies
+per cohort.
+
+Cohort 1. June 11, 2026. 20 spots.</pre>
+      </div>
+      <div class="compare-good">
+        <div class="compare-head">✅ Right — Warm and direct</div>
+        <pre>✅ GEC SME განვითარების პროგრამა
+სწორედ ამ ხარვეზს ხსნის.
+
+📅 კოჰორტი 1 · 11 ივნისი, 2026
+🗓 რეგისტრაცია: 5–31 მაისი
+🏷 20 ადგილი — 20 კომპანია
+
+👉 განაცხადი: [LINK]
+🌐 www.gecbusiness.com</pre>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:28px">
+    <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">CTA (Call to Action)</div>
+    <div class="compare-row">
+      <div class="compare-bad">
+        <div class="compare-head">❌ Wrong — Passive and vague</div>
+        <pre>If this is your business — this is
+worth reading carefully.
+
+[APPLICATION_LINK]</pre>
+      </div>
+      <div class="compare-good">
+        <div class="compare-head">✅ Right — Direct and specific</div>
+        <pre>👉 განაცხადი შეავსეთ: [LINK]
+📞 +995 XXX XXX XXX
+🌐 www.gecbusiness.com</pre>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Overall Length</div>
+    <div class="compare-row">
+      <div class="compare-bad">
+        <div class="compare-head">❌ Wrong — Long paragraphs</div>
+        <pre>These are not failing businesses.
+These are businesses that outgrew
+their original structure without
+building a new one.
+
+The pattern is consistent: the founder
+is still the operating system.
+Succession is a private worry...</pre>
+      </div>
+      <div class="compare-good">
+        <div class="compare-head">✅ Right — Scannable lines</div>
+        <pre>⚠️ მეპატრონე = ოპერაციული სისტემა
+⚠️ სუქცესიის გეგმა — არ არსებობს
+⚠️ ინვესტიცია — მზადება არ მოხდა
+⚠️ ზრდა შეჩერდა — მიზეზი გაუგებარია
+
+ეს არ არის ბიზნეს-ვარდნა.
+ეს სტრუქტურის ხარვეზია.</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TEMPLATES ─── -->
+<div id="templates" class="section">
+  <div class="section-title">6 · Post Templates <span>Copy-paste ready — fill in brackets</span></div>
+
+  <div class="template-box">
+    <h3>Template A — Problem Hook (most common)</h3>
+    <pre id="tpl-a">🎯 [BOLD QUESTION OR PROBLEM — 1 LINE]
+
+[PROBLEM LINE 1 — short]
+[PROBLEM LINE 2 — short]
+[PROBLEM LINE 3 — optional]
+
+⚠️ [SYMPTOM 1]
+⚠️ [SYMPTOM 2]
+⚠️ [SYMPTOM 3]
+
+✅ GEC SME განვითარების პროგრამა [HOW IT ADDRESSES THIS]
+
+📅 კოჰორტი 1 · 11 ივნისი, 2026
+🗓 რეგისტრაცია: 5–31 მაისი · ინტერვიუ: 1–5 ივნისი
+🏷 20 ადგილი
+
+👉 განაცხადი: [APPLICATION_LINK]
+📞 +995 XXX XXX XXX
+🌐 www.gecbusiness.com
+
+―
+
+🎯 [SAME HOOK IN ENGLISH — 1 LINE]
+
+[ENGLISH PROBLEM LINES]
+
+⚠️ [SYMPTOM 1 EN]
+⚠️ [SYMPTOM 2 EN]
+⚠️ [SYMPTOM 3 EN]
+
+✅ GEC SME Business Acceleration Program [ENGLISH SOLUTION]
+
+📅 Cohort 1 · June 11, 2026
+🗓 Registration: May 5–31 · Interviews: June 1–5
+🏷 20 spots
+
+👉 Apply: [APPLICATION_LINK]
+📞 +995 XXX XXX XXX
+🌐 www.gecbusiness.com</pre>
+    <button class="copy-btn" onclick="copyTpl('tpl-a', this)" data-orig="Copy Template A">Copy Template A</button>
+  </div>
+
+  <div class="template-box">
+    <h3>Template B — Social Proof / Mentor Post</h3>
+    <pre id="tpl-b">💡 [INSIGHT OR OBSERVATION — 1 LINE]
+
+[CONTEXT LINE 1]
+[CONTEXT LINE 2]
+
+✅ [HOW MENTOR / GEC ADDRESSED THIS]
+
+📅 კოჰორტი 1 · 11 ივნისი, 2026
+🗓 20 ადგილი · www.gecbusiness.com
+
+👉 განაცხადი: [APPLICATION_LINK]
+
+―
+
+💡 [SAME INSIGHT IN ENGLISH]
+
+[ENGLISH CONTEXT]
+
+✅ [ENGLISH SOLUTION]
+
+📅 Cohort 1 · June 11, 2026
+🏷 20 spots · www.gecbusiness.com
+
+👉 Apply: [APPLICATION_LINK]</pre>
+    <button class="copy-btn" onclick="copyTpl('tpl-b', this)" data-orig="Copy Template B">Copy Template B</button>
+  </div>
+
+  <div class="template-box">
+    <h3>Template C — Data / Stat Post</h3>
+    <pre id="tpl-c">📊 [STAT — e.g. "ქართული SME-ების 89%-ს ფორმალური მართვის სისტემა არ აქვს"]
+
+[SOURCE LINE — e.g. "(ISET / World Bank, 2023)"]
+
+[WHAT THIS ACTUALLY MEANS FOR THE READER]
+
+⚠️ [IMPLICATION 1]
+⚠️ [IMPLICATION 2]
+⚠️ [IMPLICATION 3]
+
+✅ GEC SME განვითარების პროგრამა ამ სტრუქტურას ქმნის.
+40 კვირა · 13 პრაქტიკოსი · 20 კომპანია
+
+📅 კოჰორტი 1 · 11 ივნისი, 2026
+👉 განაცხადი: [APPLICATION_LINK]
+🌐 www.gecbusiness.com
+
+―
+
+📊 [SAME STAT IN ENGLISH]
+
+[ENGLISH CONTEXT AND IMPLICATIONS]
+
+✅ GEC SME Business Acceleration Program builds this structure.
+40 weeks · 13 practitioners · 20 companies
+
+📅 Cohort 1 · June 11, 2026
+👉 Apply: [APPLICATION_LINK]
+🌐 www.gecbusiness.com</pre>
+    <button class="copy-btn" onclick="copyTpl('tpl-c', this)" data-orig="Copy Template C">Copy Template C</button>
+  </div>
+</div>
+
+<!-- ─── VISUAL SPECS ─── -->
+<div id="visuals" class="section">
+  <div class="section-title">7 · Visual Specs <span>Carousel slides, colors, layout rules</span></div>
+
+  <div class="note-box">
+    <strong>Format:</strong> GEC posts use carousel slides (1080×1080px). Slide 1 = hook/headline. Slides 2–4 = details/bullets. Last slide = CTA + logo + tagline.
+  </div>
+
+  <div class="visual-spec">
+    <div class="spec-item">
+      <h4>Brand Colors</h4>
+      <div class="color-swatch"><div class="swatch" style="background:#E8471C"></div><div><strong>#E8471C</strong> — GEC Orange (headlines on slides)</div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#153749"></div><div><strong>#153749</strong> — Navy (backgrounds, body text)</div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#226263"></div><div><strong>#226263</strong> — Teal (accents, dividers)</div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#F0B91C"></div><div><strong>#F0B91C</strong> — Gold (highlights, badges)</div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#FFFFFF;border:1px solid #ccc"></div><div><strong>#FFFFFF</strong> — White (text on dark slides)</div></div>
+    </div>
+    <div class="spec-item">
+      <h4>Slide Layout Rules</h4>
+      <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+        <li>GEC logo always top-left corner</li>
+        <li>Tagline bottom of last slide: <em>"From Delivery to Lasting Impact"</em></li>
+        <li>Orange for bold keywords / headline</li>
+        <li>White text on navy/dark background</li>
+        <li>No more than 6 lines of text per slide</li>
+        <li>Teal strip or line as visual accent</li>
+        <li>No stock photos — geometric/abstract preferred</li>
+        <li>www.gecbusiness.com on every CTA slide</li>
+      </ul>
+    </div>
+    <div class="spec-item">
+      <h4>Typography</h4>
+      <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+        <li>Headline: Bold, 36–48px, orange or white</li>
+        <li>Body: Regular/Medium, 18–22px, white or dark navy</li>
+        <li>Caption: 14–16px, muted gray</li>
+        <li>Font: System / sans-serif (Montserrat or similar)</li>
+      </ul>
+    </div>
+    <div class="spec-item">
+      <h4>Carousel Slide Order</h4>
+      <ul style="font-size:13px;line-height:1.9;padding-left:16px">
+        <li><strong>Slide 1:</strong> Hook headline (orange text)</li>
+        <li><strong>Slide 2:</strong> Problem bullets</li>
+        <li><strong>Slide 3:</strong> Solution / what program offers</li>
+        <li><strong>Slide 4:</strong> Mentor names or key stats</li>
+        <li><strong>Slide 5:</strong> CTA — dates, spots, link, logo</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRE-POST CHECKLIST ─── -->
+<div id="checklist" class="section">
+  <div class="section-title">8 · Pre-Post Checklist <span>Check every post before publishing</span></div>
+
+  <div class="checklist-block">
+    <h3>Content</h3>
+    <div class="check-item"><input type="checkbox"><label>Post opens with an emoji + hook question or bold statement</label></div>
+    <div class="check-item"><input type="checkbox"><label>Problem is described in short, relatable lines (not long paragraphs)</label></div>
+    <div class="check-item"><input type="checkbox"><label>Bullet points use consistent emoji markers (⚠️ for problems, ✅ for solutions)</label></div>
+    <div class="check-item"><input type="checkbox"><label>Program details are present: Cohort 1 · June 11, 2026 · 20 spots</label></div>
+    <div class="check-item"><input type="checkbox"><label>Registration window included: May 5–31 · Interviews June 1–5</label></div>
+    <div class="check-item"><input type="checkbox"><label>[APPLICATION_LINK] replaced with live URL</label></div>
+    <div class="check-item"><input type="checkbox"><label>www.gecbusiness.com in CTA</label></div>
+    <div class="check-item"><input type="checkbox"><label>Phone number included on paid ads and high-priority posts</label></div>
+  </div>
+
+  <br>
+  <div class="checklist-block">
+    <h3>Language &amp; Format</h3>
+    <div class="check-item"><input type="checkbox"><label>Full Georgian block first, then ―, then full English block</label></div>
+    <div class="check-item"><input type="checkbox"><label>Georgian uses formal "თქვენ" register — warm but professional</label></div>
+    <div class="check-item"><input type="checkbox"><label>No literary prose or long subordinate clauses</label></div>
+    <div class="check-item"><input type="checkbox"><label>English sentences are short (max ~20 words each)</label></div>
+    <div class="check-item"><input type="checkbox"><label>No stacked emojis (e.g. 🚀🎯🔥 — one at a time only)</label></div>
+    <div class="check-item"><input type="checkbox"><label>Hashtags appended at the end (not inline in text)</label></div>
+  </div>
+
+  <br>
+  <div class="checklist-block">
+    <h3>Brand Alignment</h3>
+    <div class="check-item"><input type="checkbox"><label>Post sounds like a smart practitioner speaking, not a corporate press release</label></div>
+    <div class="check-item"><input type="checkbox"><label>No vague words: "innovative", "valuable", "comprehensive" — replaced with specifics</label></div>
+    <div class="check-item"><input type="checkbox"><label>No passive voice: "Applications are being accepted" → "განაცხადი შეავსეთ"</label></div>
+    <div class="check-item"><input type="checkbox"><label>Visuals use orange headline text, GEC logo top-left, teal accent</label></div>
+    <div class="check-item"><input type="checkbox"><label>Last carousel slide shows tagline: "From Delivery to Lasting Impact"</label></div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<script>
+function copyTpl(id, btn) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.dataset.orig;
+    btn.textContent = 'Copied!';
+    btn.classList.add('done');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('done'); }, 1800);
+  });
+}
+</script>
+</body>
+</html>
