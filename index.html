@@ -365,7 +365,7 @@ document.getElementById('apply-form').addEventListener('submit', async function(
       body: JSON.stringify(payload)
     });
     if (!res.ok) throw new Error();
-    window.location.href = '/thanks';
+    window.location.href = '/sme-program/thanks.html';
   } catch {
     btn.disabled = false;
     btn.textContent = 'განაცხადის გაგზავნა →';
