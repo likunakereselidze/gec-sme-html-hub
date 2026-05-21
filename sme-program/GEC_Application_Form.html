@@ -334,7 +334,7 @@ button[type=submit]:active{transform:translateY(0)}
           <input type="checkbox" id="consent" name="თანხმობა" value="დათანხმდა" required>
           <label for="consent">ვეთანხმები, რომ GEC-მა დამიკავშირდეს ჩემი განაცხადის განხილვის მიზნით</label>
         </div>
-        <button type="submit">განაცხადის გაგზავნა →</button>
+        <button type="submit" id="submit-btn">განაცხადის გაგზავნა →</button>
         <div class="footer-note">
           კითხვების შემთხვევაში: <a href="mailto:lkereselidze@gecbusiness.com">lkereselidze@gecbusiness.com</a>
         </div>
@@ -343,6 +343,35 @@ button[type=submit]:active{transform:translateY(0)}
     </div>
   </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const { createClient } = supabase;
+  const db = createClient(
+    'https://qbrafwkuwzhjzcygujeh.supabase.co',
+    'sb_publishable_QE31r-Q0EUVBP8Y5CFdShg_qfpjKlwR'
+  );
+
+  document.getElementById('apply-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'იგზავნება...';
+
+    const data = Object.fromEntries(new FormData(this));
+
+    const { error } = await db.from('submissions').insert([data]);
+
+    if (error) {
+      btn.disabled = false;
+      btn.textContent = 'განაცხადის გაგზავნა →';
+      alert('შეცდომა: ' + error.message);
+      return;
+    }
+
+    window.location.href = 'thanks.html';
+  });
+</script>
 
 </body>
 </html>
