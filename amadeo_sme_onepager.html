@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SME ბიზნეს ზრდის პროგრამა</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans Georgian', sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #0d2b6e 0%, #1a4eb5 100%);
+      padding: 44px 48px 36px;
+      color: #fff;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #c9d9ff;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .header p.sub {
+      font-size: 15px;
+      font-weight: 400;
+      color: #b8ccf5;
+      line-height: 1.6;
+      max-width: 560px;
+    }
+
+    /* STATS BAR */
+    .stats {
+      display: flex;
+      background: #f0f4ff;
+      border-bottom: 1px solid #dde5f7;
+    }
+
+    .stat {
+      flex: 1;
+      text-align: center;
+      padding: 20px 16px;
+      border-right: 1px solid #dde5f7;
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a4eb5;
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #5a6a8a;
+      font-weight: 500;
+    }
+
+    /* BODY */
+    .body {
+      padding: 40px 48px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1a4eb5;
+      margin-bottom: 20px;
+    }
+
+    /* INTRO */
+    .intro {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #2e3a52;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid #eef1f8;
+    }
+
+    /* BENEFITS GRID */
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid #eef1f8;
+    }
+
+    .benefit {
+      background: #f7f9ff;
+      border: 1px solid #e4eafc;
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+
+    .benefit-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .benefit h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0d2b6e;
+      margin-bottom: 6px;
+    }
+
+    .benefit p {
+      font-size: 13px;
+      color: #5a6a8a;
+      line-height: 1.6;
+    }
+
+    /* WHO IS IT FOR */
+    .for-whom {
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid #eef1f8;
+    }
+
+    .for-whom p {
+      font-size: 14px;
+      color: #2e3a52;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      background: #e8eeff;
+      color: #1a4eb5;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* MENTOR BLOCK */
+    .mentors {
+      background: linear-gradient(135deg, #0d2b6e 0%, #1a4eb5 100%);
+      border-radius: 10px;
+      padding: 24px 28px;
+      color: #fff;
+      margin-bottom: 36px;
+    }
+
+    .mentors p {
+      font-size: 14px;
+      color: #b8ccf5;
+      line-height: 1.7;
+    }
+
+    .mentors strong {
+      color: #fff;
+    }
+
+    /* CTA */
+    .cta-block {
+      text-align: center;
+      background: #f7f9ff;
+      border: 1px solid #e4eafc;
+      border-radius: 10px;
+      padding: 32px 28px;
+    }
+
+    .cta-block h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0d2b6e;
+      margin-bottom: 10px;
+    }
+
+    .cta-block p {
+      font-size: 13px;
+      color: #5a6a8a;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0d2b6e, #1a4eb5);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 40px;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-url {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #8a99bb;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #f0f4ff;
+      border-top: 1px solid #dde5f7;
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left {
+      font-size: 12px;
+      color: #8a99bb;
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: #5a6a8a;
+      font-weight: 500;
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .header, .body, .footer { padding-left: 24px; padding-right: 24px; }
+      .benefits { grid-template-columns: 1fr; }
+      .header-top { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .stats { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid #dde5f7; }
+      .stat:last-child { border-bottom: none; }
+      .footer { flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <span class="brand">Amadeo</span>
+        <span class="tag">განსაკუთრებული შეთავაზება</span>
+      </div>
+      <h1>მცირე და საშუალო ბიზნესის<br/>ზრდის პროგრამა</h1>
+      <p class="sub">
+        40-კვირიანი პრაქტიკული პროგრამა, სადაც თქვენი ბიზნესი იქცევა სასწავლო გარემოდ
+        — რეალური შედეგებით, რეალურ დროში.
+      </p>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">40</span>
+        <span class="stat-label">კვირა</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">20</span>
+        <span class="stat-label">მეწარმე კოჰორტში</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">13</span>
+        <span class="stat-label">პრაქტიკოსი მენტორი</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">I</span>
+        <span class="stat-label">პირველი კოჰორტი</span>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <!-- INTRO -->
+      <div class="intro">
+        <div class="section-title">პროგრამის შესახებ</div>
+        <p>
+          GEC Business-ის SME პროგრამა შეიქმნა იმ მეწარმეებისთვის, ვისაც პრაქტიკული ზრდა სჭირდება —
+          და არა კიდევ ერთი სერტიფიკატი. ყოველი მოდული სრულდება კონკრეტული დავალებით,
+          რომელსაც <strong>იმავე კვირაში</strong> თქვენს ბიზნესში ნერგავთ.
+          პროგრამა ქართულ ბაზარზეა მორგებული და ქართულ ენაზე ტარდება.
+        </p>
+      </div>
+
+      <!-- BENEFITS -->
+      <div class="section-title">რას მოიპოვებთ</div>
+      <div class="benefits">
+        <div class="benefit">
+          <span class="benefit-icon">📊</span>
+          <h3>ფინანსური სიცხადე</h3>
+          <p>განსაზღვრული KPI-ები, გასაგები მოგება-ზარალი და პროგნოზირებული ფულადი ნაკადები.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">🚀</span>
+          <h3>ზრდის სტრატეგია</h3>
+          <p>ახალი ბაზრები, შემოსავლის დამატებითი წყაროები და ოპერაციული ეფექტიანობა.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">🤝</span>
+          <h3>CEO-ების ქსელი</h3>
+          <p>15–20 კოლეგა სხვადასხვა ინდუსტრიიდან — პარტნიორები, რომლებიც გზად გექნებათ.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">⚙️</span>
+          <h3>ოპერაციული თავისუფლება</h3>
+          <p>სისტემები, რომლებიც ბიზნესს თქვენი ყოველდღიური ჩართულობის გარეშე ამუშავებს.</p>
+        </div>
+      </div>
+
+      <!-- FOR WHOM -->
+      <div class="for-whom">
+        <div class="section-title">ვისთვისაა</div>
+        <p>
+          პროგრამა განკუთვნილია ადრეული ეტაპის ბიზნეს მფლობელებისთვის,
+          რომლებიც ზრდის გამოწვევების წინაშე დგანან:
+        </p>
+        <div class="tags-row">
+          <span class="chip">სკალირების სირთულეები</span>
+          <span class="chip">ოპერაციული ქაოსი</span>
+          <span class="chip">მარტოობა გადაწყვეტილებებში</span>
+          <span class="chip">თეორიასა და ბაზარს შორის სხვაობა</span>
+        </div>
+      </div>
+
+      <!-- MENTORS -->
+      <div class="mentors">
+        <div class="section-title" style="color:#7da5f5; margin-bottom:12px;">13 პრაქტიკოსი მენტორი</div>
+        <p>
+          მენტორები <strong>არ არიან მასწავლებლები</strong> — ისინი მეწარმეები არიან,
+          ვისაც საკუთარი კომპანია ააგეს და გაზარდეს. 40 კვირის განმავლობაში
+          ისინი <strong>პირდაპირ თქვენს ბიზნესსა</strong> და გამოწვევებზე მუშაობენ.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block">
+        <h2>განაცხადი პირველ კოჰორტში — 20 ადგილი</h2>
+        <p>
+          ადგილების რაოდენობა შეზღუდულია. პირველ კოჰორტში გაწევრიანება
+          ნიშნავს პროგრამის ჩამოყალიბებაში მონაწილეობასა და
+          განსაკუთრებულ პირობებს.
+        </p>
+        <a class="cta-btn" href="https://sme.gecbusiness.com" target="_blank">
+          განაცხადის შეტანა
+        </a>
+        <span class="cta-url">sme.gecbusiness.com</span>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <span class="footer-left">გაგზავნილია Amadeo-ს მიერ &nbsp;·&nbsp; 2026</span>
+      <span class="footer-right">GEC Business SME პროგრამა</span>
+    </div>
+
+  </div>
+</body>
+</html>
