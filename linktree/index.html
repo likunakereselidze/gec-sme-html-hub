@@ -109,8 +109,8 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  background:var(--card);
-  border:1px solid var(--border);
+  background:rgba(240,185,28,0.07);
+  border:1px solid rgba(240,185,28,0.35);
   color:#fff;
   text-decoration:none;
   padding:14px 18px;
@@ -118,9 +118,10 @@ body{
   font-size:14px;
   font-weight:600;
   margin-bottom:28px;
-  transition:border-color .15s,background .15s;
+  box-shadow:0 2px 12px rgba(240,185,28,0.1);
+  transition:border-color .15s,background .15s,box-shadow .15s;
 }
-.pres-btn:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.2)}
+.pres-btn:hover{background:rgba(240,185,28,0.12);border-color:rgba(240,185,28,0.55);box-shadow:0 4px 16px rgba(240,185,28,0.18)}
 .pres-btn-left{display:flex;align-items:center;gap:10px}
 .pres-icon{
   width:34px;height:34px;
